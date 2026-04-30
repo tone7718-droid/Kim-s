@@ -1,4 +1,8 @@
-"""Scrape KBO regular-season schedule + results from Statiz.
+"""Scrape KBO regular-season schedule + results from Naver Sports.
+
+Uses the public Naver Sports schedule endpoint (api-gw.sports.naver.com),
+which returns JSON. Far more reliable than HTML scraping — no DOM parsing,
+no selector drift, and accessible from cloud CI environments.
 
 Usage:
     python scrape_kbo.py --year 2021
@@ -9,25 +13,23 @@ Output: data/seasons/<year>.json
 
 Each game looks like:
     {
-        "id": "2021-04-03-OB-NC",
+        "id": "2021-04-03-LG-NC",
         "date": "2021-04-03",
-        "awayTeam": "OB",
+        "awayTeam": "LG",
         "homeTeam": "NC",
         "awayScore": 5,
         "homeScore": 3,
         "status": "completed" | "tied" | "cancelled" | "postponed" | "scheduled",
-        "stadium": "창원" | null
+        "stadium": "창원NC파크" | null
     }
-
-Statiz markup may shift between seasons; selector logic is concentrated in
-parse_month_html() so it can be adjusted in one place.
 """
 
 from __future__ import annotations
 
 import argparse
+import calendar
+import datetime as dt
 import json
-import re
 import sys
 import time
 from dataclasses import dataclass, asdict
@@ -35,11 +37,10 @@ from pathlib import Path
 from typing import Iterable
 
 import requests
-from bs4 import BeautifulSoup
 
-from teams import to_code
+from teams import normalize_code
 
-BASE_URL = "https://statiz.sporki.com/schedule/"
+API_URL = "https://api-gw.sports.naver.com/schedule/games"
 DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "seasons"
 
 HEADERS = {
@@ -48,7 +49,8 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/124.0 Safari/537.36"
     ),
-    "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+    "Accept": "application/json",
+    "Referer": "https://m.sports.naver.com/",
 }
 
 
@@ -64,91 +66,89 @@ class Game:
     stadium: str | None
 
 
-def fetch_month(year: int, month: int, retries: int = 3) -> str:
-    url = f"{BASE_URL}?year={year}&month={month:02d}"
+def fetch_range(from_date: str, to_date: str, retries: int = 3) -> list[dict]:
+    """Fetch a date-range of KBO games from Naver Sports."""
+    params = {
+        "fields": "basic,baseballHome,baseballAway,statusInfo,leagueInfo",
+        "upperCategoryId": "kbaseball",
+        "categoryId": "kbo",
+        "fromDate": from_date,
+        "toDate": to_date,
+        "size": 500,
+    }
     last_err: Exception | None = None
     for attempt in range(retries):
         try:
-            r = requests.get(url, headers=HEADERS, timeout=20)
+            r = requests.get(API_URL, headers=HEADERS, params=params, timeout=20)
             r.raise_for_status()
-            return r.text
+            payload = r.json()
+            return payload.get("result", {}).get("games", []) or []
         except Exception as e:
             last_err = e
             time.sleep(2 ** attempt)
-    raise RuntimeError(f"Failed to fetch {url}: {last_err}")
+    raise RuntimeError(f"Failed to fetch {from_date}..{to_date}: {last_err}")
 
 
-_SCORE_RE = re.compile(r"(\d+)\s*[:vs]+\s*(\d+)", re.IGNORECASE)
+# Naver status codes seen in practice. Anything not listed falls through
+# to a score-based heuristic.
+_STATUS_MAP = {
+    "RESULT": None,           # could be completed or tied — decided by scores
+    "RESULT_FINAL": None,
+    "FINAL": None,
+    "END": None,
+    "CANCEL": "cancelled",
+    "CANCEL_GAME": "cancelled",
+    "POSTPONE": "postponed",
+    "PPD": "postponed",
+    "BEFORE": "scheduled",
+    "READY": "scheduled",
+    "STARTED": "scheduled",
+    "LIVE": "scheduled",
+}
 
 
-def _parse_one_game(cell, year: int, date_str: str) -> Game | None:
-    """Parse a single game card from a calendar cell.
+def _coerce_score(v) -> int | None:
+    if isinstance(v, int):
+        return v
+    if isinstance(v, str) and v.strip().lstrip("-").isdigit():
+        return int(v)
+    return None
 
-    Statiz schedule cells contain one or more <a> blocks that look like:
-        <a href="/schedule/?m=preview&s_no=...">
-            <span>away</span>
-            <span>5:3</span>
-            <span>home</span>
-        </a>
-    Cancelled / postponed games may show only team names with status text
-    such as '취소', '우천취소', '연기'.
-    """
-    text = cell.get_text(" ", strip=True)
-    if not text:
+
+def _normalize_game(raw: dict) -> Game | None:
+    game_date_raw = raw.get("gameDate") or ""
+    if len(game_date_raw) != 8 or not game_date_raw.isdigit():
+        return None
+    date_str = f"{game_date_raw[0:4]}-{game_date_raw[4:6]}-{game_date_raw[6:8]}"
+
+    away_code = (
+        normalize_code(raw.get("awayTeamCode") or "")
+        or normalize_code(raw.get("awayTeamName") or "")
+    )
+    home_code = (
+        normalize_code(raw.get("homeTeamCode") or "")
+        or normalize_code(raw.get("homeTeamName") or "")
+    )
+    if not away_code or not home_code:
         return None
 
-    # Heuristic: collect spans within the link, fall back to plain text.
-    spans = [s.get_text(strip=True) for s in cell.find_all("span")]
-    spans = [s for s in spans if s]
+    away_score = _coerce_score(raw.get("awayTeamScore"))
+    home_score = _coerce_score(raw.get("homeTeamScore"))
 
-    # Find away/home team names from known aliases.
-    teams_found: list[str] = []
-    for s in spans:
-        for alias in ("KIA", "기아", "삼성", "LG", "두산", "KT", "kt",
-                      "SSG", "SK", "롯데", "한화", "NC", "키움"):
-            if s == alias:
-                teams_found.append(alias)
-                break
-        if len(teams_found) == 2:
-            break
-
-    if len(teams_found) < 2:
-        return None
-
-    away_name, home_name = teams_found[0], teams_found[1]
-
-    # Score detection.
-    away_score: int | None = None
-    home_score: int | None = None
-    status = "scheduled"
-    for s in spans:
-        m = _SCORE_RE.fullmatch(s.replace(" ", ""))
-        if m:
-            away_score = int(m.group(1))
-            home_score = int(m.group(2))
-            break
-
-    if away_score is not None and home_score is not None:
-        if away_score == home_score:
-            status = "tied"
+    status_code = (raw.get("statusCode") or "").upper()
+    status = _STATUS_MAP.get(status_code, "scheduled")
+    if status is None:  # finished — let scores decide tied vs completed
+        if away_score is not None and home_score is not None:
+            status = "tied" if away_score == home_score else "completed"
         else:
-            status = "completed"
-    else:
-        if any(k in text for k in ("취소", "우천", "노게임")):
-            status = "cancelled"
-        elif "연기" in text:
-            status = "postponed"
+            status = "scheduled"
+    elif status == "scheduled" and away_score is not None and home_score is not None:
+        # API sometimes lags on the status flag while scores are present.
+        status = "tied" if away_score == home_score else "completed"
 
-    stadium = None
-    # Stadium often appears as a small label; try common class names.
-    st_el = cell.find(class_=re.compile(r"(stadium|place|loc)"))
-    if st_el:
-        stadium = st_el.get_text(strip=True) or None
+    stadium = raw.get("stadium") or None
 
-    away_code = to_code(away_name)
-    home_code = to_code(home_name)
     game_id = f"{date_str}-{away_code}-{home_code}"
-
     return Game(
         id=game_id,
         date=date_str,
@@ -161,52 +161,23 @@ def _parse_one_game(cell, year: int, date_str: str) -> Game | None:
     )
 
 
-def parse_month_html(html: str, year: int, month: int) -> list[Game]:
-    soup = BeautifulSoup(html, "html.parser")
-
-    games: list[Game] = []
-    # Statiz renders a calendar table; each <td> holds a day.
-    for td in soup.select("table td"):
-        # Day number is the first numeric token in the cell.
-        day_el = td.find(class_=re.compile(r"(day|date)")) or td
-        day_text = day_el.get_text(" ", strip=True)
-        m = re.search(r"\b(\d{1,2})\b", day_text)
-        if not m:
-            continue
-        day = int(m.group(1))
-        if not (1 <= day <= 31):
-            continue
-        date_str = f"{year:04d}-{month:02d}-{day:02d}"
-
-        # Each game block typically lives inside an <a> within the cell.
-        game_links = td.find_all("a") or [td]
-        for link in game_links:
-            try:
-                g = _parse_one_game(link, year, date_str)
-            except ValueError:
-                # Unknown team name — skip rather than crash on a single row.
-                continue
-            if g is not None:
-                games.append(g)
-
-    return games
-
-
 def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
-    all_games: list[Game] = []
-    seen_ids: set[str] = set()
+    seen: set[str] = set()
+    out: list[Game] = []
     for month in months:
-        print(f"  fetching {year}-{month:02d} ...", file=sys.stderr)
-        html = fetch_month(year, month)
-        games = parse_month_html(html, year, month)
-        for g in games:
-            if g.id in seen_ids:
-                continue
-            seen_ids.add(g.id)
-            all_games.append(g)
-        time.sleep(0.5)
-    all_games.sort(key=lambda g: (g.date, g.awayTeam))
-    return all_games
+        first = dt.date(year, month, 1)
+        last_day = calendar.monthrange(year, month)[1]
+        last = dt.date(year, month, last_day)
+        print(f"  fetching {first}..{last} ...", file=sys.stderr)
+        raws = fetch_range(first.isoformat(), last.isoformat())
+        for r in raws:
+            g = _normalize_game(r)
+            if g and g.id not in seen:
+                seen.add(g.id)
+                out.append(g)
+        time.sleep(0.3)
+    out.sort(key=lambda g: (g.date, g.awayTeam))
+    return out
 
 
 def write_season(year: int, games: list[Game]) -> Path:
