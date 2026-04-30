@@ -75,52 +75,72 @@ jobs:
           import json, glob, os
           rows = ["# KBO 스크래핑 결과 요약", ""]
           rows += [f"_생성 시각 (UTC): {os.environ.get('GITHUB_RUN_STARTED_AT','-')}_  ", ""]
-          rows += ["| 시즌 | 총 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 |",
+          rows += ["사용자 선택: **정규시즌 + 포스트시즌만 합산** (시범경기는 별도 표시)", ""]
+          rows += ["## 시즌별 요약 (정규+포스트시즌)", ""]
+          rows += ["| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 |",
                    "|---|---|---|---|---|---|---|"]
-          total = 0
+          total_main = 0
+          total_pre = 0
+          per_season = []
           for f in sorted(glob.glob("data/seasons/*.json")):
               with open(f, encoding="utf-8") as fp:
                   payload = json.load(fp)
               g = payload["games"]
-              status_counts = {"completed":0,"tied":0,"cancelled":0,"postponed":0,"scheduled":0}
-              for x in g:
-                  status_counts[x.get("status","scheduled")] = status_counts.get(x.get("status","scheduled"),0)+1
               year = payload["year"]
-              rows.append(f"| {year} | **{len(g)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['scheduled']} |")
-              total += len(g)
-          rows += ["", f"**총 {total} 경기**", ""]
-          rows += ["## 샘플 (각 시즌 첫 경기)", ""]
-          for f in sorted(glob.glob("data/seasons/*.json")):
-              with open(f, encoding="utf-8") as fp:
-                  payload = json.load(fp)
-              g = payload["games"]
-              if not g:
-                  rows.append(f"- {payload['year']}: (경기 없음)")
+              # 카테고리별로 분리
+              by_cat = {"regular":[],"postseason":[],"preseason":[],"unknown":[]}
+              for x in g:
+                  by_cat.setdefault(x.get("category","unknown"), []).append(x)
+              main = by_cat["regular"] + by_cat["postseason"] + by_cat["unknown"]
+              pre = by_cat["preseason"]
+              status_counts = {"completed":0,"tied":0,"cancelled":0,"postponed":0,"scheduled":0}
+              for x in main:
+                  status_counts[x.get("status","scheduled")] = status_counts.get(x.get("status","scheduled"),0)+1
+              rows.append(f"| {year} | **{len(main)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['scheduled']} |")
+              total_main += len(main)
+              total_pre += len(pre)
+              per_season.append((year, by_cat))
+          rows += ["", f"**합산 총 {total_main} 경기** / 시범경기는 별도 {total_pre} 경기 (제외됨)", ""]
+          rows += ["## 카테고리 분포", ""]
+          rows += ["| 시즌 | 정규 | 포스트 | 시범 | 미상 |", "|---|---|---|---|---|"]
+          for year, by_cat in per_season:
+              rows.append(f"| {year} | {len(by_cat['regular'])} | {len(by_cat['postseason'])} | {len(by_cat['preseason'])} | {len(by_cat['unknown'])} |")
+          rows += ["", "## 샘플 (각 시즌 정규시즌 첫 경기)", ""]
+          for year, by_cat in per_season:
+              regs = by_cat["regular"]
+              if not regs:
+                  rows.append(f"- {year}: (정규시즌 경기 없음)")
                   continue
-              first = g[0]
-              rows.append(f"- {payload['year']}: `{first['date']}` {first['awayTeam']} {first.get('awayScore','-')}:{first.get('homeScore','-')} {first['homeTeam']} ({first['status']})")
-          # 모든 시즌이 0이면 진단 정보 추가.
-          if total == 0:
+              first = regs[0]
+              rows.append(f"- {year}: `{first['date']}` {first['awayTeam']} {first.get('awayScore','-')}:{first.get('homeScore','-')} {first['homeTeam']} ({first['status']}, {first.get('category')})")
+
+          # 진단: statusCode 분포 + 카테고리 후보 필드 분포 (항상 표시)
+          dbg_path = "data/_debug_naver.json"
+          if os.path.exists(dbg_path):
+              with open(dbg_path, encoding="utf-8") as fp:
+                  diag = json.load(fp)
               rows += ["", "## API 응답 진단", ""]
-              dbg_path = "data/_debug_naver.json"
-              if os.path.exists(dbg_path):
-                  with open(dbg_path, encoding="utf-8") as fp:
-                      diag = json.load(fp)
-                  rows.append(f"- top-level keys: `{diag.get('topLevelKeys')}`")
-                  rows.append(f"- result keys: `{diag.get('resultKeys')}`")
-                  rows.append(f"- extracted game count: `{diag.get('extractedGameCount')}`")
-                  rows.append(f"- first game keys: `{diag.get('firstGameKeys')}`")
-                  fg = diag.get("firstGame")
-                  if fg:
-                      rows += ["", "첫 게임 raw:", "", "```json"]
-                      rows.append(json.dumps(fg, ensure_ascii=False, indent=2)[:2000])
-                      rows.append("```")
+              sc = diag.get("statusCodeCounts") or {}
+              rows.append("**statusCode 분포:**")
+              for k, v in sc.items():
+                  rows.append(f"  - `{k}`: {v}")
+              cf = diag.get("categoryFieldValues") or {}
+              if cf:
+                  rows += ["", "**카테고리 후보 필드에서 발견된 값:**"]
+                  for field, vals in cf.items():
+                      rows.append(f"  - `{field}`:")
+                      for k, v in list(vals.items())[:8]:
+                          rows.append(f"    - `{k}`: {v}")
               else:
-                  rows.append("(디버그 dump 파일 없음 — fetch 전에 죽은 듯)")
+                  rows += ["", "**카테고리 후보 필드:** 응답에 매칭되는 필드 없음 → 날짜 휴리스틱으로 분류됨"]
+              fg = diag.get("firstGame")
+              if fg:
+                  rows += ["", "<details><summary>첫 게임 raw JSON</summary>", "", "```json",
+                           json.dumps(fg, ensure_ascii=False, indent=2)[:3000],
+                           "```", "</details>"]
           os.makedirs("data", exist_ok=True)
           with open("data/_summary.md", "w", encoding="utf-8") as fp:
               fp.write("\n".join(rows) + "\n")
-          # GitHub Step Summary에도 동일 내용 출력
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fp:
               fp.write("\n".join(rows) + "\n")
           PY
@@ -129,7 +149,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/seasons/ data/_summary.md
           if git diff --staged --quiet; then
             echo "No data changes."
           else

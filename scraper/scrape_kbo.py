@@ -66,6 +66,7 @@ class Game:
     homeScore: int | None
     status: str
     stadium: str | None
+    category: str  # "regular" | "preseason" | "postseason" | "unknown"
 
 
 def fetch_range(from_date: str, to_date: str, retries: int = 3) -> dict:
@@ -143,22 +144,68 @@ def _extract_games(payload: dict) -> list[dict]:
     return [g for g in candidates if isinstance(g, dict)]
 
 
-# Naver status codes seen in practice. Anything not listed falls through
-# to a score-based heuristic.
-_STATUS_MAP = {
-    "RESULT": None,           # could be completed or tied — decided by scores
-    "RESULT_FINAL": None,
-    "FINAL": None,
-    "END": None,
-    "CANCEL": "cancelled",
-    "CANCEL_GAME": "cancelled",
-    "POSTPONE": "postponed",
-    "PPD": "postponed",
-    "BEFORE": "scheduled",
-    "READY": "scheduled",
-    "STARTED": "scheduled",
-    "LIVE": "scheduled",
-}
+_FINISHED_STATUS_CODES = {"RESULT", "RESULT_FINAL", "FINAL", "END", "FINISHED"}
+_CANCELLED_STATUS_CODES = {"CANCEL", "CANCEL_GAME", "CANCELED"}
+_POSTPONED_STATUS_CODES = {"POSTPONE", "POSTPONED", "PPD", "DELAY"}
+# Anything else (BEFORE, READY, STARTED, LIVE, blank, ...) is treated as
+# scheduled — even if 0:0 happens to be in the response. This avoids the
+# nasty bug where future games with a default 0:0 score get mislabeled
+# as ties.
+
+# Candidate fields that have appeared in Naver-style sports payloads to
+# distinguish 시범경기 / 정규시즌 / 포스트시즌. We probe each in order
+# and the first non-empty value wins.
+_CATEGORY_FIELDS = (
+    "gameKindCode", "gameKindName", "gameKind",
+    "seriesType", "seriesCode", "seriesName",
+    "seasonCode", "seasonType", "seasonName",
+    "leagueInfo.code", "leagueInfo.name", "leagueInfo.seriesType",
+    "category",
+)
+
+# Tokens we look for inside the candidate value to bucket it.
+_PRESEASON_TOKENS = ("PRE", "시범", "EXHIB", "EX", "SPRING")
+_POSTSEASON_TOKENS = (
+    "POST", "PO", "PLAYOFF", "WC", "WILD",          # 포스트시즌 일반
+    "SEMI", "준플", "와일드",                        # 한국식 표현
+    "KS", "KOREAN_SERIES", "KOREANSERIES", "한국시리즈",
+    "FINAL_SERIES", "CHAMPIONSHIP",
+)
+_REGULAR_TOKENS = ("REG", "정규", "REGULAR", "SEASON")
+
+
+def _classify_category(raw: dict, date_str: str) -> str:
+    """Return 'regular' / 'preseason' / 'postseason' / 'unknown'.
+
+    Tries to read a category-bearing field from the payload first; falls
+    back to a date-based heuristic (시범경기 ≈ 3월 초~중순,
+    포스트시즌 ≈ 10월 후반~11월) when no field matches.
+    """
+    for field in _CATEGORY_FIELDS:
+        v = _pluck(raw, field)
+        if v is None:
+            continue
+        s = str(v).upper()
+        if any(tok in s for tok in (t.upper() for t in _PRESEASON_TOKENS)):
+            return "preseason"
+        if any(tok in s for tok in (t.upper() for t in _POSTSEASON_TOKENS)):
+            return "postseason"
+        if any(tok in s for tok in (t.upper() for t in _REGULAR_TOKENS)):
+            return "regular"
+
+    # Date-based fallback. KBO 시범경기는 보통 3/초~3/24 사이,
+    # 정규시즌 개막은 3/말~4/초, 포스트시즌은 10월 말~11월 초.
+    try:
+        y, m, d = (int(x) for x in date_str.split("-"))
+    except Exception:
+        return "unknown"
+    if m == 3 and d <= 24:
+        return "preseason"
+    if (m == 10 and d >= 22) or m >= 11:
+        return "postseason"
+    if 3 <= m <= 10:
+        return "regular"
+    return "unknown"
 
 
 def _coerce_score(v) -> int | None:
@@ -212,20 +259,26 @@ def _normalize_game(raw: dict) -> Game | None:
     away_score = _coerce_score(_pluck(raw, "awayTeamScore", "awayTeam.score", "away.score"))
     home_score = _coerce_score(_pluck(raw, "homeTeamScore", "homeTeam.score", "home.score"))
 
-    status_code = (raw.get("statusCode") or "").upper()
-    status = _STATUS_MAP.get(status_code, "scheduled")
-    if status is None:  # finished — let scores decide tied vs completed
+    status_code = (raw.get("statusCode") or "").upper().strip()
+    if status_code in _CANCELLED_STATUS_CODES:
+        status = "cancelled"
+    elif status_code in _POSTPONED_STATUS_CODES:
+        status = "postponed"
+    elif status_code in _FINISHED_STATUS_CODES:
         if away_score is not None and home_score is not None:
             status = "tied" if away_score == home_score else "completed"
         else:
             status = "scheduled"
-    elif status == "scheduled" and away_score is not None and home_score is not None:
-        # API sometimes lags on the status flag while scores are present.
-        status = "tied" if away_score == home_score else "completed"
+    else:
+        # BEFORE / READY / LIVE / 알 수 없는 코드 — 점수 0:0이 들어와도
+        # 미래 경기를 무승부로 오분류하지 않도록 무조건 scheduled.
+        status = "scheduled"
 
     stadium = _pluck(raw, "stadium", "place", "ballpark") or None
     if stadium is not None:
         stadium = str(stadium)
+
+    category = _classify_category(raw, date_str)
 
     game_id = f"{date_str}-{away_code}-{home_code}"
     return Game(
@@ -237,34 +290,73 @@ def _normalize_game(raw: dict) -> Game | None:
         homeScore=home_score,
         status=status,
         stadium=stadium,
+        category=category,
     )
 
 
-_debug_saved = False
+_debug_state = {
+    "first_payload_seen": False,
+    "status_counts": {},
+    "category_field_values": {f: {} for f in _CATEGORY_FIELDS},
+    "first_game": None,
+    "first_payload_top_keys": None,
+    "first_payload_result_keys": None,
+}
 
 
-def _save_debug(payload: dict, raws: list[dict]) -> None:
-    """Write a compact diagnostics file for the first month of the first year."""
-    global _debug_saved
-    if _debug_saved:
-        return
+def _record_debug(payload: dict, raws: list[dict]) -> None:
+    if not _debug_state["first_payload_seen"]:
+        _debug_state["first_payload_top_keys"] = (
+            list(payload.keys()) if isinstance(payload, dict) else None
+        )
+        _debug_state["first_payload_result_keys"] = (
+            list(payload["result"].keys())
+            if isinstance(payload, dict) and isinstance(payload.get("result"), dict)
+            else None
+        )
+        if raws:
+            _debug_state["first_game"] = raws[0]
+        _debug_state["first_payload_seen"] = True
+
+    for r in raws:
+        sc = (r.get("statusCode") or "").upper().strip() or "(empty)"
+        _debug_state["status_counts"][sc] = _debug_state["status_counts"].get(sc, 0) + 1
+        for field in _CATEGORY_FIELDS:
+            v = _pluck(r, field)
+            if v is None:
+                continue
+            key = str(v)
+            bucket = _debug_state["category_field_values"][field]
+            bucket[key] = bucket.get(key, 0) + 1
+
+
+def _flush_debug() -> None:
     try:
         DEBUG_DUMP_PATH.parent.mkdir(parents=True, exist_ok=True)
         diag = {
-            "topLevelKeys": list(payload.keys()) if isinstance(payload, dict) else None,
-            "resultKeys": (
-                list(payload["result"].keys())
-                if isinstance(payload, dict) and isinstance(payload.get("result"), dict)
+            "topLevelKeys": _debug_state["first_payload_top_keys"],
+            "resultKeys": _debug_state["first_payload_result_keys"],
+            "firstGame": _debug_state["first_game"],
+            "firstGameKeys": (
+                sorted(_debug_state["first_game"].keys())
+                if _debug_state["first_game"]
                 else None
             ),
-            "extractedGameCount": len(raws),
-            "firstGame": raws[0] if raws else None,
-            "firstGameKeys": sorted(raws[0].keys()) if raws else None,
+            "statusCodeCounts": dict(
+                sorted(
+                    _debug_state["status_counts"].items(),
+                    key=lambda kv: -kv[1],
+                )
+            ),
+            "categoryFieldValues": {
+                f: dict(sorted(vals.items(), key=lambda kv: -kv[1]))
+                for f, vals in _debug_state["category_field_values"].items()
+                if vals
+            },
         }
         DEBUG_DUMP_PATH.write_text(
             json.dumps(diag, ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        _debug_saved = True
     except Exception as e:
         print(f"  (debug dump failed: {e})", file=sys.stderr)
 
@@ -279,7 +371,7 @@ def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
         print(f"  fetching {first}..{last} ...", file=sys.stderr)
         payload = fetch_range(first.isoformat(), last.isoformat())
         raws = _extract_games(payload)
-        _save_debug(payload, raws)
+        _record_debug(payload, raws)
         kept = 0
         for r in raws:
             g = _normalize_game(r)
@@ -329,6 +421,7 @@ def main() -> int:
         out = write_season(y, games)
         print(f"  wrote {len(games)} games -> {out}", file=sys.stderr)
 
+    _flush_debug()
     return 0
 
 
