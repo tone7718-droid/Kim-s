@@ -30,6 +30,7 @@ import argparse
 import calendar
 import datetime as dt
 import json
+import os
 import sys
 import time
 from dataclasses import dataclass, asdict
@@ -42,6 +43,7 @@ from teams import normalize_code
 
 API_URL = "https://api-gw.sports.naver.com/schedule/games"
 DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "seasons"
+DEBUG_DUMP_PATH = Path(os.environ.get("KBO_DEBUG_DUMP", "/tmp/kbo_debug_response.json"))
 
 HEADERS = {
     "User-Agent": (
@@ -66,8 +68,12 @@ class Game:
     stadium: str | None
 
 
-def fetch_range(from_date: str, to_date: str, retries: int = 3) -> list[dict]:
-    """Fetch a date-range of KBO games from Naver Sports."""
+def fetch_range(from_date: str, to_date: str, retries: int = 3) -> dict:
+    """Fetch a date-range of KBO games from Naver Sports.
+
+    Returns the full JSON payload (caller extracts the games list) so the
+    first response can be inspected for diagnostics.
+    """
     params = {
         "fields": "basic,baseballHome,baseballAway,statusInfo,leagueInfo",
         "upperCategoryId": "kbaseball",
@@ -80,13 +86,61 @@ def fetch_range(from_date: str, to_date: str, retries: int = 3) -> list[dict]:
     for attempt in range(retries):
         try:
             r = requests.get(API_URL, headers=HEADERS, params=params, timeout=20)
+            print(f"    HTTP {r.status_code}, {len(r.content)} bytes", file=sys.stderr)
             r.raise_for_status()
-            payload = r.json()
-            return payload.get("result", {}).get("games", []) or []
+            try:
+                return r.json()
+            except Exception as je:
+                # Save raw text for inspection if JSON parse fails.
+                DEBUG_DUMP_PATH.parent.mkdir(parents=True, exist_ok=True)
+                DEBUG_DUMP_PATH.write_text(r.text[:200_000], encoding="utf-8")
+                raise RuntimeError(
+                    f"JSON parse failed; raw saved to {DEBUG_DUMP_PATH}"
+                ) from je
         except Exception as e:
             last_err = e
             time.sleep(2 ** attempt)
     raise RuntimeError(f"Failed to fetch {from_date}..{to_date}: {last_err}")
+
+
+def _extract_games(payload: dict) -> list[dict]:
+    """Pull a list of game records out of the payload.
+
+    Naver wraps the data in `result.games` in the schedule endpoint, but we
+    accept a few likely alternatives so a small wrapper change doesn't make
+    every season silently empty.
+    """
+    if not isinstance(payload, dict):
+        return []
+    candidates: list = []
+    result = payload.get("result")
+    if isinstance(result, dict):
+        for key in ("games", "gameList", "scheduleList", "items"):
+            v = result.get(key)
+            if isinstance(v, list):
+                candidates = v
+                break
+        if not candidates:
+            # Some Naver endpoints return result.dates -> list of {games: [...]}
+            for key in ("dates", "groups"):
+                v = result.get(key)
+                if isinstance(v, list):
+                    flat: list = []
+                    for entry in v:
+                        if isinstance(entry, dict):
+                            inner = entry.get("games") or entry.get("gameList")
+                            if isinstance(inner, list):
+                                flat.extend(inner)
+                    if flat:
+                        candidates = flat
+                        break
+    if not candidates:
+        for key in ("games", "gameList", "scheduleList"):
+            v = payload.get(key)
+            if isinstance(v, list):
+                candidates = v
+                break
+    return [g for g in candidates if isinstance(g, dict)]
 
 
 # Naver status codes seen in practice. Anything not listed falls through
@@ -115,25 +169,48 @@ def _coerce_score(v) -> int | None:
     return None
 
 
-def _normalize_game(raw: dict) -> Game | None:
-    game_date_raw = raw.get("gameDate") or ""
-    if len(game_date_raw) != 8 or not game_date_raw.isdigit():
-        return None
-    date_str = f"{game_date_raw[0:4]}-{game_date_raw[4:6]}-{game_date_raw[6:8]}"
+def _pluck(d: dict, *keys: str):
+    """Find the first non-empty value among nested dot-paths."""
+    for key in keys:
+        node: object = d
+        ok = True
+        for part in key.split("."):
+            if isinstance(node, dict) and part in node:
+                node = node[part]
+            else:
+                ok = False
+                break
+        if ok and node not in (None, ""):
+            return node
+    return None
 
-    away_code = (
-        normalize_code(raw.get("awayTeamCode") or "")
-        or normalize_code(raw.get("awayTeamName") or "")
+
+def _normalize_game(raw: dict) -> Game | None:
+    game_date_raw = _pluck(raw, "gameDate", "gmkey", "date") or ""
+    if isinstance(game_date_raw, (int, float)):
+        game_date_raw = str(int(game_date_raw))
+    game_date_raw = str(game_date_raw)
+    # Accept YYYY-MM-DD or YYYYMMDD or ISO datetimes.
+    digits = "".join(c for c in game_date_raw if c.isdigit())[:8]
+    if len(digits) != 8:
+        return None
+    date_str = f"{digits[0:4]}-{digits[4:6]}-{digits[6:8]}"
+
+    away_raw = (
+        _pluck(raw, "awayTeamCode", "awayTeam.code", "away.code", "awayTeamName", "awayTeam.name")
+        or ""
     )
-    home_code = (
-        normalize_code(raw.get("homeTeamCode") or "")
-        or normalize_code(raw.get("homeTeamName") or "")
+    home_raw = (
+        _pluck(raw, "homeTeamCode", "homeTeam.code", "home.code", "homeTeamName", "homeTeam.name")
+        or ""
     )
+    away_code = normalize_code(str(away_raw))
+    home_code = normalize_code(str(home_raw))
     if not away_code or not home_code:
         return None
 
-    away_score = _coerce_score(raw.get("awayTeamScore"))
-    home_score = _coerce_score(raw.get("homeTeamScore"))
+    away_score = _coerce_score(_pluck(raw, "awayTeamScore", "awayTeam.score", "away.score"))
+    home_score = _coerce_score(_pluck(raw, "homeTeamScore", "homeTeam.score", "home.score"))
 
     status_code = (raw.get("statusCode") or "").upper()
     status = _STATUS_MAP.get(status_code, "scheduled")
@@ -146,7 +223,9 @@ def _normalize_game(raw: dict) -> Game | None:
         # API sometimes lags on the status flag while scores are present.
         status = "tied" if away_score == home_score else "completed"
 
-    stadium = raw.get("stadium") or None
+    stadium = _pluck(raw, "stadium", "place", "ballpark") or None
+    if stadium is not None:
+        stadium = str(stadium)
 
     game_id = f"{date_str}-{away_code}-{home_code}"
     return Game(
@@ -161,6 +240,35 @@ def _normalize_game(raw: dict) -> Game | None:
     )
 
 
+_debug_saved = False
+
+
+def _save_debug(payload: dict, raws: list[dict]) -> None:
+    """Write a compact diagnostics file for the first month of the first year."""
+    global _debug_saved
+    if _debug_saved:
+        return
+    try:
+        DEBUG_DUMP_PATH.parent.mkdir(parents=True, exist_ok=True)
+        diag = {
+            "topLevelKeys": list(payload.keys()) if isinstance(payload, dict) else None,
+            "resultKeys": (
+                list(payload["result"].keys())
+                if isinstance(payload, dict) and isinstance(payload.get("result"), dict)
+                else None
+            ),
+            "extractedGameCount": len(raws),
+            "firstGame": raws[0] if raws else None,
+            "firstGameKeys": sorted(raws[0].keys()) if raws else None,
+        }
+        DEBUG_DUMP_PATH.write_text(
+            json.dumps(diag, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        _debug_saved = True
+    except Exception as e:
+        print(f"  (debug dump failed: {e})", file=sys.stderr)
+
+
 def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
     seen: set[str] = set()
     out: list[Game] = []
@@ -169,12 +277,17 @@ def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
         last_day = calendar.monthrange(year, month)[1]
         last = dt.date(year, month, last_day)
         print(f"  fetching {first}..{last} ...", file=sys.stderr)
-        raws = fetch_range(first.isoformat(), last.isoformat())
+        payload = fetch_range(first.isoformat(), last.isoformat())
+        raws = _extract_games(payload)
+        _save_debug(payload, raws)
+        kept = 0
         for r in raws:
             g = _normalize_game(r)
             if g and g.id not in seen:
                 seen.add(g.id)
                 out.append(g)
+                kept += 1
+        print(f"    -> {len(raws)} raw, {kept} kept", file=sys.stderr)
         time.sleep(0.3)
     out.sort(key=lambda g: (g.date, g.awayTeam))
     return out
