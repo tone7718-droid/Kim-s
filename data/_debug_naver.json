@@ -1,0 +1,54 @@
+{
+  "topLevelKeys": [
+    "code",
+    "success",
+    "result"
+  ],
+  "resultKeys": [
+    "games",
+    "gameTotalCount"
+  ],
+  "extractedGameCount": 35,
+  "firstGame": {
+    "gameId": "20210321HTSS02021",
+    "categoryId": "kbo",
+    "gameDate": "2021-03-21",
+    "gameDateTime": "2021-03-21T13:00:00",
+    "homeTeamCode": "SS",
+    "homeTeamName": "삼성",
+    "homeTeamScore": 10,
+    "awayTeamCode": "HT",
+    "awayTeamName": "KIA",
+    "awayTeamScore": 7,
+    "winner": "HOME",
+    "statusCode": "RESULT",
+    "statusInfo": "9회초",
+    "cancel": false,
+    "suspended": false,
+    "reversedHomeAway": true,
+    "homeTeamEmblemUrl": "https://sports-phinf.pstatic.net/team/kbo/default/SS.png",
+    "awayTeamEmblemUrl": "https://sports-phinf.pstatic.net/team/kbo/default/HT.png",
+    "widgetEnable": false
+  },
+  "firstGameKeys": [
+    "awayTeamCode",
+    "awayTeamEmblemUrl",
+    "awayTeamName",
+    "awayTeamScore",
+    "cancel",
+    "categoryId",
+    "gameDate",
+    "gameDateTime",
+    "gameId",
+    "homeTeamCode",
+    "homeTeamEmblemUrl",
+    "homeTeamName",
+    "homeTeamScore",
+    "reversedHomeAway",
+    "statusCode",
+    "statusInfo",
+    "suspended",
+    "widgetEnable",
+    "winner"
+  ]
+}
