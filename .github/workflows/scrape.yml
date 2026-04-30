@@ -1,6 +1,14 @@
 name: Scrape KBO schedules
 
 on:
+  # 워크플로 또는 스크래퍼 코드가 바뀌면 자동 실행 (data/ 변경은 무시 — 무한 루프 방지)
+  push:
+    branches:
+      - main
+      - claude/**
+    paths:
+      - 'scraper/**'
+      - '.github/workflows/scrape.yml'
   schedule:
     # 매일 09:00 KST (= 00:00 UTC) — 전날 경기 결과 반영
     - cron: '0 0 * * *'
@@ -59,20 +67,49 @@ jobs:
         working-directory: scraper
         run: python scrape_kbo.py ${{ steps.args.outputs.scope }}
 
-      - name: Show output summary
+      - name: Build human-readable summary
         run: |
-          echo "## Scrape result" >> "$GITHUB_STEP_SUMMARY"
-          for f in data/seasons/*.json; do
-            [ -e "$f" ] || continue
-            count=$(python -c "import json,sys; print(len(json.load(open('$f'))['games']))")
-            echo "- \`$f\`: **$count** games" >> "$GITHUB_STEP_SUMMARY"
-          done
+          python - <<'PY'
+          import json, glob, os
+          rows = ["# KBO 스크래핑 결과 요약", ""]
+          rows += [f"_생성 시각 (UTC): {os.environ.get('GITHUB_RUN_STARTED_AT','-')}_  ", ""]
+          rows += ["| 시즌 | 총 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 |",
+                   "|---|---|---|---|---|---|---|"]
+          total = 0
+          for f in sorted(glob.glob("data/seasons/*.json")):
+              with open(f, encoding="utf-8") as fp:
+                  payload = json.load(fp)
+              g = payload["games"]
+              status_counts = {"completed":0,"tied":0,"cancelled":0,"postponed":0,"scheduled":0}
+              for x in g:
+                  status_counts[x.get("status","scheduled")] = status_counts.get(x.get("status","scheduled"),0)+1
+              year = payload["year"]
+              rows.append(f"| {year} | **{len(g)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['scheduled']} |")
+              total += len(g)
+          rows += ["", f"**총 {total} 경기**", ""]
+          rows += ["## 샘플 (각 시즌 첫 경기)", ""]
+          for f in sorted(glob.glob("data/seasons/*.json")):
+              with open(f, encoding="utf-8") as fp:
+                  payload = json.load(fp)
+              g = payload["games"]
+              if not g:
+                  rows.append(f"- {payload['year']}: (경기 없음 — 셀렉터 확인 필요)")
+                  continue
+              first = g[0]
+              rows.append(f"- {payload['year']}: `{first['date']}` {first['awayTeam']} {first.get('awayScore','-')}:{first.get('homeScore','-')} {first['homeTeam']} ({first['status']})")
+          os.makedirs("data", exist_ok=True)
+          with open("data/_summary.md", "w", encoding="utf-8") as fp:
+              fp.write("\n".join(rows) + "\n")
+          # GitHub Step Summary에도 동일 내용 출력
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fp:
+              fp.write("\n".join(rows) + "\n")
+          PY
 
       - name: Commit & push if data changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/seasons/
+          git add data/
           if git diff --staged --quiet; then
             echo "No data changes."
           else
