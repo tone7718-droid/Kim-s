@@ -1,0 +1,14 @@
+{
+  "name": "내 직관 승률 (KBO)",
+  "short_name": "직관승률",
+  "description": "KBO 직관 경기 승률 자동 계산기",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#18181b",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

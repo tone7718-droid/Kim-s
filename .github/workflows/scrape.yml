@@ -1,0 +1,173 @@
+name: Scrape KBO schedules
+
+on:
+  # 워크플로 또는 스크래퍼 코드가 바뀌면 자동 실행 (data/ 변경은 무시 — 무한 루프 방지)
+  push:
+    branches:
+      - main
+      - claude/**
+    paths:
+      - 'scraper/**'
+      - '.github/workflows/scrape.yml'
+  schedule:
+    # 매일 09:00 KST (= 00:00 UTC) — 전날 경기 결과 반영
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: '단일 시즌만 (예: 2021). 비워두면 2021~현재 시즌 전부.'
+        required: false
+        default: ''
+      month:
+        description: '특정 월만 (예: 4). 비워두면 시즌 전체. 검증/디버깅용.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-kbo
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install deps
+        working-directory: scraper
+        run: pip install -r requirements.txt
+
+      - name: Build CLI args
+        id: args
+        run: |
+          year="${{ github.event.inputs.year }}"
+          month="${{ github.event.inputs.month }}"
+          current_year=$(date -u +'%Y')
+          if [ -n "$year" ]; then
+            scope="--year $year"
+          else
+            scope="--years 2021-$current_year"
+          fi
+          if [ -n "$month" ]; then
+            scope="$scope --month $month"
+          fi
+          echo "scope=$scope" >> "$GITHUB_OUTPUT"
+          echo "Using: $scope"
+
+      - name: Scrape
+        working-directory: scraper
+        env:
+          KBO_DEBUG_DUMP: ${{ github.workspace }}/data/_debug_naver.json
+        run: python scrape_kbo.py ${{ steps.args.outputs.scope }}
+
+      - name: Build human-readable summary
+        run: |
+          python - <<'PY'
+          import json, glob, os
+          rows = ["# KBO 스크래핑 결과 요약", ""]
+          rows += [f"_생성 시각 (UTC): {os.environ.get('GITHUB_RUN_STARTED_AT','-')}_  ", ""]
+          rows += ["사용자 선택: **정규시즌 + 포스트시즌만 합산** (시범경기는 별도 표시)", ""]
+          rows += ["## 시즌별 요약 (정규+포스트시즌)", ""]
+          rows += ["| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 |",
+                   "|---|---|---|---|---|---|---|"]
+          total_main = 0
+          total_pre = 0
+          per_season = []
+          for f in sorted(glob.glob("data/seasons/*.json")):
+              with open(f, encoding="utf-8") as fp:
+                  payload = json.load(fp)
+              g = payload["games"]
+              year = payload["year"]
+              # 카테고리별로 분리
+              by_cat = {"regular":[],"postseason":[],"preseason":[],"unknown":[]}
+              for x in g:
+                  by_cat.setdefault(x.get("category","unknown"), []).append(x)
+              main = by_cat["regular"] + by_cat["postseason"] + by_cat["unknown"]
+              pre = by_cat["preseason"]
+              status_counts = {"completed":0,"tied":0,"cancelled":0,"postponed":0,"scheduled":0}
+              for x in main:
+                  status_counts[x.get("status","scheduled")] = status_counts.get(x.get("status","scheduled"),0)+1
+              rows.append(f"| {year} | **{len(main)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['scheduled']} |")
+              total_main += len(main)
+              total_pre += len(pre)
+              per_season.append((year, by_cat))
+          rows += ["", f"**합산 총 {total_main} 경기** / 시범경기는 별도 {total_pre} 경기 (제외됨)", ""]
+          rows += ["## 카테고리 분포", ""]
+          rows += ["| 시즌 | 정규 | 포스트 | 시범 | 미상 |", "|---|---|---|---|---|"]
+          for year, by_cat in per_season:
+              rows.append(f"| {year} | {len(by_cat['regular'])} | {len(by_cat['postseason'])} | {len(by_cat['preseason'])} | {len(by_cat['unknown'])} |")
+          rows += ["", "## 샘플 (각 시즌 정규시즌 첫 경기)", ""]
+          for year, by_cat in per_season:
+              regs = by_cat["regular"]
+              if not regs:
+                  rows.append(f"- {year}: (정규시즌 경기 없음)")
+                  continue
+              first = regs[0]
+              rows.append(f"- {year}: `{first['date']}` {first['awayTeam']} {first.get('awayScore','-')}:{first.get('homeScore','-')} {first['homeTeam']} ({first['status']}, {first.get('category')})")
+
+          # 진단: statusCode/statusInfo 분포 + 카테고리 후보 + BEFORE 게임 샘플
+          dbg_path = "data/_debug_naver.json"
+          if os.path.exists(dbg_path):
+              with open(dbg_path, encoding="utf-8") as fp:
+                  diag = json.load(fp)
+              rows += ["", "## API 응답 진단", ""]
+              sc = diag.get("statusCodeCounts") or {}
+              rows.append("**statusCode 분포:**")
+              for k, v in sc.items():
+                  rows.append(f"  - `{k}`: {v}")
+              si = diag.get("statusInfoCounts") or {}
+              if si:
+                  rows += ["", "**statusInfo 분포:**"]
+                  for k, v in list(si.items())[:20]:
+                      rows.append(f"  - `{k}`: {v}")
+              combo = diag.get("statusComboCounts") or {}
+              if combo:
+                  rows += ["", "**statusCode / statusInfo 조합 (상위 20):**"]
+                  for k, v in list(combo.items())[:20]:
+                      rows.append(f"  - `{k}`: {v}")
+              cf = diag.get("categoryFieldValues") or {}
+              if cf:
+                  rows += ["", "**카테고리 후보 필드에서 발견된 값:**"]
+                  for field, vals in cf.items():
+                      rows.append(f"  - `{field}`:")
+                      for k, v in list(vals.items())[:8]:
+                          rows.append(f"    - `{k}`: {v}")
+              else:
+                  rows += ["", "**카테고리 후보 필드:** 응답에 매칭되는 필드 없음 → 날짜 휴리스틱으로 분류됨"]
+              fg = diag.get("firstGame")
+              if fg:
+                  rows += ["", "<details><summary>첫 RESULT 게임 raw JSON</summary>", "", "```json",
+                           json.dumps(fg, ensure_ascii=False, indent=2)[:3000],
+                           "```", "</details>"]
+              fb = diag.get("firstBeforeGame")
+              if fb:
+                  rows += ["", "<details><summary>첫 BEFORE 게임 raw JSON (취소/미진행 구분 단서)</summary>", "", "```json",
+                           json.dumps(fb, ensure_ascii=False, indent=2)[:3000],
+                           "```", "</details>"]
+          os.makedirs("data", exist_ok=True)
+          with open("data/_summary.md", "w", encoding="utf-8") as fp:
+              fp.write("\n".join(rows) + "\n")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fp:
+              fp.write("\n".join(rows) + "\n")
+          PY
+
+      - name: Commit & push if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seasons/ data/_summary.md
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: refresh KBO schedule ($(date -u +'%Y-%m-%d'))"
+            git push
+          fi
