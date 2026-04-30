@@ -1,6 +1,6 @@
 {
   "year": 2023,
-  "generatedAt": "2026-04-30T16:17:09+0000",
+  "generatedAt": "2026-04-30T16:32:12+0000",
   "games": [
     {
       "id": "2023-03-13-KIA-HH",
@@ -460,7 +460,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "preseason"
     },
@@ -471,7 +471,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "preseason"
     },
@@ -493,7 +493,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "preseason"
     },
@@ -561,7 +561,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-25-LG-WO",
@@ -572,7 +572,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-25-NC-KIA",
@@ -583,7 +583,7 @@
       "homeScore": 4,
       "status": "tied",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-25-SS-OB",
@@ -594,7 +594,7 @@
       "homeScore": 3,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-25-SSG-KT",
@@ -605,7 +605,7 @@
       "homeScore": 5,
       "status": "tied",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-26-HH-LT",
@@ -616,7 +616,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-26-LG-WO",
@@ -627,7 +627,7 @@
       "homeScore": 4,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-26-NC-KIA",
@@ -638,7 +638,7 @@
       "homeScore": 4,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-26-SS-OB",
@@ -649,7 +649,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-26-SSG-KT",
@@ -660,7 +660,7 @@
       "homeScore": 4,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-27-HH-SS",
@@ -671,7 +671,7 @@
       "homeScore": 2,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-27-KIA-LT",
@@ -682,7 +682,7 @@
       "homeScore": 6,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-27-NC-KT",
@@ -693,7 +693,7 @@
       "homeScore": 2,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-27-OB-WO",
@@ -704,7 +704,7 @@
       "homeScore": 3,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-27-SSG-LG",
@@ -715,7 +715,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-28-HH-SS",
@@ -726,7 +726,7 @@
       "homeScore": 3,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-28-KIA-LT",
@@ -737,7 +737,7 @@
       "homeScore": 7,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-28-NC-KT",
@@ -748,7 +748,7 @@
       "homeScore": 2,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-28-OB-WO",
@@ -759,7 +759,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-03-28-SSG-LG",
@@ -770,7 +770,7 @@
       "homeScore": 0,
       "status": "completed",
       "stadium": null,
-      "category": "regular"
+      "category": "preseason"
     },
     {
       "id": "2023-04-01-HH-WO",
@@ -900,7 +900,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -944,7 +944,7 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -955,7 +955,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -977,7 +977,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1010,7 +1010,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1032,7 +1032,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1318,7 +1318,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1879,7 +1879,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1912,7 +1912,7 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2143,7 +2143,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2341,7 +2341,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2352,7 +2352,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2374,7 +2374,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2385,7 +2385,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2396,7 +2396,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2407,7 +2407,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2429,7 +2429,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2440,7 +2440,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2451,7 +2451,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2462,7 +2462,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2484,7 +2484,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2517,7 +2517,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -2979,7 +2979,7 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -3023,7 +3023,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -3463,7 +3463,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -3474,7 +3474,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -3518,7 +3518,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -3639,7 +3639,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -3661,7 +3661,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -4794,7 +4794,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -4805,7 +4805,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -4959,7 +4959,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -4970,7 +4970,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -4981,7 +4981,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -4992,7 +4992,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5003,7 +5003,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5179,7 +5179,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5190,7 +5190,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5201,7 +5201,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5355,7 +5355,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5366,7 +5366,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5377,7 +5377,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5509,7 +5509,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5531,7 +5531,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5542,7 +5542,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5553,7 +5553,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5619,7 +5619,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5652,7 +5652,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5751,7 +5751,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5762,7 +5762,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5795,7 +5795,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5806,7 +5806,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -5817,7 +5817,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -6510,7 +6510,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -6609,7 +6609,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -6620,7 +6620,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -6642,7 +6642,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -6653,7 +6653,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7038,7 +7038,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7170,7 +7170,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7181,7 +7181,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7214,7 +7214,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7225,7 +7225,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7236,7 +7236,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7258,7 +7258,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7313,7 +7313,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7489,7 +7489,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7500,7 +7500,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7511,7 +7511,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7522,7 +7522,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7533,7 +7533,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7544,7 +7544,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7555,7 +7555,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7566,7 +7566,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7577,7 +7577,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7698,7 +7698,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7753,7 +7753,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -7830,7 +7830,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8226,7 +8226,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8248,7 +8248,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8259,7 +8259,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8325,7 +8325,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8336,7 +8336,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8347,7 +8347,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8369,7 +8369,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8501,7 +8501,7 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8512,7 +8512,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8523,7 +8523,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8534,7 +8534,7 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8545,7 +8545,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8765,7 +8765,7 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8776,7 +8776,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -8787,7 +8787,7 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },

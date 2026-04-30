@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generatedAt": "2026-04-30T16:17:38+0000",
+  "generatedAt": "2026-04-30T16:32:48+0000",
   "games": [
     {
       "id": "2026-03-12-KT-LT",
@@ -1219,7 +1219,7 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1230,7 +1230,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1241,7 +1241,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1252,7 +1252,7 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1263,7 +1263,7 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1604,7 +1604,7 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1626,7 +1626,7 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
@@ -1637,7 +1637,7 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "scheduled",
+      "status": "cancelled",
       "stadium": null,
       "category": "regular"
     },
