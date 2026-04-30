@@ -1,6 +1,6 @@
 {
   "year": 2021,
-  "generatedAt": "2026-04-30T14:02:47+0000",
+  "generatedAt": "2026-04-30T16:16:50+0000",
   "games": [
     {
       "id": "2021-03-21-KIA-SS",
@@ -10,7 +10,8 @@
       "awayScore": 7,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-21-KT-OB",
@@ -20,7 +21,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-21-LG-HH",
@@ -30,7 +32,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-21-SSG-NC",
@@ -40,7 +43,8 @@
       "awayScore": 3,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-21-WO-LT",
@@ -50,7 +54,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-22-HH-OB",
@@ -60,7 +65,8 @@
       "awayScore": 12,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-22-KIA-NC",
@@ -70,7 +76,8 @@
       "awayScore": 7,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-22-LG-KT",
@@ -80,7 +87,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-22-SSG-LT",
@@ -90,7 +98,8 @@
       "awayScore": 3,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-22-WO-SS",
@@ -100,7 +109,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-23-HH-OB",
@@ -110,7 +120,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-23-KIA-NC",
@@ -120,7 +131,8 @@
       "awayScore": 11,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-23-LG-KT",
@@ -130,7 +142,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-23-SSG-LT",
@@ -140,7 +153,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-23-WO-SS",
@@ -150,7 +164,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2021-03-25-HH-KT",
@@ -160,7 +175,8 @@
       "awayScore": 5,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-25-LG-OB",
@@ -170,7 +186,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-25-LT-KIA",
@@ -180,7 +197,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-25-SS-SSG",
@@ -190,7 +208,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-25-WO-NC",
@@ -200,7 +219,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-26-HH-KT",
@@ -210,7 +230,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-26-LT-KIA",
@@ -220,7 +241,8 @@
       "awayScore": 4,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-26-OB-LG",
@@ -230,7 +252,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-26-SS-SSG",
@@ -240,7 +263,8 @@
       "awayScore": 10,
       "homeScore": 10,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-26-WO-NC",
@@ -250,7 +274,8 @@
       "awayScore": 7,
       "homeScore": 7,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-28-LT-HH",
@@ -260,7 +285,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-28-NC-KT",
@@ -270,7 +296,8 @@
       "awayScore": 3,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-28-SS-LG",
@@ -280,7 +307,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-28-WO-KIA",
@@ -290,7 +318,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-29-SSG-LG",
@@ -300,7 +329,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-30-KT-KIA",
@@ -310,7 +340,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-30-NC-LT",
@@ -320,7 +351,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-30-OB-SS",
@@ -330,7 +362,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-30-SSG-LG",
@@ -340,7 +373,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-03-30-WO-HH",
@@ -350,7 +384,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-03-HH-KT",
@@ -359,8 +394,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-03-KIA-OB",
@@ -369,8 +405,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-03-LG-NC",
@@ -379,8 +416,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-03-LT-SSG",
@@ -389,8 +427,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-03-SS-WO",
@@ -400,7 +439,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-04-HH-KT",
@@ -410,7 +450,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-04-KIA-OB",
@@ -420,7 +461,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-04-LG-NC",
@@ -430,7 +472,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-04-LT-SSG",
@@ -440,7 +483,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-04-SS-WO",
@@ -450,7 +494,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-06-HH-SSG",
@@ -460,7 +505,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-06-KIA-WO",
@@ -470,7 +516,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-06-LG-KT",
@@ -480,7 +527,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-06-LT-NC",
@@ -490,7 +538,8 @@
       "awayScore": 10,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-06-SS-OB",
@@ -500,7 +549,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-07-HH-SSG",
@@ -510,7 +560,8 @@
       "awayScore": 17,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-07-KIA-WO",
@@ -520,7 +571,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-07-LG-KT",
@@ -530,7 +582,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-07-LT-NC",
@@ -540,7 +593,8 @@
       "awayScore": 6,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-07-SS-OB",
@@ -550,7 +604,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-08-HH-SSG",
@@ -560,7 +615,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-08-KIA-WO",
@@ -570,7 +626,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-08-LG-KT",
@@ -580,7 +637,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-08-LT-NC",
@@ -590,7 +648,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-08-SS-OB",
@@ -600,7 +659,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-09-KT-SS",
@@ -610,7 +670,8 @@
       "awayScore": 5,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-09-NC-KIA",
@@ -620,7 +681,8 @@
       "awayScore": 10,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-09-OB-HH",
@@ -630,7 +692,8 @@
       "awayScore": 0,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-09-SSG-LG",
@@ -640,7 +703,8 @@
       "awayScore": 5,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-09-WO-LT",
@@ -650,7 +714,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-10-KT-SS",
@@ -660,7 +725,8 @@
       "awayScore": 6,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-10-NC-KIA",
@@ -670,7 +736,8 @@
       "awayScore": 9,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-10-OB-HH",
@@ -680,7 +747,8 @@
       "awayScore": 18,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-10-SSG-LG",
@@ -690,7 +758,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-10-WO-LT",
@@ -700,7 +769,8 @@
       "awayScore": 0,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-11-KT-SS",
@@ -710,7 +780,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-11-NC-KIA",
@@ -720,7 +791,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-11-OB-HH",
@@ -730,7 +802,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-11-SSG-LG",
@@ -740,7 +813,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-11-WO-LT",
@@ -750,7 +824,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-13-HH-SS",
@@ -760,7 +835,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-13-KT-OB",
@@ -770,7 +846,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-13-LG-WO",
@@ -780,7 +857,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-13-LT-KIA",
@@ -790,7 +868,8 @@
       "awayScore": 8,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-13-NC-SSG",
@@ -800,7 +879,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-14-HH-SS",
@@ -810,7 +890,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-14-KT-OB",
@@ -820,7 +901,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-14-LG-WO",
@@ -830,7 +912,8 @@
       "awayScore": 13,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-14-LT-KIA",
@@ -840,7 +923,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-14-NC-SSG",
@@ -850,7 +934,8 @@
       "awayScore": 3,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-15-HH-SS",
@@ -860,7 +945,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-15-KT-OB",
@@ -870,7 +956,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-15-LG-WO",
@@ -880,7 +967,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-15-LT-KIA",
@@ -890,7 +978,8 @@
       "awayScore": 5,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-15-NC-SSG",
@@ -900,7 +989,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-16-HH-NC",
@@ -910,7 +1000,8 @@
       "awayScore": 1,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-16-KIA-SSG",
@@ -920,7 +1011,8 @@
       "awayScore": 11,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-16-OB-LG",
@@ -930,7 +1022,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-16-SS-LT",
@@ -940,7 +1033,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-16-WO-KT",
@@ -950,7 +1044,8 @@
       "awayScore": 4,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-17-HH-NC",
@@ -960,7 +1055,8 @@
       "awayScore": 4,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-17-KIA-SSG",
@@ -970,7 +1066,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-17-OB-LG",
@@ -980,7 +1077,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-17-SS-LT",
@@ -990,7 +1088,8 @@
       "awayScore": 12,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-17-WO-KT",
@@ -1000,7 +1099,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-18-HH-NC",
@@ -1010,7 +1110,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-18-KIA-SSG",
@@ -1020,7 +1121,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-18-OB-LG",
@@ -1030,7 +1132,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-18-SS-LT",
@@ -1040,7 +1143,8 @@
       "awayScore": 7,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-18-WO-KT",
@@ -1050,7 +1154,8 @@
       "awayScore": 2,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-20-KIA-LG",
@@ -1060,7 +1165,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-20-KT-NC",
@@ -1070,7 +1176,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-20-OB-LT",
@@ -1080,7 +1187,8 @@
       "awayScore": 5,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-20-SSG-SS",
@@ -1090,7 +1198,8 @@
       "awayScore": 10,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-20-WO-HH",
@@ -1100,7 +1209,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-21-KIA-LG",
@@ -1110,7 +1220,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-21-KT-NC",
@@ -1120,7 +1231,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-21-OB-LT",
@@ -1130,7 +1242,8 @@
       "awayScore": 9,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-21-SSG-SS",
@@ -1140,7 +1253,8 @@
       "awayScore": 4,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-21-WO-HH",
@@ -1150,7 +1264,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-22-KIA-LG",
@@ -1160,7 +1275,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-22-KT-NC",
@@ -1170,7 +1286,8 @@
       "awayScore": 11,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-22-OB-LT",
@@ -1180,7 +1297,8 @@
       "awayScore": 13,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-22-SSG-SS",
@@ -1190,7 +1308,8 @@
       "awayScore": 11,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-22-WO-HH",
@@ -1200,7 +1319,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-23-LG-HH",
@@ -1210,7 +1330,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-23-LT-KT",
@@ -1220,7 +1341,8 @@
       "awayScore": 10,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-23-NC-OB",
@@ -1230,7 +1352,8 @@
       "awayScore": 1,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-23-SS-KIA",
@@ -1240,7 +1363,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-23-SSG-WO",
@@ -1250,7 +1374,8 @@
       "awayScore": 9,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-24-LG-HH",
@@ -1260,7 +1385,8 @@
       "awayScore": 5,
       "homeScore": 19,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-24-LT-KT",
@@ -1270,7 +1396,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-24-NC-OB",
@@ -1280,7 +1407,8 @@
       "awayScore": 6,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-24-SS-KIA",
@@ -1290,7 +1418,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-24-SSG-WO",
@@ -1300,7 +1429,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-25-LG-HH",
@@ -1310,7 +1440,8 @@
       "awayScore": 8,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-25-LT-KT",
@@ -1320,7 +1451,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-25-NC-OB",
@@ -1330,7 +1462,8 @@
       "awayScore": 10,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-25-SS-KIA",
@@ -1340,7 +1473,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-25-SSG-WO",
@@ -1350,7 +1484,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-27-HH-KIA",
@@ -1360,7 +1495,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-27-KT-SSG",
@@ -1370,7 +1506,8 @@
       "awayScore": 14,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-27-LT-LG",
@@ -1380,7 +1517,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-27-NC-SS",
@@ -1390,7 +1528,8 @@
       "awayScore": 0,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-27-OB-WO",
@@ -1400,7 +1539,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-28-HH-KIA",
@@ -1410,7 +1550,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-28-KT-SSG",
@@ -1420,7 +1561,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-28-LT-LG",
@@ -1430,7 +1572,8 @@
       "awayScore": 3,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-28-NC-SS",
@@ -1440,7 +1583,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-28-OB-WO",
@@ -1450,7 +1594,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-29-HH-KIA",
@@ -1460,7 +1605,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-29-KT-SSG",
@@ -1470,7 +1616,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-29-LT-LG",
@@ -1480,7 +1627,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-29-NC-SS",
@@ -1490,7 +1638,8 @@
       "awayScore": 9,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-29-OB-WO",
@@ -1500,7 +1649,8 @@
       "awayScore": 15,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-30-HH-LT",
@@ -1510,7 +1660,8 @@
       "awayScore": 11,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-30-KIA-KT",
@@ -1520,7 +1671,8 @@
       "awayScore": 3,
       "homeScore": 15,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-30-LG-SS",
@@ -1530,7 +1682,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-30-SSG-OB",
@@ -1540,7 +1693,8 @@
       "awayScore": 4,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-04-30-WO-NC",
@@ -1550,7 +1704,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-01-HH-LT",
@@ -1560,7 +1715,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-01-KIA-KT",
@@ -1570,7 +1726,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-01-LG-SS",
@@ -1580,7 +1737,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-01-SSG-OB",
@@ -1590,7 +1748,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-01-WO-NC",
@@ -1600,7 +1759,8 @@
       "awayScore": 13,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-02-HH-LT",
@@ -1610,7 +1770,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-02-KIA-KT",
@@ -1620,7 +1781,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-02-LG-SS",
@@ -1630,7 +1792,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-02-SSG-OB",
@@ -1640,7 +1803,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-02-WO-NC",
@@ -1650,7 +1814,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-04-KIA-LT",
@@ -1659,8 +1824,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-04-KT-WO",
@@ -1669,8 +1835,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-04-LG-OB",
@@ -1679,8 +1846,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-04-SS-HH",
@@ -1689,8 +1857,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-04-SSG-NC",
@@ -1699,8 +1868,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-05-KIA-LT",
@@ -1710,7 +1880,8 @@
       "awayScore": 8,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-05-KT-WO",
@@ -1720,7 +1891,8 @@
       "awayScore": 0,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-05-LG-OB",
@@ -1730,7 +1902,8 @@
       "awayScore": 7,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-05-SS-HH",
@@ -1740,7 +1913,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-05-SSG-NC",
@@ -1750,7 +1924,8 @@
       "awayScore": 13,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-06-KIA-LT",
@@ -1760,7 +1935,8 @@
       "awayScore": 9,
       "homeScore": 17,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-06-KT-WO",
@@ -1770,7 +1946,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-06-LG-OB",
@@ -1780,7 +1957,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-06-SS-HH",
@@ -1790,7 +1968,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-06-SSG-NC",
@@ -1800,7 +1979,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-07-HH-LG",
@@ -1809,8 +1989,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-07-LT-SS",
@@ -1820,7 +2001,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-07-NC-KT",
@@ -1829,8 +2011,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-07-OB-KIA",
@@ -1839,8 +2022,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-07-WO-SSG",
@@ -1849,8 +2033,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-08-HH-LG",
@@ -1859,8 +2044,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-08-LT-SS",
@@ -1870,7 +2056,8 @@
       "awayScore": 9,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-08-NC-KT",
@@ -1879,8 +2066,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-08-OB-KIA",
@@ -1889,8 +2077,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-08-WO-SSG",
@@ -1899,8 +2088,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-09-HH-LG",
@@ -1910,7 +2100,8 @@
       "awayScore": 1,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-09-LT-SS",
@@ -1920,7 +2111,8 @@
       "awayScore": 6,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-09-NC-KT",
@@ -1930,7 +2122,8 @@
       "awayScore": 16,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-09-OB-KIA",
@@ -1940,7 +2133,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-09-WO-SSG",
@@ -1950,7 +2144,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-11-LG-KIA",
@@ -1960,7 +2155,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-11-NC-HH",
@@ -1970,7 +2166,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-11-SS-KT",
@@ -1980,7 +2177,8 @@
       "awayScore": 6,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-11-SSG-LT",
@@ -1990,7 +2188,8 @@
       "awayScore": 7,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-11-WO-OB",
@@ -2000,7 +2199,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-12-LG-KIA",
@@ -2010,7 +2210,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-12-NC-HH",
@@ -2020,7 +2221,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-12-SS-KT",
@@ -2030,7 +2232,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-12-SSG-LT",
@@ -2040,7 +2243,8 @@
       "awayScore": 9,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-12-WO-OB",
@@ -2050,7 +2254,8 @@
       "awayScore": 3,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-13-LG-KIA",
@@ -2060,7 +2265,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-13-NC-HH",
@@ -2070,7 +2276,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-13-SS-KT",
@@ -2080,7 +2287,8 @@
       "awayScore": 4,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-13-SSG-LT",
@@ -2090,7 +2298,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-13-WO-OB",
@@ -2100,7 +2309,8 @@
       "awayScore": 14,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-14-HH-WO",
@@ -2110,7 +2320,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-14-KIA-NC",
@@ -2120,7 +2331,8 @@
       "awayScore": 2,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-14-KT-LT",
@@ -2130,7 +2342,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-14-OB-SSG",
@@ -2140,7 +2353,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-14-SS-LG",
@@ -2150,7 +2364,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-15-HH-WO",
@@ -2160,7 +2375,8 @@
       "awayScore": 1,
       "homeScore": 15,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-15-KIA-NC",
@@ -2170,7 +2386,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-15-KT-LT",
@@ -2180,7 +2397,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-15-OB-SSG",
@@ -2189,8 +2407,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-15-SS-LG",
@@ -2200,7 +2419,8 @@
       "awayScore": 4,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-16-HH-WO",
@@ -2210,7 +2430,8 @@
       "awayScore": 1,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-16-KIA-NC",
@@ -2219,8 +2440,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-16-KT-LT",
@@ -2229,8 +2451,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-16-OB-SSG",
@@ -2239,8 +2462,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-16-SS-LG",
@@ -2249,8 +2473,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-17-KIA-NC",
@@ -2259,8 +2484,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-17-KT-LT",
@@ -2269,8 +2495,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-17-OB-SSG",
@@ -2280,7 +2507,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-17-SS-LG",
@@ -2290,7 +2518,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-18-LT-HH",
@@ -2300,7 +2529,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-18-NC-LG",
@@ -2310,7 +2540,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-18-OB-KT",
@@ -2320,7 +2551,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-18-SSG-KIA",
@@ -2330,7 +2562,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-18-WO-SS",
@@ -2340,7 +2573,8 @@
       "awayScore": 15,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-19-LT-HH",
@@ -2350,7 +2584,8 @@
       "awayScore": 2,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-19-NC-LG",
@@ -2360,7 +2595,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-19-OB-KT",
@@ -2370,7 +2606,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-19-SSG-KIA",
@@ -2380,7 +2617,8 @@
       "awayScore": 11,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-19-WO-SS",
@@ -2390,7 +2628,8 @@
       "awayScore": 9,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-20-LT-HH",
@@ -2399,8 +2638,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-20-NC-LG",
@@ -2410,7 +2650,8 @@
       "awayScore": 11,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-20-OB-KT",
@@ -2419,8 +2660,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-20-SSG-KIA",
@@ -2429,8 +2671,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-20-WO-SS",
@@ -2439,8 +2682,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-21-KIA-SS",
@@ -2450,7 +2694,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-21-KT-HH",
@@ -2460,7 +2705,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-21-LG-SSG",
@@ -2470,7 +2716,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-21-LT-OB",
@@ -2480,7 +2727,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-21-NC-WO",
@@ -2490,7 +2738,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-22-KIA-SS",
@@ -2500,7 +2749,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-22-KT-HH",
@@ -2510,7 +2760,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-22-LG-SSG",
@@ -2520,7 +2771,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-22-LT-OB",
@@ -2530,7 +2782,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-22-NC-WO",
@@ -2540,7 +2793,8 @@
       "awayScore": 6,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-23-KIA-SS",
@@ -2550,7 +2804,8 @@
       "awayScore": 5,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-23-KT-HH",
@@ -2560,7 +2815,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-23-LG-SSG",
@@ -2570,7 +2826,8 @@
       "awayScore": 0,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-23-LT-OB",
@@ -2580,7 +2837,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-23-NC-WO",
@@ -2590,7 +2848,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-25-HH-OB",
@@ -2599,8 +2858,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-25-LG-LT",
@@ -2609,8 +2869,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-25-SS-NC",
@@ -2619,8 +2880,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-25-SSG-KT",
@@ -2629,8 +2891,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-25-WO-KIA",
@@ -2639,8 +2902,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-26-HH-OB",
@@ -2650,7 +2914,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-26-LG-LT",
@@ -2660,7 +2925,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-26-SS-NC",
@@ -2670,7 +2936,8 @@
       "awayScore": 7,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-26-SSG-KT",
@@ -2680,7 +2947,8 @@
       "awayScore": 9,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-26-WO-KIA",
@@ -2690,7 +2958,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-27-HH-OB",
@@ -2700,7 +2969,8 @@
       "awayScore": 3,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-27-LG-LT",
@@ -2710,7 +2980,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-27-SS-NC",
@@ -2720,7 +2991,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-27-SSG-KT",
@@ -2730,7 +3002,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-27-WO-KIA",
@@ -2740,7 +3013,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-28-KT-KIA",
@@ -2750,7 +3024,8 @@
       "awayScore": 6,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-28-NC-LT",
@@ -2759,8 +3034,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-28-OB-SS",
@@ -2770,7 +3046,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-28-SSG-HH",
@@ -2780,7 +3057,8 @@
       "awayScore": 12,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-28-WO-LG",
@@ -2790,7 +3068,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-29-KT-KIA",
@@ -2800,7 +3079,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-29-NC-LT",
@@ -2810,7 +3090,8 @@
       "awayScore": 10,
       "homeScore": 10,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-29-OB-SS",
@@ -2820,7 +3101,8 @@
       "awayScore": 4,
       "homeScore": 16,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-29-SSG-HH",
@@ -2830,7 +3112,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-29-WO-LG",
@@ -2840,7 +3123,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-30-KT-KIA",
@@ -2850,7 +3134,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-30-NC-LT",
@@ -2860,7 +3145,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-30-OB-SS",
@@ -2870,7 +3156,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-30-SSG-HH",
@@ -2880,7 +3167,8 @@
       "awayScore": 5,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-05-30-WO-LG",
@@ -2890,7 +3178,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-01-KIA-HH",
@@ -2900,7 +3189,8 @@
       "awayScore": 1,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-01-KT-LG",
@@ -2910,7 +3200,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-01-LT-WO",
@@ -2920,7 +3211,8 @@
       "awayScore": 3,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-01-OB-NC",
@@ -2930,7 +3222,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-01-SS-SSG",
@@ -2940,7 +3233,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-02-KIA-HH",
@@ -2950,7 +3244,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-02-KT-LG",
@@ -2960,7 +3255,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-02-LT-WO",
@@ -2970,7 +3266,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-02-OB-NC",
@@ -2980,7 +3277,8 @@
       "awayScore": 5,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-02-SS-SSG",
@@ -2990,7 +3288,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-03-KIA-HH",
@@ -2999,8 +3298,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-03-KT-LG",
@@ -3009,8 +3309,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-03-LT-WO",
@@ -3020,7 +3321,8 @@
       "awayScore": 4,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-03-OB-NC",
@@ -3029,8 +3331,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-03-SS-SSG",
@@ -3039,8 +3342,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-04-HH-NC",
@@ -3050,7 +3354,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-04-LG-KIA",
@@ -3060,7 +3365,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-04-LT-KT",
@@ -3070,7 +3376,8 @@
       "awayScore": 15,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-04-SS-WO",
@@ -3080,7 +3387,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-04-SSG-OB",
@@ -3090,7 +3398,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-05-HH-NC",
@@ -3100,7 +3409,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-05-LG-KIA",
@@ -3110,7 +3420,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-05-LT-KT",
@@ -3120,7 +3431,8 @@
       "awayScore": 1,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-05-SS-WO",
@@ -3130,7 +3442,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-05-SSG-OB",
@@ -3140,7 +3453,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-06-HH-NC",
@@ -3150,7 +3464,8 @@
       "awayScore": 13,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-06-LG-KIA",
@@ -3160,7 +3475,8 @@
       "awayScore": 10,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-06-LT-KT",
@@ -3170,7 +3486,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-06-SS-WO",
@@ -3180,7 +3497,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-06-SSG-OB",
@@ -3190,7 +3508,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-08-KIA-SS",
@@ -3200,7 +3519,8 @@
       "awayScore": 0,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-08-KT-SSG",
@@ -3210,7 +3530,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-08-NC-LG",
@@ -3220,7 +3541,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-08-OB-LT",
@@ -3230,7 +3552,8 @@
       "awayScore": 9,
       "homeScore": 18,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-08-WO-HH",
@@ -3240,7 +3563,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-09-KIA-SS",
@@ -3250,7 +3574,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-09-KT-SSG",
@@ -3260,7 +3585,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-09-NC-LG",
@@ -3270,7 +3596,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-09-OB-LT",
@@ -3280,7 +3607,8 @@
       "awayScore": 14,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-09-WO-HH",
@@ -3290,7 +3618,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-10-KIA-SS",
@@ -3300,7 +3629,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-10-KT-SSG",
@@ -3309,8 +3639,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-10-NC-LG",
@@ -3320,7 +3651,8 @@
       "awayScore": 6,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-10-OB-LT",
@@ -3330,7 +3662,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-10-WO-HH",
@@ -3340,7 +3673,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-11-HH-KT",
@@ -3350,7 +3684,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-11-KIA-LT",
@@ -3359,8 +3694,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-11-NC-SS",
@@ -3370,7 +3706,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-11-OB-LG",
@@ -3380,7 +3717,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-11-WO-SSG",
@@ -3390,7 +3728,8 @@
       "awayScore": 6,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-12-HH-KT",
@@ -3400,7 +3739,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-12-KIA-LT",
@@ -3409,8 +3749,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-12-NC-SS",
@@ -3420,7 +3761,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-12-OB-LG",
@@ -3430,7 +3772,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-12-WO-SSG",
@@ -3440,7 +3783,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-13-HH-KT",
@@ -3450,7 +3794,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-13-KIA-LT",
@@ -3460,7 +3805,8 @@
       "awayScore": 6,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-13-NC-SS",
@@ -3470,7 +3816,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-13-OB-LG",
@@ -3480,7 +3827,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-13-WO-SSG",
@@ -3490,7 +3838,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-15-KT-NC",
@@ -3499,8 +3848,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-15-LG-WO",
@@ -3510,7 +3860,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-15-LT-HH",
@@ -3520,7 +3871,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-15-SS-OB",
@@ -3530,7 +3882,8 @@
       "awayScore": 8,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-15-SSG-KIA",
@@ -3539,8 +3892,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-16-KT-NC",
@@ -3550,7 +3904,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-16-LG-WO",
@@ -3560,7 +3915,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-16-LT-HH",
@@ -3570,7 +3926,8 @@
       "awayScore": 4,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-16-SS-OB",
@@ -3580,7 +3937,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-16-SSG-KIA",
@@ -3590,7 +3948,8 @@
       "awayScore": 10,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-17-KT-NC",
@@ -3600,7 +3959,8 @@
       "awayScore": 1,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-17-LG-WO",
@@ -3610,7 +3970,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-17-LT-HH",
@@ -3620,7 +3981,8 @@
       "awayScore": 9,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-17-SS-OB",
@@ -3630,7 +3992,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-17-SSG-KIA",
@@ -3640,7 +4003,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-18-KIA-LG",
@@ -3650,7 +4014,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-18-OB-KT",
@@ -3660,7 +4025,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-18-SS-LT",
@@ -3670,7 +4036,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-18-SSG-HH",
@@ -3680,7 +4047,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-18-WO-NC",
@@ -3690,7 +4058,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-19-KIA-LG",
@@ -3700,7 +4069,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-19-OB-KT",
@@ -3710,7 +4080,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-19-SS-LT",
@@ -3720,7 +4091,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-19-SSG-HH",
@@ -3730,7 +4102,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-19-WO-NC",
@@ -3740,7 +4113,8 @@
       "awayScore": 12,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-20-KIA-LG",
@@ -3750,7 +4124,8 @@
       "awayScore": 0,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-20-OB-KT",
@@ -3760,7 +4135,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-20-SS-LT",
@@ -3770,7 +4146,8 @@
       "awayScore": 7,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-20-SSG-HH",
@@ -3780,7 +4157,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-20-WO-NC",
@@ -3790,7 +4168,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-22-HH-SS",
@@ -3800,7 +4179,8 @@
       "awayScore": 0,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-22-KIA-KT",
@@ -3810,7 +4190,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-22-LG-SSG",
@@ -3820,7 +4201,8 @@
       "awayScore": 14,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-22-NC-LT",
@@ -3830,7 +4212,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-22-WO-OB",
@@ -3840,7 +4223,8 @@
       "awayScore": 3,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-23-HH-SS",
@@ -3850,7 +4234,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-23-KIA-KT",
@@ -3860,7 +4245,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-23-LG-SSG",
@@ -3870,7 +4256,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-23-NC-LT",
@@ -3880,7 +4267,8 @@
       "awayScore": 7,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-23-WO-OB",
@@ -3890,7 +4278,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-24-HH-SS",
@@ -3900,7 +4289,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-24-KIA-KT",
@@ -3910,7 +4300,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-24-LG-SSG",
@@ -3920,7 +4311,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-24-NC-LT",
@@ -3930,7 +4322,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-24-WO-OB",
@@ -3940,7 +4333,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-25-KIA-WO",
@@ -3950,7 +4344,8 @@
       "awayScore": 5,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-25-KT-HH",
@@ -3960,7 +4355,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-25-LG-SS",
@@ -3969,8 +4365,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-25-LT-OB",
@@ -3980,7 +4377,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-25-SSG-NC",
@@ -3990,7 +4388,8 @@
       "awayScore": 10,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-26-KIA-WO",
@@ -4000,7 +4399,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-26-KT-HH",
@@ -4010,7 +4410,8 @@
       "awayScore": 11,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-26-LG-SS",
@@ -4020,7 +4421,8 @@
       "awayScore": 10,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-26-LT-OB",
@@ -4030,7 +4432,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-26-SSG-NC",
@@ -4040,7 +4443,8 @@
       "awayScore": 10,
       "homeScore": 10,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-27-KIA-WO",
@@ -4050,7 +4454,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-27-KT-HH",
@@ -4060,7 +4465,8 @@
       "awayScore": 11,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-27-LG-SS",
@@ -4070,7 +4476,8 @@
       "awayScore": 9,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-27-SSG-NC",
@@ -4080,7 +4487,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-29-KT-LG",
@@ -4089,8 +4497,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-29-LT-WO",
@@ -4100,7 +4509,8 @@
       "awayScore": 13,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-29-NC-KIA",
@@ -4110,7 +4520,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-29-OB-HH",
@@ -4119,8 +4530,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-29-SS-SSG",
@@ -4130,7 +4542,8 @@
       "awayScore": 3,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-30-KT-LG",
@@ -4139,8 +4552,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-30-LT-WO",
@@ -4150,7 +4564,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-30-NC-KIA",
@@ -4159,8 +4574,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-30-OB-HH",
@@ -4170,7 +4586,8 @@
       "awayScore": 8,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-06-30-SS-SSG",
@@ -4180,7 +4597,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-01-KT-LG",
@@ -4190,7 +4608,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-01-LT-WO",
@@ -4200,7 +4619,8 @@
       "awayScore": 1,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-01-NC-KIA",
@@ -4210,7 +4630,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-01-OB-HH",
@@ -4220,7 +4641,8 @@
       "awayScore": 10,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-01-SS-SSG",
@@ -4230,7 +4652,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-02-HH-LG",
@@ -4240,7 +4663,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-02-LT-SSG",
@@ -4250,7 +4674,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-02-OB-KIA",
@@ -4260,7 +4685,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-02-SS-NC",
@@ -4270,7 +4696,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-02-WO-KT",
@@ -4280,7 +4707,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-03-HH-LG",
@@ -4289,8 +4717,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-03-LT-SSG",
@@ -4299,8 +4728,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-03-OB-KIA",
@@ -4309,8 +4739,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-03-SS-NC",
@@ -4319,8 +4750,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-03-WO-KT",
@@ -4329,8 +4761,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-04-HH-LG",
@@ -4340,7 +4773,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-04-LT-SSG",
@@ -4350,7 +4784,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-04-OB-KIA",
@@ -4360,7 +4795,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-04-SS-NC",
@@ -4370,7 +4806,8 @@
       "awayScore": 5,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-04-WO-KT",
@@ -4380,7 +4817,8 @@
       "awayScore": 3,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-05-HH-LG",
@@ -4390,7 +4828,8 @@
       "awayScore": 6,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-05-LT-SSG",
@@ -4400,7 +4839,8 @@
       "awayScore": 4,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-05-OB-KIA",
@@ -4409,8 +4849,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-05-SS-NC",
@@ -4419,8 +4860,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-05-WO-KT",
@@ -4430,7 +4872,8 @@
       "awayScore": 15,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-06-KIA-HH",
@@ -4439,8 +4882,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-06-KT-SS",
@@ -4449,8 +4893,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-06-LG-LT",
@@ -4459,8 +4904,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-06-NC-OB",
@@ -4470,7 +4916,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-06-SSG-WO",
@@ -4480,7 +4927,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-07-KIA-HH",
@@ -4490,7 +4938,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-07-KT-SS",
@@ -4499,8 +4948,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-07-LG-LT",
@@ -4509,8 +4959,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-07-NC-OB",
@@ -4520,7 +4971,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-07-SSG-WO",
@@ -4530,7 +4982,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-08-KIA-HH",
@@ -4539,8 +4992,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-08-KT-SS",
@@ -4550,7 +5004,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-08-LG-LT",
@@ -4559,8 +5014,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-08-NC-OB",
@@ -4569,8 +5025,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-08-SSG-WO",
@@ -4580,7 +5037,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-09-HH-SSG",
@@ -4590,7 +5048,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-09-KT-KIA",
@@ -4600,7 +5059,8 @@
       "awayScore": 4,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-09-LG-OB",
@@ -4609,8 +5069,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-09-LT-SS",
@@ -4620,7 +5081,8 @@
       "awayScore": 9,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-09-NC-WO",
@@ -4629,8 +5091,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-10-HH-SSG",
@@ -4640,7 +5103,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-10-KT-KIA",
@@ -4649,8 +5113,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-10-LG-OB",
@@ -4659,8 +5124,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-10-LT-SS",
@@ -4670,7 +5136,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-10-NC-WO",
@@ -4679,8 +5146,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-11-HH-SSG",
@@ -4690,7 +5158,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-11-KT-KIA",
@@ -4700,7 +5169,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-11-LG-OB",
@@ -4709,8 +5179,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-11-LT-SS",
@@ -4720,7 +5191,8 @@
       "awayScore": 0,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-11-NC-WO",
@@ -4729,8 +5201,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-13-HH-LT",
@@ -4739,8 +5212,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-13-NC-KT",
@@ -4749,8 +5223,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-13-OB-SSG",
@@ -4759,8 +5234,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-13-SS-KIA",
@@ -4769,8 +5245,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-13-WO-LG",
@@ -4779,8 +5256,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-14-HH-LT",
@@ -4789,8 +5267,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-14-NC-KT",
@@ -4799,8 +5278,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-14-OB-SSG",
@@ -4809,8 +5289,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-14-SS-KIA",
@@ -4819,8 +5300,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-14-WO-LG",
@@ -4829,8 +5311,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-15-HH-LT",
@@ -4839,8 +5322,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-15-NC-KT",
@@ -4849,8 +5333,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-15-OB-SSG",
@@ -4859,8 +5344,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-15-SS-KIA",
@@ -4869,8 +5355,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-15-WO-LG",
@@ -4879,8 +5366,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-16-KIA-NC",
@@ -4889,8 +5377,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-16-KT-OB",
@@ -4899,8 +5388,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-16-LG-HH",
@@ -4909,8 +5399,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-16-SSG-LT",
@@ -4919,8 +5410,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-16-WO-SS",
@@ -4929,8 +5421,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-17-KIA-NC",
@@ -4939,8 +5432,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-17-KT-OB",
@@ -4949,8 +5443,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-17-LG-HH",
@@ -4959,8 +5454,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-17-SSG-LT",
@@ -4969,8 +5465,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-17-WO-SS",
@@ -4979,8 +5476,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-18-KIA-NC",
@@ -4989,8 +5487,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-18-KT-OB",
@@ -4999,8 +5498,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-18-LG-HH",
@@ -5009,8 +5509,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-18-SSG-LT",
@@ -5019,8 +5520,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-07-18-WO-SS",
@@ -5029,8 +5531,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-10-HH-KIA",
@@ -5040,7 +5543,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-10-KT-WO",
@@ -5050,7 +5554,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-10-LT-NC",
@@ -5060,7 +5565,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-10-OB-SS",
@@ -5069,8 +5575,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-10-SSG-LG",
@@ -5080,7 +5587,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-11-HH-KIA",
@@ -5090,7 +5598,8 @@
       "awayScore": 7,
       "homeScore": 7,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-11-KT-WO",
@@ -5100,7 +5609,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-11-LT-NC",
@@ -5110,7 +5620,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-11-OB-SS",
@@ -5120,7 +5631,8 @@
       "awayScore": 8,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-11-SSG-LG",
@@ -5130,7 +5642,8 @@
       "awayScore": 5,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-12-HH-KIA",
@@ -5139,8 +5652,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-12-KT-WO",
@@ -5150,7 +5664,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-12-LT-NC",
@@ -5160,7 +5675,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-12-OB-SS",
@@ -5170,7 +5686,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-12-SSG-LG",
@@ -5179,8 +5696,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-13-KIA-SSG",
@@ -5190,7 +5708,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-13-LT-LG",
@@ -5200,7 +5719,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-13-NC-HH",
@@ -5210,7 +5730,8 @@
       "awayScore": 5,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-13-OB-WO",
@@ -5220,7 +5741,8 @@
       "awayScore": 16,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-13-SS-KT",
@@ -5230,7 +5752,8 @@
       "awayScore": 6,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-14-KIA-SSG",
@@ -5240,7 +5763,8 @@
       "awayScore": 2,
       "homeScore": 2,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-14-LT-LG",
@@ -5250,7 +5774,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-14-NC-HH",
@@ -5260,7 +5785,8 @@
       "awayScore": 9,
       "homeScore": 9,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-14-OB-WO",
@@ -5270,7 +5796,8 @@
       "awayScore": 1,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-14-SS-KT",
@@ -5280,7 +5807,8 @@
       "awayScore": 4,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-15-KIA-SSG",
@@ -5290,7 +5818,8 @@
       "awayScore": 5,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-15-LT-LG",
@@ -5300,7 +5829,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-15-NC-HH",
@@ -5310,7 +5840,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-15-OB-WO",
@@ -5320,7 +5851,8 @@
       "awayScore": 1,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-15-SS-KT",
@@ -5330,7 +5862,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-17-KIA-OB",
@@ -5339,8 +5872,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-17-LG-KT",
@@ -5350,7 +5884,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-17-NC-SSG",
@@ -5359,8 +5894,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-17-SS-HH",
@@ -5370,7 +5906,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-17-WO-LT",
@@ -5380,7 +5917,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-18-KIA-OB",
@@ -5390,7 +5928,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-18-LG-KT",
@@ -5400,7 +5939,8 @@
       "awayScore": 1,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-18-NC-SSG",
@@ -5410,7 +5950,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-18-SS-HH",
@@ -5420,7 +5961,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-18-WO-LT",
@@ -5430,7 +5972,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-19-KIA-OB",
@@ -5440,7 +5983,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-19-LG-KT",
@@ -5450,7 +5994,8 @@
       "awayScore": 1,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-19-NC-SSG",
@@ -5460,7 +6005,8 @@
       "awayScore": 8,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-19-SS-HH",
@@ -5470,7 +6016,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-19-WO-LT",
@@ -5479,8 +6026,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-20-HH-OB",
@@ -5490,7 +6038,8 @@
       "awayScore": 1,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-20-KT-LT",
@@ -5500,7 +6049,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-20-LG-NC",
@@ -5510,7 +6060,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-20-SSG-SS",
@@ -5520,7 +6071,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-20-WO-KIA",
@@ -5530,7 +6082,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-21-HH-OB",
@@ -5540,7 +6093,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-21-KT-LT",
@@ -5549,8 +6103,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-21-LG-NC",
@@ -5559,8 +6114,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-21-SSG-SS",
@@ -5569,8 +6125,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-21-WO-KIA",
@@ -5579,8 +6136,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-22-HH-OB",
@@ -5590,7 +6148,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-22-KT-LT",
@@ -5600,7 +6159,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-22-LG-NC",
@@ -5610,7 +6170,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-22-SSG-SS",
@@ -5620,7 +6181,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-22-WO-KIA",
@@ -5630,7 +6192,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-23-HH-OB",
@@ -5639,8 +6202,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-23-KT-LT",
@@ -5650,7 +6214,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-23-LG-NC",
@@ -5659,8 +6224,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-23-SSG-SS",
@@ -5669,8 +6235,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-23-WO-KIA",
@@ -5679,8 +6246,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-24-HH-OB",
@@ -5690,7 +6258,8 @@
       "awayScore": 8,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-24-KT-LT",
@@ -5699,8 +6268,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-24-LG-NC",
@@ -5709,8 +6279,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-24-SSG-SS",
@@ -5720,7 +6291,8 @@
       "awayScore": 8,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-24-WO-KIA",
@@ -5730,7 +6302,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-25-HH-WO",
@@ -5740,7 +6313,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-25-LT-KIA",
@@ -5750,7 +6324,8 @@
       "awayScore": 6,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-25-OB-NC",
@@ -5759,8 +6334,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-25-SS-LG",
@@ -5770,7 +6346,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-25-SSG-KT",
@@ -5780,7 +6357,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-26-HH-WO",
@@ -5790,7 +6368,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-26-LT-KIA",
@@ -5800,7 +6379,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-26-OB-NC",
@@ -5810,7 +6390,8 @@
       "awayScore": 7,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-26-SS-LG",
@@ -5820,7 +6401,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-26-SSG-KT",
@@ -5830,7 +6412,8 @@
       "awayScore": 5,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-27-HH-WO",
@@ -5840,7 +6423,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-27-LT-KIA",
@@ -5849,8 +6433,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-27-OB-NC",
@@ -5860,7 +6445,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-27-SS-LG",
@@ -5870,7 +6456,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-27-SSG-KT",
@@ -5880,7 +6467,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-28-KIA-SSG",
@@ -5890,7 +6478,8 @@
       "awayScore": 4,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-28-NC-HH",
@@ -5900,7 +6489,8 @@
       "awayScore": 1,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-28-OB-LT",
@@ -5910,7 +6500,8 @@
       "awayScore": 10,
       "homeScore": 10,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-28-SS-KT",
@@ -5920,7 +6511,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-28-WO-LG",
@@ -5930,7 +6522,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-29-KIA-SSG",
@@ -5940,7 +6533,8 @@
       "awayScore": 0,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-29-NC-HH",
@@ -5950,7 +6544,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-29-OB-LT",
@@ -5960,7 +6555,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-29-SS-KT",
@@ -5970,7 +6566,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-29-WO-LG",
@@ -5980,7 +6577,8 @@
       "awayScore": 2,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-31-KIA-OB",
@@ -5989,8 +6587,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-31-KT-HH",
@@ -6000,7 +6599,8 @@
       "awayScore": 2,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-31-LG-LT",
@@ -6010,7 +6610,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-31-NC-SSG",
@@ -6019,8 +6620,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-08-31-WO-SS",
@@ -6030,7 +6632,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-01-KIA-OB",
@@ -6040,7 +6643,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-01-KT-HH",
@@ -6050,7 +6654,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-01-LG-LT",
@@ -6059,8 +6664,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-01-NC-SSG",
@@ -6070,7 +6676,8 @@
       "awayScore": 9,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-01-WO-SS",
@@ -6080,7 +6687,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-02-HH-LT",
@@ -6089,8 +6697,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-02-KT-WO",
@@ -6100,7 +6709,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-02-NC-LG",
@@ -6110,7 +6720,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-02-OB-SSG",
@@ -6120,7 +6731,8 @@
       "awayScore": 1,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-02-SS-KIA",
@@ -6130,7 +6742,8 @@
       "awayScore": 5,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-03-HH-LT",
@@ -6140,7 +6753,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-03-KT-WO",
@@ -6150,7 +6764,8 @@
       "awayScore": 11,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-03-NC-LG",
@@ -6160,7 +6775,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-03-OB-SSG",
@@ -6170,7 +6786,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-03-SS-KIA",
@@ -6180,7 +6797,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-04-KIA-HH",
@@ -6190,7 +6808,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-04-KT-LG",
@@ -6200,7 +6819,8 @@
       "awayScore": 11,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-04-LT-NC",
@@ -6210,7 +6830,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-04-OB-SS",
@@ -6220,7 +6841,8 @@
       "awayScore": 4,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-04-SSG-WO",
@@ -6230,7 +6852,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-05-KIA-HH",
@@ -6240,7 +6863,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-05-KT-LG",
@@ -6250,7 +6874,8 @@
       "awayScore": 11,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-05-LT-NC",
@@ -6260,7 +6885,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-05-OB-SS",
@@ -6270,7 +6896,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-05-SSG-WO",
@@ -6280,7 +6907,8 @@
       "awayScore": 8,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-07-HH-NC",
@@ -6290,7 +6918,8 @@
       "awayScore": 4,
       "homeScore": 16,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-07-KIA-KT",
@@ -6299,8 +6928,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-07-LG-SSG",
@@ -6309,8 +6939,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-07-LT-SS",
@@ -6320,7 +6951,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-07-WO-OB",
@@ -6329,8 +6961,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-08-HH-NC",
@@ -6340,7 +6973,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-08-KIA-KT",
@@ -6350,7 +6984,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-08-LG-SSG",
@@ -6360,7 +6995,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-08-LT-SS",
@@ -6370,7 +7006,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-08-WO-OB",
@@ -6380,7 +7017,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-09-HH-LG",
@@ -6390,7 +7028,8 @@
       "awayScore": 1,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-09-KIA-WO",
@@ -6400,7 +7039,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-09-KT-SS",
@@ -6410,7 +7050,8 @@
       "awayScore": 7,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-09-OB-NC",
@@ -6420,7 +7061,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-09-SSG-LT",
@@ -6430,7 +7072,8 @@
       "awayScore": 9,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-10-HH-LG",
@@ -6440,7 +7083,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-10-KIA-WO",
@@ -6450,7 +7094,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-10-KT-SS",
@@ -6460,7 +7105,8 @@
       "awayScore": 2,
       "homeScore": 2,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-10-OB-NC",
@@ -6470,7 +7116,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-10-SSG-LT",
@@ -6480,7 +7127,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-11-LG-OB",
@@ -6490,7 +7138,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-11-NC-KIA",
@@ -6500,7 +7149,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-11-SS-HH",
@@ -6510,7 +7160,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-11-SSG-KT",
@@ -6520,7 +7171,8 @@
       "awayScore": 2,
       "homeScore": 2,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-11-WO-LT",
@@ -6530,7 +7182,8 @@
       "awayScore": 13,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-12-LG-OB",
@@ -6540,7 +7193,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-12-NC-KIA",
@@ -6550,7 +7204,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-12-SS-HH",
@@ -6560,7 +7215,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-12-SSG-KT",
@@ -6570,7 +7226,8 @@
       "awayScore": 0,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-12-WO-LT",
@@ -6580,7 +7237,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-14-HH-SSG",
@@ -6590,7 +7248,8 @@
       "awayScore": 11,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-14-KT-OB",
@@ -6600,7 +7259,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-14-LG-SS",
@@ -6610,7 +7270,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-14-LT-KIA",
@@ -6620,7 +7281,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-14-WO-NC",
@@ -6630,7 +7292,8 @@
       "awayScore": 8,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-15-HH-SSG",
@@ -6640,7 +7303,8 @@
       "awayScore": 6,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-15-KT-OB",
@@ -6650,7 +7314,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-15-LG-SS",
@@ -6660,7 +7325,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-15-LT-KIA",
@@ -6670,7 +7336,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-15-WO-NC",
@@ -6680,7 +7347,8 @@
       "awayScore": 2,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-16-HH-WO",
@@ -6690,7 +7358,8 @@
       "awayScore": 8,
       "homeScore": 8,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-16-KIA-SS",
@@ -6700,7 +7369,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-16-LG-NC",
@@ -6710,7 +7380,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-16-LT-KT",
@@ -6720,7 +7391,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-16-SSG-OB",
@@ -6730,7 +7402,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-17-HH-WO",
@@ -6740,7 +7413,8 @@
       "awayScore": 15,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-17-KIA-SS",
@@ -6750,7 +7424,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-17-LG-NC",
@@ -6759,8 +7434,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-17-LT-KT",
@@ -6770,7 +7446,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-17-SSG-OB",
@@ -6780,7 +7457,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-18-KIA-LG",
@@ -6790,7 +7468,8 @@
       "awayScore": 9,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-18-KT-NC",
@@ -6800,7 +7479,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-18-LT-HH",
@@ -6810,7 +7490,8 @@
       "awayScore": 2,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-18-OB-WO",
@@ -6820,7 +7501,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-18-SS-SSG",
@@ -6830,7 +7512,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-19-KIA-LG",
@@ -6840,7 +7523,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-19-KT-NC",
@@ -6850,7 +7534,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-19-LT-HH",
@@ -6860,7 +7545,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-19-OB-WO",
@@ -6870,7 +7556,8 @@
       "awayScore": 6,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-19-SS-SSG",
@@ -6880,7 +7567,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-21-KT-KIA",
@@ -6890,7 +7578,8 @@
       "awayScore": 11,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-21-LG-HH",
@@ -6900,7 +7589,8 @@
       "awayScore": 6,
       "homeScore": 15,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-21-NC-OB",
@@ -6910,7 +7600,8 @@
       "awayScore": 2,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-21-SS-LT",
@@ -6920,7 +7611,8 @@
       "awayScore": 11,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-21-WO-SSG",
@@ -6930,7 +7622,8 @@
       "awayScore": 10,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-22-KT-KIA",
@@ -6940,7 +7633,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-22-LG-HH",
@@ -6950,7 +7644,8 @@
       "awayScore": 12,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-22-NC-OB",
@@ -6960,7 +7655,8 @@
       "awayScore": 0,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-22-SS-LT",
@@ -6970,7 +7666,8 @@
       "awayScore": 8,
       "homeScore": 17,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-22-WO-SSG",
@@ -6980,7 +7677,8 @@
       "awayScore": 7,
       "homeScore": 7,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-23-HH-KT",
@@ -6990,7 +7688,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-23-LT-SSG",
@@ -7000,7 +7699,8 @@
       "awayScore": 8,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-23-NC-WO",
@@ -7010,7 +7710,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-23-OB-KIA",
@@ -7020,7 +7721,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-23-SS-LG",
@@ -7030,7 +7732,8 @@
       "awayScore": 7,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-24-HH-KT",
@@ -7040,7 +7743,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-24-LT-SSG",
@@ -7050,7 +7754,8 @@
       "awayScore": 4,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-24-NC-WO",
@@ -7060,7 +7765,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-24-OB-KIA",
@@ -7070,7 +7776,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-24-SS-LG",
@@ -7080,7 +7787,8 @@
       "awayScore": 3,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-25-HH-OB",
@@ -7090,7 +7798,8 @@
       "awayScore": 5,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-25-LG-KT",
@@ -7100,7 +7809,8 @@
       "awayScore": 0,
       "homeScore": 0,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-25-LT-WO",
@@ -7110,7 +7820,8 @@
       "awayScore": 12,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-25-NC-SS",
@@ -7120,7 +7831,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-25-SSG-KIA",
@@ -7130,7 +7842,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-26-HH-OB",
@@ -7140,7 +7853,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-26-LG-KT",
@@ -7150,7 +7864,8 @@
       "awayScore": 4,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-26-LT-WO",
@@ -7160,7 +7875,8 @@
       "awayScore": 2,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-26-NC-SS",
@@ -7170,7 +7886,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-26-SSG-KIA",
@@ -7180,7 +7897,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-28-KIA-NC",
@@ -7190,7 +7908,8 @@
       "awayScore": 9,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-28-LT-LG",
@@ -7200,7 +7919,8 @@
       "awayScore": 2,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-28-OB-KT",
@@ -7210,7 +7930,8 @@
       "awayScore": 1,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-28-SSG-SS",
@@ -7220,7 +7941,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-28-WO-HH",
@@ -7230,7 +7952,8 @@
       "awayScore": 1,
       "homeScore": 1,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-29-KIA-NC",
@@ -7240,7 +7963,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-29-LT-LG",
@@ -7249,8 +7973,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-29-OB-KT",
@@ -7260,7 +7985,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-29-SSG-SS",
@@ -7269,8 +7995,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-29-WO-HH",
@@ -7279,8 +8006,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-30-HH-SS",
@@ -7290,7 +8018,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-30-KT-LT",
@@ -7300,7 +8029,8 @@
       "awayScore": 4,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-30-OB-LG",
@@ -7310,7 +8040,8 @@
       "awayScore": 4,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-30-SSG-NC",
@@ -7320,7 +8051,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-09-30-WO-KIA",
@@ -7330,7 +8062,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-01-HH-SS",
@@ -7340,7 +8073,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-01-KT-LT",
@@ -7350,7 +8084,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-01-OB-LG",
@@ -7360,7 +8095,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-01-SSG-NC",
@@ -7370,7 +8106,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-01-WO-KIA",
@@ -7380,7 +8117,8 @@
       "awayScore": 0,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-02-HH-KIA",
@@ -7390,7 +8128,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-02-KT-SSG",
@@ -7400,7 +8139,8 @@
       "awayScore": 2,
       "homeScore": 2,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-02-LG-WO",
@@ -7410,7 +8150,8 @@
       "awayScore": 10,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-02-NC-LT",
@@ -7420,7 +8161,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-02-SS-OB",
@@ -7430,7 +8172,8 @@
       "awayScore": 0,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-03-HH-KIA",
@@ -7440,7 +8183,8 @@
       "awayScore": 6,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-03-KT-SSG",
@@ -7450,7 +8194,8 @@
       "awayScore": 8,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-03-LG-WO",
@@ -7460,7 +8205,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-03-NC-LT",
@@ -7470,7 +8216,8 @@
       "awayScore": 7,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-03-SS-OB",
@@ -7480,7 +8227,8 @@
       "awayScore": 13,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-05-KIA-LT",
@@ -7490,7 +8238,8 @@
       "awayScore": 3,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-05-NC-KT",
@@ -7500,7 +8249,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-05-OB-HH",
@@ -7510,7 +8260,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-05-SS-WO",
@@ -7520,7 +8271,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-05-SSG-LG",
@@ -7530,7 +8282,8 @@
       "awayScore": 8,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-06-KIA-LT",
@@ -7540,7 +8293,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-06-NC-KT",
@@ -7550,7 +8304,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-06-OB-HH",
@@ -7560,7 +8315,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-06-SS-WO",
@@ -7570,7 +8326,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-06-SSG-LG",
@@ -7580,7 +8337,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-07-LG-KIA",
@@ -7590,7 +8348,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-07-LT-OB",
@@ -7600,7 +8359,8 @@
       "awayScore": 7,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-07-SS-NC",
@@ -7610,7 +8370,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-07-SSG-HH",
@@ -7620,7 +8381,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-07-WO-KT",
@@ -7630,7 +8392,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-08-LG-KIA",
@@ -7640,7 +8403,8 @@
       "awayScore": 2,
       "homeScore": 2,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-08-LT-OB",
@@ -7650,7 +8414,8 @@
       "awayScore": 5,
       "homeScore": 14,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-08-SS-NC",
@@ -7660,7 +8425,8 @@
       "awayScore": 0,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-08-SSG-HH",
@@ -7670,7 +8436,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-08-WO-KT",
@@ -7679,8 +8446,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-09-KIA-HH",
@@ -7690,7 +8458,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-09-KT-LG",
@@ -7700,7 +8469,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-09-LT-SSG",
@@ -7710,7 +8480,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-10-KIA-HH",
@@ -7720,7 +8491,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-10-KT-LG",
@@ -7729,8 +8501,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-10-OB-NC",
@@ -7740,7 +8513,8 @@
       "awayScore": 1,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-11-KT-LG",
@@ -7750,7 +8524,8 @@
       "awayScore": 4,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-12-KT-OB",
@@ -7760,7 +8535,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-12-LG-SSG",
@@ -7770,7 +8546,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-12-NC-WO",
@@ -7780,7 +8557,8 @@
       "awayScore": 2,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-12-SS-KIA",
@@ -7790,7 +8568,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-13-KT-OB",
@@ -7800,7 +8579,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-13-LG-LT",
@@ -7810,7 +8590,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-13-NC-WO",
@@ -7820,7 +8601,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-13-SS-KIA",
@@ -7830,7 +8612,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-14-KT-OB",
@@ -7840,7 +8623,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-14-LG-LT",
@@ -7850,7 +8634,8 @@
       "awayScore": 13,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-14-NC-WO",
@@ -7860,7 +8645,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-14-SS-KIA",
@@ -7870,7 +8656,8 @@
       "awayScore": 2,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-15-KIA-KT",
@@ -7880,7 +8667,8 @@
       "awayScore": 7,
       "homeScore": 7,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-15-LG-LT",
@@ -7890,7 +8678,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-15-NC-OB",
@@ -7900,7 +8689,8 @@
       "awayScore": 5,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-15-WO-SS",
@@ -7910,7 +8700,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-16-HH-KT",
@@ -7920,7 +8711,8 @@
       "awayScore": 2,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-16-KIA-OB",
@@ -7930,7 +8722,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-16-LG-NC",
@@ -7940,7 +8733,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-16-SSG-LT",
@@ -7950,7 +8744,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-16-WO-SS",
@@ -7960,7 +8755,8 @@
       "awayScore": 5,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-17-HH-KT",
@@ -7970,7 +8766,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-17-KIA-OB",
@@ -7980,7 +8777,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-17-LG-NC",
@@ -7990,7 +8788,8 @@
       "awayScore": 11,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-17-SSG-LT",
@@ -8000,7 +8799,8 @@
       "awayScore": 14,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-17-WO-SS",
@@ -8010,7 +8810,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-19-KT-NC",
@@ -8020,7 +8821,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-19-OB-SS",
@@ -8030,7 +8832,8 @@
       "awayScore": 5,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-19-SSG-KIA",
@@ -8040,7 +8843,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-19-WO-LG",
@@ -8050,7 +8854,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-20-KT-KIA",
@@ -8060,7 +8865,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-20-NC-SSG",
@@ -8070,7 +8876,8 @@
       "awayScore": 7,
       "homeScore": 7,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-20-WO-LG",
@@ -8080,7 +8887,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-21-HH-KIA",
@@ -8090,7 +8898,8 @@
       "awayScore": 13,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-21-OB-SSG",
@@ -8100,7 +8909,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-21-WO-LG",
@@ -8110,7 +8920,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2021-10-22-HH-LT",
@@ -8120,7 +8931,8 @@
       "awayScore": 0,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-22-KIA-NC",
@@ -8130,7 +8942,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-22-KT-SS",
@@ -8140,7 +8953,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-22-OB-SSG",
@@ -8150,7 +8964,8 @@
       "awayScore": 6,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-23-HH-LT",
@@ -8160,7 +8975,8 @@
       "awayScore": 15,
       "homeScore": 15,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-23-KIA-NC",
@@ -8170,7 +8986,8 @@
       "awayScore": 7,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-23-KT-SS",
@@ -8180,7 +8997,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-23-LG-OB",
@@ -8190,7 +9008,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-24-HH-LT",
@@ -8200,7 +9019,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-24-KIA-NC",
@@ -8210,7 +9030,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-24-LG-OB",
@@ -8220,7 +9041,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-24-SSG-SS",
@@ -8230,7 +9052,8 @@
       "awayScore": 3,
       "homeScore": 3,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-24-WO-KT",
@@ -8240,7 +9063,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-25-LT-LG",
@@ -8250,7 +9074,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-25-WO-HH",
@@ -8260,7 +9085,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-26-LG-HH",
@@ -8270,7 +9096,8 @@
       "awayScore": 4,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-26-SSG-NC",
@@ -8280,7 +9107,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-26-WO-OB",
@@ -8290,7 +9118,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-27-KIA-LT",
@@ -8300,7 +9129,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-27-LG-HH",
@@ -8310,7 +9140,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-27-NC-KT",
@@ -8320,7 +9151,8 @@
       "awayScore": 9,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-27-OB-SSG",
@@ -8330,7 +9162,8 @@
       "awayScore": 8,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-27-SS-WO",
@@ -8340,7 +9173,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-28-KIA-LT",
@@ -8350,7 +9184,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-28-LG-HH",
@@ -8360,7 +9195,8 @@
       "awayScore": 1,
       "homeScore": 1,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-28-NC-KT",
@@ -8370,7 +9206,8 @@
       "awayScore": 1,
       "homeScore": 1,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-28-OB-SSG",
@@ -8380,7 +9217,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-29-KT-WO",
@@ -8390,7 +9228,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-29-LG-LT",
@@ -8400,7 +9239,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-29-OB-KIA",
@@ -8410,7 +9250,8 @@
       "awayScore": 11,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-29-SS-NC",
@@ -8420,7 +9261,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-30-KT-SSG",
@@ -8430,7 +9272,8 @@
       "awayScore": 8,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-30-LG-LT",
@@ -8440,7 +9283,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-30-OB-HH",
@@ -8450,7 +9294,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-30-SS-NC",
@@ -8460,7 +9305,8 @@
       "awayScore": 11,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-30-WO-KIA",
@@ -8470,7 +9316,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-10-31-KT-SS",
@@ -8480,7 +9327,8 @@
       "awayScore": 1,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-01-WO-OB",
@@ -8490,7 +9338,8 @@
       "awayScore": 7,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-02-WO-OB",
@@ -8500,7 +9349,8 @@
       "awayScore": 8,
       "homeScore": 16,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-04-OB-LG",
@@ -8510,7 +9360,8 @@
       "awayScore": 5,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-05-LG-OB",
@@ -8520,7 +9371,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-07-OB-LG",
@@ -8530,7 +9382,8 @@
       "awayScore": 10,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-09-OB-SS",
@@ -8540,7 +9393,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-10-SS-OB",
@@ -8550,7 +9404,8 @@
       "awayScore": 3,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-14-OB-KT",
@@ -8560,7 +9415,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-15-OB-KT",
@@ -8570,7 +9426,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-17-KT-OB",
@@ -8580,7 +9437,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     },
     {
       "id": "2021-11-18-KT-OB",
@@ -8590,7 +9448,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "postseason"
     }
   ]
 }

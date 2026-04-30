@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generatedAt": "2026-04-30T14:03:50+0000",
+  "generatedAt": "2026-04-30T16:17:38+0000",
   "games": [
     {
       "id": "2026-03-12-KT-LT",
@@ -10,7 +10,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-12-LG-NC",
@@ -20,7 +21,8 @@
       "awayScore": 11,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-12-SS-HH",
@@ -30,7 +32,8 @@
       "awayScore": 12,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-12-SSG-KIA",
@@ -40,7 +43,8 @@
       "awayScore": 4,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-12-WO-OB",
@@ -50,7 +54,8 @@
       "awayScore": 7,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-13-KT-LT",
@@ -60,7 +65,8 @@
       "awayScore": 6,
       "homeScore": 6,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-13-LG-NC",
@@ -70,7 +76,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-13-SS-HH",
@@ -80,7 +87,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-13-SSG-KIA",
@@ -90,7 +98,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-13-WO-OB",
@@ -100,7 +109,8 @@
       "awayScore": 1,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-14-KT-KIA",
@@ -110,7 +120,8 @@
       "awayScore": 10,
       "homeScore": 10,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-14-LG-LT",
@@ -120,7 +131,8 @@
       "awayScore": 3,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-14-SS-OB",
@@ -130,7 +142,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-14-SSG-HH",
@@ -140,7 +153,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-14-WO-NC",
@@ -150,7 +164,8 @@
       "awayScore": 6,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-15-KT-KIA",
@@ -160,7 +175,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-15-LG-LT",
@@ -170,7 +186,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-15-SS-OB",
@@ -180,7 +197,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-15-SSG-HH",
@@ -190,7 +208,8 @@
       "awayScore": 0,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-15-WO-NC",
@@ -200,7 +219,8 @@
       "awayScore": 8,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-16-KIA-NC",
@@ -210,7 +230,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-16-LG-KT",
@@ -220,7 +241,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-16-OB-HH",
@@ -230,7 +252,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-16-SS-SSG",
@@ -240,7 +263,8 @@
       "awayScore": 8,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-16-WO-LT",
@@ -250,7 +274,8 @@
       "awayScore": 1,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-17-KIA-NC",
@@ -260,7 +285,8 @@
       "awayScore": 2,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-17-LG-KT",
@@ -270,7 +296,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-17-OB-HH",
@@ -280,7 +307,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-17-SS-SSG",
@@ -290,7 +318,8 @@
       "awayScore": 4,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-17-WO-LT",
@@ -300,7 +329,8 @@
       "awayScore": 4,
       "homeScore": 4,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-19-KIA-HH",
@@ -310,7 +340,8 @@
       "awayScore": 5,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-19-LG-SSG",
@@ -320,7 +351,8 @@
       "awayScore": 12,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-19-OB-LT",
@@ -330,7 +362,8 @@
       "awayScore": 3,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-19-SS-NC",
@@ -340,7 +373,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-19-WO-KT",
@@ -350,7 +384,8 @@
       "awayScore": 11,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-20-KIA-HH",
@@ -360,7 +395,8 @@
       "awayScore": 8,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-20-LG-SSG",
@@ -370,7 +406,8 @@
       "awayScore": 9,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-20-OB-LT",
@@ -380,7 +417,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-20-SS-NC",
@@ -390,7 +428,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-20-WO-KT",
@@ -400,7 +439,8 @@
       "awayScore": 1,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-21-HH-LT",
@@ -410,7 +450,8 @@
       "awayScore": 6,
       "homeScore": 12,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-21-KIA-OB",
@@ -420,7 +461,8 @@
       "awayScore": 11,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-21-LG-SS",
@@ -430,7 +472,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-21-NC-KT",
@@ -440,7 +483,8 @@
       "awayScore": 2,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-21-WO-SSG",
@@ -450,7 +494,8 @@
       "awayScore": 9,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-22-HH-LT",
@@ -460,7 +505,8 @@
       "awayScore": 6,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-22-KIA-OB",
@@ -470,7 +516,8 @@
       "awayScore": 0,
       "homeScore": 0,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-22-LG-SS",
@@ -480,7 +527,8 @@
       "awayScore": 14,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-22-NC-KT",
@@ -490,7 +538,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-22-WO-SSG",
@@ -500,7 +549,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-23-KIA-SS",
@@ -510,7 +560,8 @@
       "awayScore": 1,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-23-LT-SSG",
@@ -520,7 +571,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-23-NC-HH",
@@ -530,7 +582,8 @@
       "awayScore": 4,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-23-OB-KT",
@@ -540,7 +593,8 @@
       "awayScore": 12,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-23-WO-LG",
@@ -550,7 +604,8 @@
       "awayScore": 13,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-24-KIA-SS",
@@ -560,7 +615,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-24-LT-SSG",
@@ -570,7 +626,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-24-NC-HH",
@@ -580,7 +637,8 @@
       "awayScore": 8,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-24-OB-KT",
@@ -590,7 +648,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-24-WO-LG",
@@ -600,7 +659,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "preseason"
     },
     {
       "id": "2026-03-28-KIA-SSG",
@@ -610,7 +670,8 @@
       "awayScore": 6,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-28-KT-LG",
@@ -620,7 +681,8 @@
       "awayScore": 11,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-28-LT-SS",
@@ -630,7 +692,8 @@
       "awayScore": 6,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-28-OB-NC",
@@ -640,7 +703,8 @@
       "awayScore": 0,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-28-WO-HH",
@@ -650,7 +714,8 @@
       "awayScore": 9,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-29-KIA-SSG",
@@ -660,7 +725,8 @@
       "awayScore": 6,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-29-KT-LG",
@@ -670,7 +736,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-29-LT-SS",
@@ -680,7 +747,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-29-OB-NC",
@@ -690,7 +758,8 @@
       "awayScore": 9,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-29-WO-HH",
@@ -700,7 +769,8 @@
       "awayScore": 4,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-31-KIA-LG",
@@ -710,7 +780,8 @@
       "awayScore": 7,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-31-KT-HH",
@@ -720,7 +791,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-31-LT-NC",
@@ -730,7 +802,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-31-OB-SS",
@@ -740,7 +813,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-03-31-WO-SSG",
@@ -750,7 +824,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-01-KIA-LG",
@@ -760,7 +835,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-01-KT-HH",
@@ -770,7 +846,8 @@
       "awayScore": 14,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-01-LT-NC",
@@ -780,7 +857,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-01-OB-SS",
@@ -790,7 +868,8 @@
       "awayScore": 3,
       "homeScore": 13,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-01-WO-SSG",
@@ -800,7 +879,8 @@
       "awayScore": 11,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-02-KIA-LG",
@@ -810,7 +890,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-02-KT-HH",
@@ -820,7 +901,8 @@
       "awayScore": 13,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-02-LT-NC",
@@ -830,7 +912,8 @@
       "awayScore": 4,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-02-OB-SS",
@@ -840,7 +923,8 @@
       "awayScore": 2,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-02-WO-SSG",
@@ -850,7 +934,8 @@
       "awayScore": 1,
       "homeScore": 11,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-03-HH-OB",
@@ -860,7 +945,8 @@
       "awayScore": 11,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-03-LG-WO",
@@ -870,7 +956,8 @@
       "awayScore": 2,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-03-NC-KIA",
@@ -880,7 +967,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-03-SS-KT",
@@ -890,7 +978,8 @@
       "awayScore": 2,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-03-SSG-LT",
@@ -900,7 +989,8 @@
       "awayScore": 17,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-04-HH-OB",
@@ -910,7 +1000,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-04-LG-WO",
@@ -920,7 +1011,8 @@
       "awayScore": 6,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-04-NC-KIA",
@@ -930,7 +1022,8 @@
       "awayScore": 6,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-04-SS-KT",
@@ -940,7 +1033,8 @@
       "awayScore": 8,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-04-SSG-LT",
@@ -950,7 +1044,8 @@
       "awayScore": 7,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-05-HH-OB",
@@ -960,7 +1055,8 @@
       "awayScore": 0,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-05-LG-WO",
@@ -970,7 +1066,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-05-NC-KIA",
@@ -980,7 +1077,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-05-SS-KT",
@@ -990,7 +1088,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-05-SSG-LT",
@@ -1000,7 +1099,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-07-HH-SSG",
@@ -1010,7 +1110,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-07-KT-LT",
@@ -1020,7 +1121,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-07-LG-NC",
@@ -1030,7 +1132,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-07-SS-KIA",
@@ -1040,7 +1143,8 @@
       "awayScore": 10,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-07-WO-OB",
@@ -1050,7 +1154,8 @@
       "awayScore": 5,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-08-HH-SSG",
@@ -1060,7 +1165,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-08-KT-LT",
@@ -1070,7 +1176,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-08-LG-NC",
@@ -1080,7 +1187,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-08-SS-KIA",
@@ -1090,7 +1198,8 @@
       "awayScore": 5,
       "homeScore": 15,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-08-WO-OB",
@@ -1100,7 +1209,8 @@
       "awayScore": 3,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-09-HH-SSG",
@@ -1109,8 +1219,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-09-KT-LT",
@@ -1119,8 +1230,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-09-LG-NC",
@@ -1129,8 +1241,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-09-SS-KIA",
@@ -1139,8 +1252,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-09-WO-OB",
@@ -1149,8 +1263,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-10-KIA-HH",
@@ -1160,7 +1275,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-10-LT-WO",
@@ -1170,7 +1286,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-10-NC-SS",
@@ -1180,7 +1297,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-10-OB-KT",
@@ -1190,7 +1308,8 @@
       "awayScore": 8,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-10-SSG-LG",
@@ -1200,7 +1319,8 @@
       "awayScore": 2,
       "homeScore": 10,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-11-KIA-HH",
@@ -1210,7 +1330,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-11-LT-WO",
@@ -1220,7 +1341,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-11-NC-SS",
@@ -1230,7 +1352,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-11-OB-KT",
@@ -1240,7 +1363,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-11-SSG-LG",
@@ -1250,7 +1374,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-12-KIA-HH",
@@ -1260,7 +1385,8 @@
       "awayScore": 9,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-12-LT-WO",
@@ -1270,7 +1396,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-12-NC-SS",
@@ -1280,7 +1407,8 @@
       "awayScore": 3,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-12-OB-KT",
@@ -1290,7 +1418,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-12-SSG-LG",
@@ -1300,7 +1429,8 @@
       "awayScore": 1,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-14-KT-NC",
@@ -1310,7 +1440,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-14-LT-LG",
@@ -1320,7 +1451,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-14-OB-SSG",
@@ -1330,7 +1462,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-14-SS-HH",
@@ -1340,7 +1473,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-14-WO-KIA",
@@ -1350,7 +1484,8 @@
       "awayScore": 2,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-15-KT-NC",
@@ -1360,7 +1495,8 @@
       "awayScore": 10,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-15-LT-LG",
@@ -1370,7 +1506,8 @@
       "awayScore": 2,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-15-OB-SSG",
@@ -1380,7 +1517,8 @@
       "awayScore": 0,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-15-SS-HH",
@@ -1390,7 +1528,8 @@
       "awayScore": 13,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-15-WO-KIA",
@@ -1400,7 +1539,8 @@
       "awayScore": 5,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-16-KT-NC",
@@ -1410,7 +1550,8 @@
       "awayScore": 4,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-16-LT-LG",
@@ -1420,7 +1561,8 @@
       "awayScore": 4,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-16-OB-SSG",
@@ -1430,7 +1572,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-16-SS-HH",
@@ -1440,7 +1583,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-16-WO-KIA",
@@ -1450,7 +1594,8 @@
       "awayScore": 1,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-17-HH-LT",
@@ -1459,8 +1604,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-17-KIA-OB",
@@ -1470,7 +1616,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-17-LG-SS",
@@ -1479,8 +1626,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-17-SSG-NC",
@@ -1489,8 +1637,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-17-WO-KT",
@@ -1500,7 +1649,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-18-HH-LT",
@@ -1510,7 +1660,8 @@
       "awayScore": 5,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-18-KIA-OB",
@@ -1520,7 +1671,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-18-LG-SS",
@@ -1530,7 +1682,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-18-SSG-NC",
@@ -1540,7 +1693,8 @@
       "awayScore": 11,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-18-WO-KT",
@@ -1550,7 +1704,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-19-HH-LT",
@@ -1560,7 +1715,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-19-KIA-OB",
@@ -1570,7 +1726,8 @@
       "awayScore": 3,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-19-LG-SS",
@@ -1580,7 +1737,8 @@
       "awayScore": 5,
       "homeScore": 0,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-19-SSG-NC",
@@ -1590,7 +1748,8 @@
       "awayScore": 2,
       "homeScore": 9,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-19-WO-KT",
@@ -1600,7 +1759,8 @@
       "awayScore": 3,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-21-HH-LG",
@@ -1610,7 +1770,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-21-KIA-KT",
@@ -1620,7 +1781,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-21-NC-WO",
@@ -1630,7 +1792,8 @@
       "awayScore": 1,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-21-OB-LT",
@@ -1640,7 +1803,8 @@
       "awayScore": 6,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-21-SSG-SS",
@@ -1650,7 +1814,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-22-HH-LG",
@@ -1660,7 +1825,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-22-KIA-KT",
@@ -1670,7 +1836,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-22-NC-WO",
@@ -1680,7 +1847,8 @@
       "awayScore": 0,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-22-OB-LT",
@@ -1690,7 +1858,8 @@
       "awayScore": 9,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-22-SSG-SS",
@@ -1700,7 +1869,8 @@
       "awayScore": 3,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-23-HH-LG",
@@ -1710,7 +1880,8 @@
       "awayScore": 8,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-23-KIA-KT",
@@ -1720,7 +1891,8 @@
       "awayScore": 3,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-23-NC-WO",
@@ -1730,7 +1902,8 @@
       "awayScore": 12,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-23-OB-LT",
@@ -1740,7 +1913,8 @@
       "awayScore": 1,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-23-SSG-SS",
@@ -1750,7 +1924,8 @@
       "awayScore": 8,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-24-KT-SSG",
@@ -1760,7 +1935,8 @@
       "awayScore": 0,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-24-LG-OB",
@@ -1770,7 +1946,8 @@
       "awayScore": 4,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-24-LT-KIA",
@@ -1780,7 +1957,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-24-NC-HH",
@@ -1790,7 +1968,8 @@
       "awayScore": 7,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-24-SS-WO",
@@ -1800,7 +1979,8 @@
       "awayScore": 4,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-25-KT-SSG",
@@ -1810,7 +1990,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-25-LG-OB",
@@ -1820,7 +2001,8 @@
       "awayScore": 7,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-25-LT-KIA",
@@ -1830,7 +2012,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-25-NC-HH",
@@ -1840,7 +2023,8 @@
       "awayScore": 1,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-25-SS-WO",
@@ -1850,7 +2034,8 @@
       "awayScore": 2,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-26-KT-SSG",
@@ -1860,7 +2045,8 @@
       "awayScore": 12,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-26-LG-OB",
@@ -1870,7 +2056,8 @@
       "awayScore": 3,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-26-LT-KIA",
@@ -1880,7 +2067,8 @@
       "awayScore": 5,
       "homeScore": 5,
       "status": "tied",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-26-NC-HH",
@@ -1890,7 +2078,8 @@
       "awayScore": 5,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-26-SS-WO",
@@ -1900,7 +2089,8 @@
       "awayScore": 0,
       "homeScore": 2,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-28-KIA-NC",
@@ -1910,7 +2100,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-28-LG-KT",
@@ -1920,7 +2111,8 @@
       "awayScore": 5,
       "homeScore": 6,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-28-SS-OB",
@@ -1930,7 +2122,8 @@
       "awayScore": 5,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-28-SSG-HH",
@@ -1940,7 +2133,8 @@
       "awayScore": 6,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-28-WO-LT",
@@ -1950,7 +2144,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-29-KIA-NC",
@@ -1960,7 +2155,8 @@
       "awayScore": 9,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-29-LG-KT",
@@ -1970,7 +2166,8 @@
       "awayScore": 4,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-29-SS-OB",
@@ -1980,7 +2177,8 @@
       "awayScore": 0,
       "homeScore": 4,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-29-SSG-HH",
@@ -1990,7 +2188,8 @@
       "awayScore": 6,
       "homeScore": 1,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-29-WO-LT",
@@ -2000,7 +2199,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-30-KIA-NC",
@@ -2010,7 +2210,8 @@
       "awayScore": 2,
       "homeScore": 7,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-30-LG-KT",
@@ -2020,7 +2221,8 @@
       "awayScore": 6,
       "homeScore": 5,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-30-SS-OB",
@@ -2030,7 +2232,8 @@
       "awayScore": 5,
       "homeScore": 8,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-30-SSG-HH",
@@ -2040,7 +2243,8 @@
       "awayScore": 14,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-04-30-WO-LT",
@@ -2050,7 +2254,8 @@
       "awayScore": 1,
       "homeScore": 3,
       "status": "completed",
-      "stadium": null
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-01-HH-SS",
@@ -2059,8 +2264,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-01-KT-KIA",
@@ -2069,8 +2275,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-01-LT-SSG",
@@ -2079,8 +2286,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-01-NC-LG",
@@ -2089,8 +2297,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-01-OB-WO",
@@ -2099,8 +2308,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-02-HH-SS",
@@ -2109,8 +2319,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-02-KT-KIA",
@@ -2119,8 +2330,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-02-LT-SSG",
@@ -2129,8 +2341,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-02-NC-LG",
@@ -2139,8 +2352,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-02-OB-WO",
@@ -2149,8 +2363,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-03-HH-SS",
@@ -2159,8 +2374,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-03-KT-KIA",
@@ -2169,8 +2385,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-03-LT-SSG",
@@ -2179,8 +2396,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-03-NC-LG",
@@ -2189,8 +2407,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-03-OB-WO",
@@ -2199,8 +2418,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-05-HH-KIA",
@@ -2209,8 +2429,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-05-LT-KT",
@@ -2219,8 +2440,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-05-NC-SSG",
@@ -2229,8 +2451,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-05-OB-LG",
@@ -2239,8 +2462,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-05-WO-SS",
@@ -2249,8 +2473,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-06-HH-KIA",
@@ -2259,8 +2484,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-06-LT-KT",
@@ -2269,8 +2495,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-06-NC-SSG",
@@ -2279,8 +2506,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-06-OB-LG",
@@ -2289,8 +2517,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-06-WO-SS",
@@ -2299,8 +2528,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-07-HH-KIA",
@@ -2309,8 +2539,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-07-LT-KT",
@@ -2319,8 +2550,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-07-NC-SSG",
@@ -2329,8 +2561,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-07-OB-LG",
@@ -2339,8 +2572,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-07-WO-SS",
@@ -2349,8 +2583,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-08-KIA-LT",
@@ -2359,8 +2594,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-08-KT-WO",
@@ -2369,8 +2605,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-08-LG-HH",
@@ -2379,8 +2616,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-08-SS-NC",
@@ -2389,8 +2627,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-08-SSG-OB",
@@ -2399,8 +2638,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-09-KIA-LT",
@@ -2409,8 +2649,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-09-KT-WO",
@@ -2419,8 +2660,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-09-LG-HH",
@@ -2429,8 +2671,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-09-SS-NC",
@@ -2439,8 +2682,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-09-SSG-OB",
@@ -2449,8 +2693,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-10-KIA-LT",
@@ -2459,8 +2704,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-10-KT-WO",
@@ -2469,8 +2715,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-10-LG-HH",
@@ -2479,8 +2726,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-10-SS-NC",
@@ -2489,8 +2737,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-10-SSG-OB",
@@ -2499,8 +2748,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-12-HH-WO",
@@ -2509,8 +2759,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-12-NC-LT",
@@ -2519,8 +2770,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-12-OB-KIA",
@@ -2529,8 +2781,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-12-SS-LG",
@@ -2539,8 +2792,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-12-SSG-KT",
@@ -2549,8 +2803,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-13-HH-WO",
@@ -2559,8 +2814,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-13-NC-LT",
@@ -2569,8 +2825,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-13-OB-KIA",
@@ -2579,8 +2836,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-13-SS-LG",
@@ -2589,8 +2847,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-13-SSG-KT",
@@ -2599,8 +2858,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-14-HH-WO",
@@ -2609,8 +2869,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-14-NC-LT",
@@ -2619,8 +2880,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-14-OB-KIA",
@@ -2629,8 +2891,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-14-SS-LG",
@@ -2639,8 +2902,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-14-SSG-KT",
@@ -2649,8 +2913,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-15-HH-KT",
@@ -2659,8 +2924,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-15-KIA-SS",
@@ -2669,8 +2935,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-15-LG-SSG",
@@ -2679,8 +2946,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-15-LT-OB",
@@ -2689,8 +2957,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-15-WO-NC",
@@ -2699,8 +2968,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-16-HH-KT",
@@ -2709,8 +2979,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-16-KIA-SS",
@@ -2719,8 +2990,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-16-LG-SSG",
@@ -2729,8 +3001,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-16-LT-OB",
@@ -2739,8 +3012,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-16-WO-NC",
@@ -2749,8 +3023,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-17-HH-KT",
@@ -2759,8 +3034,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-17-KIA-SS",
@@ -2769,8 +3045,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-17-LG-SSG",
@@ -2779,8 +3056,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-17-LT-OB",
@@ -2789,8 +3067,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-17-WO-NC",
@@ -2799,8 +3078,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-19-KT-SS",
@@ -2809,8 +3089,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-19-LG-KIA",
@@ -2819,8 +3100,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-19-LT-HH",
@@ -2829,8 +3111,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-19-NC-OB",
@@ -2839,8 +3122,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-19-SSG-WO",
@@ -2849,8 +3133,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-20-KT-SS",
@@ -2859,8 +3144,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-20-LG-KIA",
@@ -2869,8 +3155,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-20-LT-HH",
@@ -2879,8 +3166,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-20-NC-OB",
@@ -2889,8 +3177,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-20-SSG-WO",
@@ -2899,8 +3188,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-21-KT-SS",
@@ -2909,8 +3199,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-21-LG-KIA",
@@ -2919,8 +3210,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-21-LT-HH",
@@ -2929,8 +3221,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-21-NC-OB",
@@ -2939,8 +3232,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-21-SSG-WO",
@@ -2949,8 +3243,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-22-NC-KT",
@@ -2959,8 +3254,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-22-OB-HH",
@@ -2969,8 +3265,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-22-SS-LT",
@@ -2979,8 +3276,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-22-SSG-KIA",
@@ -2989,8 +3287,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-22-WO-LG",
@@ -2999,8 +3298,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-23-NC-KT",
@@ -3009,8 +3309,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-23-OB-HH",
@@ -3019,8 +3320,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-23-SS-LT",
@@ -3029,8 +3331,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-23-SSG-KIA",
@@ -3039,8 +3342,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-23-WO-LG",
@@ -3049,8 +3353,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-24-NC-KT",
@@ -3059,8 +3364,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-24-OB-HH",
@@ -3069,8 +3375,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-24-SS-LT",
@@ -3079,8 +3386,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-24-SSG-KIA",
@@ -3089,8 +3397,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-24-WO-LG",
@@ -3099,8 +3408,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-26-HH-NC",
@@ -3109,8 +3419,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-26-KIA-WO",
@@ -3119,8 +3430,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-26-KT-OB",
@@ -3129,8 +3441,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-26-LG-LT",
@@ -3139,8 +3452,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-26-SS-SSG",
@@ -3149,8 +3463,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-27-HH-NC",
@@ -3159,8 +3474,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-27-KIA-WO",
@@ -3169,8 +3485,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-27-KT-OB",
@@ -3179,8 +3496,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-27-LG-LT",
@@ -3189,8 +3507,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-27-SS-SSG",
@@ -3199,8 +3518,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-28-HH-NC",
@@ -3209,8 +3529,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-28-KIA-WO",
@@ -3219,8 +3540,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-28-KT-OB",
@@ -3229,8 +3551,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-28-LG-LT",
@@ -3239,8 +3562,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-28-SS-SSG",
@@ -3249,8 +3573,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-29-KIA-LG",
@@ -3259,8 +3584,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-29-KT-WO",
@@ -3269,8 +3595,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-29-LT-NC",
@@ -3279,8 +3606,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-29-OB-SS",
@@ -3289,8 +3617,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-29-SSG-HH",
@@ -3299,8 +3628,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-30-KIA-LG",
@@ -3309,8 +3639,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-30-KT-WO",
@@ -3319,8 +3650,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-30-LT-NC",
@@ -3329,8 +3661,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-30-OB-SS",
@@ -3339,8 +3672,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-30-SSG-HH",
@@ -3349,8 +3683,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-31-KIA-LG",
@@ -3359,8 +3694,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-31-KT-WO",
@@ -3369,8 +3705,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-31-LT-NC",
@@ -3379,8 +3716,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-31-OB-SS",
@@ -3389,8 +3727,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-05-31-SSG-HH",
@@ -3399,8 +3738,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-02-HH-OB",
@@ -3409,8 +3749,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-02-LG-KT",
@@ -3419,8 +3760,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-02-LT-KIA",
@@ -3429,8 +3771,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-02-NC-SS",
@@ -3439,8 +3782,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-02-WO-SSG",
@@ -3449,8 +3793,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-03-HH-OB",
@@ -3459,8 +3804,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-03-LG-KT",
@@ -3469,8 +3815,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-03-LT-KIA",
@@ -3479,8 +3826,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-03-NC-SS",
@@ -3489,8 +3837,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-03-WO-SSG",
@@ -3499,8 +3848,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-04-HH-OB",
@@ -3509,8 +3859,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-04-LG-KT",
@@ -3519,8 +3870,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-04-LT-KIA",
@@ -3529,8 +3881,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-04-NC-SS",
@@ -3539,8 +3892,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-04-WO-SSG",
@@ -3549,8 +3903,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-05-HH-LT",
@@ -3559,8 +3914,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-05-KT-SSG",
@@ -3569,8 +3925,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-05-LG-NC",
@@ -3579,8 +3936,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-05-SS-KIA",
@@ -3589,8 +3947,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-05-WO-OB",
@@ -3599,8 +3958,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-06-HH-LT",
@@ -3609,8 +3969,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-06-KT-SSG",
@@ -3619,8 +3980,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-06-LG-NC",
@@ -3629,8 +3991,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-06-SS-KIA",
@@ -3639,8 +4002,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-06-WO-OB",
@@ -3649,8 +4013,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-07-HH-LT",
@@ -3659,8 +4024,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-07-KT-SSG",
@@ -3669,8 +4035,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-07-LG-NC",
@@ -3679,8 +4046,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-07-SS-KIA",
@@ -3689,8 +4057,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-07-WO-OB",
@@ -3699,8 +4068,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-09-KIA-HH",
@@ -3709,8 +4079,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-09-NC-WO",
@@ -3719,8 +4090,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-09-OB-LT",
@@ -3729,8 +4101,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-09-SS-KT",
@@ -3739,8 +4112,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-09-SSG-LG",
@@ -3749,8 +4123,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-10-KIA-HH",
@@ -3759,8 +4134,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-10-NC-WO",
@@ -3769,8 +4145,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-10-OB-LT",
@@ -3779,8 +4156,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-10-SS-KT",
@@ -3789,8 +4167,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-10-SSG-LG",
@@ -3799,8 +4178,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-11-KIA-HH",
@@ -3809,8 +4189,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-11-NC-WO",
@@ -3819,8 +4200,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-11-OB-LT",
@@ -3829,8 +4211,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-11-SS-KT",
@@ -3839,8 +4222,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-11-SSG-LG",
@@ -3849,8 +4233,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-12-HH-WO",
@@ -3859,8 +4244,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-12-LT-LG",
@@ -3869,8 +4255,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-12-NC-KT",
@@ -3879,8 +4266,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-12-OB-KIA",
@@ -3889,8 +4277,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-12-SSG-SS",
@@ -3899,8 +4288,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-13-HH-WO",
@@ -3909,8 +4299,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-13-LT-LG",
@@ -3919,8 +4310,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-13-NC-KT",
@@ -3929,8 +4321,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-13-OB-KIA",
@@ -3939,8 +4332,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-13-SSG-SS",
@@ -3949,8 +4343,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-14-HH-WO",
@@ -3959,8 +4354,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-14-LT-LG",
@@ -3969,8 +4365,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-14-NC-KT",
@@ -3979,8 +4376,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-14-OB-KIA",
@@ -3989,8 +4387,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-14-SSG-SS",
@@ -3999,8 +4398,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-16-HH-NC",
@@ -4009,8 +4409,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-16-KT-OB",
@@ -4019,8 +4420,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-16-LG-KIA",
@@ -4029,8 +4431,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-16-LT-SSG",
@@ -4039,8 +4442,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-16-WO-SS",
@@ -4049,8 +4453,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-17-HH-NC",
@@ -4059,8 +4464,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-17-KT-OB",
@@ -4069,8 +4475,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-17-LG-KIA",
@@ -4079,8 +4486,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-17-LT-SSG",
@@ -4089,8 +4497,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-17-WO-SS",
@@ -4099,8 +4508,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-18-HH-NC",
@@ -4109,8 +4519,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-18-KT-OB",
@@ -4119,8 +4530,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-18-LG-KIA",
@@ -4129,8 +4541,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-18-LT-SSG",
@@ -4139,8 +4552,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-18-WO-SS",
@@ -4149,8 +4563,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-19-KIA-KT",
@@ -4159,8 +4574,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-19-LT-WO",
@@ -4169,8 +4585,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-19-OB-LG",
@@ -4179,8 +4596,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-19-SS-HH",
@@ -4189,8 +4607,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-19-SSG-NC",
@@ -4199,8 +4618,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-20-KIA-KT",
@@ -4209,8 +4629,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-20-LT-WO",
@@ -4219,8 +4640,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-20-OB-LG",
@@ -4229,8 +4651,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-20-SS-HH",
@@ -4239,8 +4662,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-20-SSG-NC",
@@ -4249,8 +4673,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-21-KIA-KT",
@@ -4259,8 +4684,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-21-LT-WO",
@@ -4269,8 +4695,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-21-OB-LG",
@@ -4279,8 +4706,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-21-SS-HH",
@@ -4289,8 +4717,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-21-SSG-NC",
@@ -4299,8 +4728,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-23-KIA-WO",
@@ -4309,8 +4739,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-23-NC-LT",
@@ -4319,8 +4750,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-23-OB-HH",
@@ -4329,8 +4761,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-23-SS-LG",
@@ -4339,8 +4772,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-23-SSG-KT",
@@ -4349,8 +4783,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-24-KIA-WO",
@@ -4359,8 +4794,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-24-NC-LT",
@@ -4369,8 +4805,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-24-OB-HH",
@@ -4379,8 +4816,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-24-SS-LG",
@@ -4389,8 +4827,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-24-SSG-KT",
@@ -4399,8 +4838,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-25-KIA-WO",
@@ -4409,8 +4849,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-25-NC-LT",
@@ -4419,8 +4860,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-25-OB-HH",
@@ -4429,8 +4871,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-25-SS-LG",
@@ -4439,8 +4882,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-25-SSG-KT",
@@ -4449,8 +4893,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-26-HH-SSG",
@@ -4459,8 +4904,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-26-KIA-OB",
@@ -4469,8 +4915,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-26-KT-SS",
@@ -4479,8 +4926,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-26-LG-LT",
@@ -4489,8 +4937,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-26-WO-NC",
@@ -4499,8 +4948,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-27-HH-SSG",
@@ -4509,8 +4959,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-27-KIA-OB",
@@ -4519,8 +4970,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-27-KT-SS",
@@ -4529,8 +4981,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-27-LG-LT",
@@ -4539,8 +4992,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-27-WO-NC",
@@ -4549,8 +5003,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-28-HH-SSG",
@@ -4559,8 +5014,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-28-KIA-OB",
@@ -4569,8 +5025,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-28-KT-SS",
@@ -4579,8 +5036,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-28-LG-LT",
@@ -4589,8 +5047,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-28-WO-NC",
@@ -4599,8 +5058,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-30-KT-HH",
@@ -4609,8 +5069,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-30-LG-WO",
@@ -4619,8 +5080,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-30-LT-OB",
@@ -4629,8 +5091,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-30-SS-NC",
@@ -4639,8 +5102,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-06-30-SSG-KIA",
@@ -4649,8 +5113,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-01-KT-HH",
@@ -4659,8 +5124,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-01-LG-WO",
@@ -4669,8 +5135,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-01-LT-OB",
@@ -4679,8 +5146,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-01-SS-NC",
@@ -4689,8 +5157,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-01-SSG-KIA",
@@ -4699,8 +5168,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-02-KT-HH",
@@ -4709,8 +5179,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-02-LG-WO",
@@ -4719,8 +5190,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-02-LT-OB",
@@ -4729,8 +5201,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-02-SS-NC",
@@ -4739,8 +5212,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-02-SSG-KIA",
@@ -4749,8 +5223,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-03-HH-LG",
@@ -4759,8 +5234,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-03-LT-KT",
@@ -4769,8 +5245,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-03-NC-KIA",
@@ -4779,8 +5256,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-03-OB-WO",
@@ -4789,8 +5267,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-03-SS-SSG",
@@ -4799,8 +5278,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-04-HH-LG",
@@ -4809,8 +5289,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-04-LT-KT",
@@ -4819,8 +5300,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-04-NC-KIA",
@@ -4829,8 +5311,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-04-OB-WO",
@@ -4839,8 +5322,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-04-SS-SSG",
@@ -4849,8 +5333,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-05-HH-LG",
@@ -4859,8 +5344,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-05-LT-KT",
@@ -4869,8 +5355,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-05-NC-KIA",
@@ -4879,8 +5366,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-05-OB-WO",
@@ -4889,8 +5377,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-05-SS-SSG",
@@ -4899,8 +5388,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-07-KIA-LT",
@@ -4909,8 +5399,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-07-LG-SS",
@@ -4919,8 +5410,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-07-NC-HH",
@@ -4929,8 +5421,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-07-SSG-OB",
@@ -4939,8 +5432,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-07-WO-KT",
@@ -4949,8 +5443,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-08-KIA-LT",
@@ -4959,8 +5454,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-08-LG-SS",
@@ -4969,8 +5465,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-08-NC-HH",
@@ -4979,8 +5476,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-08-SSG-OB",
@@ -4989,8 +5487,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-08-WO-KT",
@@ -4999,8 +5498,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-09-KIA-LT",
@@ -5009,8 +5509,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-09-LG-SS",
@@ -5019,8 +5520,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-09-NC-HH",
@@ -5029,8 +5531,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-09-SSG-OB",
@@ -5039,8 +5542,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-09-WO-KT",
@@ -5049,8 +5553,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-16-KIA-SSG",
@@ -5059,8 +5564,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-16-KT-LG",
@@ -5069,8 +5575,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-16-LT-SS",
@@ -5079,8 +5586,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-16-OB-NC",
@@ -5089,8 +5597,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-16-WO-HH",
@@ -5099,8 +5608,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-17-KIA-SSG",
@@ -5109,8 +5619,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-17-KT-LG",
@@ -5119,8 +5630,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-17-LT-SS",
@@ -5129,8 +5641,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-17-OB-NC",
@@ -5139,8 +5652,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-17-WO-HH",
@@ -5149,8 +5663,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-18-KIA-SSG",
@@ -5159,8 +5674,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-18-KT-LG",
@@ -5169,8 +5685,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-18-LT-SS",
@@ -5179,8 +5696,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-18-OB-NC",
@@ -5189,8 +5707,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-18-WO-HH",
@@ -5199,8 +5718,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-19-KIA-SSG",
@@ -5209,8 +5729,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-19-KT-LG",
@@ -5219,8 +5740,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-19-LT-SS",
@@ -5229,8 +5751,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-19-OB-NC",
@@ -5239,8 +5762,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-19-WO-HH",
@@ -5249,8 +5773,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-21-HH-KIA",
@@ -5259,8 +5784,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-21-NC-LG",
@@ -5269,8 +5795,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-21-OB-KT",
@@ -5279,8 +5806,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-21-SS-WO",
@@ -5289,8 +5817,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-21-SSG-LT",
@@ -5299,8 +5828,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-22-HH-KIA",
@@ -5309,8 +5839,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-22-NC-LG",
@@ -5319,8 +5850,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-22-OB-KT",
@@ -5329,8 +5861,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-22-SS-WO",
@@ -5339,8 +5872,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-22-SSG-LT",
@@ -5349,8 +5883,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-23-HH-KIA",
@@ -5359,8 +5894,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-23-NC-LG",
@@ -5369,8 +5905,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-23-OB-KT",
@@ -5379,8 +5916,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-23-SS-WO",
@@ -5389,8 +5927,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-23-SSG-LT",
@@ -5399,8 +5938,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-24-KT-LT",
@@ -5409,8 +5949,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-24-LG-HH",
@@ -5419,8 +5960,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-24-NC-SSG",
@@ -5429,8 +5971,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-24-SS-OB",
@@ -5439,8 +5982,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-24-WO-KIA",
@@ -5449,8 +5993,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-25-KT-LT",
@@ -5459,8 +6004,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-25-LG-HH",
@@ -5469,8 +6015,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-25-NC-SSG",
@@ -5479,8 +6026,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-25-SS-OB",
@@ -5489,8 +6037,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-25-WO-KIA",
@@ -5499,8 +6048,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-26-KT-LT",
@@ -5509,8 +6059,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-26-LG-HH",
@@ -5519,8 +6070,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-26-NC-SSG",
@@ -5529,8 +6081,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-26-SS-OB",
@@ -5539,8 +6092,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-26-WO-KIA",
@@ -5549,8 +6103,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-28-KIA-SS",
@@ -5559,8 +6114,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-28-KT-NC",
@@ -5569,8 +6125,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-28-LT-HH",
@@ -5579,8 +6136,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-28-OB-SSG",
@@ -5589,8 +6147,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-28-WO-LG",
@@ -5599,8 +6158,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-29-KIA-SS",
@@ -5609,8 +6169,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-29-KT-NC",
@@ -5619,8 +6180,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-29-LT-HH",
@@ -5629,8 +6191,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-29-OB-SSG",
@@ -5639,8 +6202,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-29-WO-LG",
@@ -5649,8 +6213,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-30-KIA-SS",
@@ -5659,8 +6224,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-30-KT-NC",
@@ -5669,8 +6235,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-30-LT-HH",
@@ -5679,8 +6246,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-30-OB-SSG",
@@ -5689,8 +6257,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-30-WO-LG",
@@ -5699,8 +6268,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-31-HH-KT",
@@ -5709,8 +6279,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-31-KIA-NC",
@@ -5719,8 +6290,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-31-LG-OB",
@@ -5729,8 +6301,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-31-SS-LT",
@@ -5739,8 +6312,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-07-31-SSG-WO",
@@ -5749,8 +6323,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-01-HH-KT",
@@ -5759,8 +6334,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-01-KIA-NC",
@@ -5769,8 +6345,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-01-LG-OB",
@@ -5779,8 +6356,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-01-SS-LT",
@@ -5789,8 +6367,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-01-SSG-WO",
@@ -5799,8 +6378,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-02-HH-KT",
@@ -5809,8 +6389,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-02-KIA-NC",
@@ -5819,8 +6400,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-02-LG-OB",
@@ -5829,8 +6411,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-02-SS-LT",
@@ -5839,8 +6422,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-02-SSG-WO",
@@ -5849,8 +6433,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-04-HH-SS",
@@ -5859,8 +6444,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-04-KT-KIA",
@@ -5869,8 +6455,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-04-LG-SSG",
@@ -5879,8 +6466,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-04-NC-OB",
@@ -5889,8 +6477,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-04-WO-LT",
@@ -5899,8 +6488,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-05-HH-SS",
@@ -5909,8 +6499,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-05-KT-KIA",
@@ -5919,8 +6510,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-05-LG-SSG",
@@ -5929,8 +6521,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-05-NC-OB",
@@ -5939,8 +6532,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-05-WO-LT",
@@ -5949,8 +6543,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-06-HH-SS",
@@ -5959,8 +6554,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-06-KT-KIA",
@@ -5969,8 +6565,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-06-LG-SSG",
@@ -5979,8 +6576,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-06-NC-OB",
@@ -5989,8 +6587,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-06-WO-LT",
@@ -5999,8 +6598,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-07-KIA-LG",
@@ -6009,8 +6609,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-07-LT-KT",
@@ -6019,8 +6620,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-07-OB-SS",
@@ -6029,8 +6631,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-07-SSG-NC",
@@ -6039,8 +6642,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-07-WO-HH",
@@ -6049,8 +6653,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-08-KIA-LG",
@@ -6059,8 +6664,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-08-LT-KT",
@@ -6069,8 +6675,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-08-OB-SS",
@@ -6079,8 +6686,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-08-SSG-NC",
@@ -6089,8 +6697,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-08-WO-HH",
@@ -6099,8 +6708,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-09-KIA-LG",
@@ -6109,8 +6719,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-09-LT-KT",
@@ -6119,8 +6730,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-09-OB-SS",
@@ -6129,8 +6741,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-09-SSG-NC",
@@ -6139,8 +6752,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-09-WO-HH",
@@ -6149,8 +6763,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-11-HH-OB",
@@ -6159,8 +6774,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-11-KT-NC",
@@ -6169,8 +6785,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-11-LG-WO",
@@ -6179,8 +6796,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-11-LT-SSG",
@@ -6189,8 +6807,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-11-SS-KIA",
@@ -6199,8 +6818,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-12-HH-OB",
@@ -6209,8 +6829,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-12-KT-NC",
@@ -6219,8 +6840,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-12-LG-WO",
@@ -6229,8 +6851,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-12-LT-SSG",
@@ -6239,8 +6862,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-12-SS-KIA",
@@ -6249,8 +6873,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-13-HH-OB",
@@ -6259,8 +6884,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-13-KT-NC",
@@ -6269,8 +6895,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-13-LG-WO",
@@ -6279,8 +6906,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-13-LT-SSG",
@@ -6289,8 +6917,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-13-SS-KIA",
@@ -6299,8 +6928,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-14-HH-SS",
@@ -6309,8 +6939,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-14-NC-LT",
@@ -6319,8 +6950,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-14-OB-KIA",
@@ -6329,8 +6961,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-14-SSG-LG",
@@ -6339,8 +6972,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-14-WO-KT",
@@ -6349,8 +6983,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-15-HH-SS",
@@ -6359,8 +6994,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-15-NC-LT",
@@ -6369,8 +7005,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-15-OB-KIA",
@@ -6379,8 +7016,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-15-SSG-LG",
@@ -6389,8 +7027,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-15-WO-KT",
@@ -6399,8 +7038,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-16-HH-SS",
@@ -6409,8 +7049,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-16-NC-LT",
@@ -6419,8 +7060,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-16-OB-KIA",
@@ -6429,8 +7071,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-16-SSG-LG",
@@ -6439,8 +7082,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-16-WO-KT",
@@ -6449,8 +7093,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-18-KIA-HH",
@@ -6459,8 +7104,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-18-KT-LG",
@@ -6469,8 +7115,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-18-OB-NC",
@@ -6479,8 +7126,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-18-SSG-SS",
@@ -6489,8 +7137,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-18-WO-LT",
@@ -6499,8 +7148,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-19-KIA-HH",
@@ -6509,8 +7159,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-19-KT-LG",
@@ -6519,8 +7170,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-19-OB-NC",
@@ -6529,8 +7181,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-19-SSG-SS",
@@ -6539,8 +7192,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-19-WO-LT",
@@ -6549,8 +7203,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-20-KIA-HH",
@@ -6559,8 +7214,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-20-KT-LG",
@@ -6569,8 +7225,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-20-OB-NC",
@@ -6579,8 +7236,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-20-SSG-SS",
@@ -6589,8 +7247,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-20-WO-LT",
@@ -6599,8 +7258,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-21-KIA-WO",
@@ -6609,8 +7269,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-21-KT-SSG",
@@ -6619,8 +7280,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-21-LG-HH",
@@ -6629,8 +7291,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-21-LT-OB",
@@ -6639,8 +7302,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-21-SS-NC",
@@ -6649,8 +7313,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-22-KIA-WO",
@@ -6659,8 +7324,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-22-KT-SSG",
@@ -6669,8 +7335,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-22-LG-HH",
@@ -6679,8 +7346,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-22-LT-OB",
@@ -6689,8 +7357,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-22-SS-NC",
@@ -6699,8 +7368,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-23-KIA-WO",
@@ -6709,8 +7379,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-23-KT-SSG",
@@ -6719,8 +7390,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-23-LG-HH",
@@ -6729,8 +7401,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-23-LT-OB",
@@ -6739,8 +7412,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-23-SS-NC",
@@ -6749,8 +7423,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-25-HH-SSG",
@@ -6759,8 +7434,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-25-LT-KIA",
@@ -6769,8 +7445,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-25-NC-LG",
@@ -6779,8 +7456,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-25-OB-KT",
@@ -6789,8 +7467,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-25-SS-WO",
@@ -6799,8 +7478,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-26-HH-SSG",
@@ -6809,8 +7489,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-26-LT-KIA",
@@ -6819,8 +7500,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-26-NC-LG",
@@ -6829,8 +7511,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-26-OB-KT",
@@ -6839,8 +7522,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-26-SS-WO",
@@ -6849,8 +7533,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-27-HH-SSG",
@@ -6859,8 +7544,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-27-LT-KIA",
@@ -6869,8 +7555,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-27-NC-LG",
@@ -6879,8 +7566,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-27-OB-KT",
@@ -6889,8 +7577,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-27-SS-WO",
@@ -6899,8 +7588,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-28-KT-SS",
@@ -6909,8 +7599,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-28-LG-LT",
@@ -6919,8 +7610,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-28-NC-HH",
@@ -6929,8 +7621,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-28-SSG-KIA",
@@ -6939,8 +7632,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-28-WO-OB",
@@ -6949,8 +7643,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-29-KT-SS",
@@ -6959,8 +7654,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-29-LG-LT",
@@ -6969,8 +7665,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-29-NC-HH",
@@ -6979,8 +7676,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-29-SSG-KIA",
@@ -6989,8 +7687,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-29-WO-OB",
@@ -6999,8 +7698,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-30-KT-SS",
@@ -7009,8 +7709,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-30-LG-LT",
@@ -7019,8 +7720,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-30-NC-HH",
@@ -7029,8 +7731,9 @@
       "homeTeam": "HH",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-30-SSG-KIA",
@@ -7039,8 +7742,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-08-30-WO-OB",
@@ -7049,8 +7753,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-01-HH-KT",
@@ -7059,8 +7764,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-01-KIA-NC",
@@ -7069,8 +7775,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-01-LG-OB",
@@ -7079,8 +7786,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-01-LT-SS",
@@ -7089,8 +7797,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-01-SSG-WO",
@@ -7099,8 +7808,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-02-HH-KT",
@@ -7109,8 +7819,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-02-KIA-NC",
@@ -7119,8 +7830,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-02-LG-OB",
@@ -7129,8 +7841,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-02-LT-SS",
@@ -7139,8 +7852,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-02-SSG-WO",
@@ -7149,8 +7863,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-03-HH-KT",
@@ -7159,8 +7874,9 @@
       "homeTeam": "KT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-03-KIA-NC",
@@ -7169,8 +7885,9 @@
       "homeTeam": "NC",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-03-LG-OB",
@@ -7179,8 +7896,9 @@
       "homeTeam": "OB",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-03-LT-SS",
@@ -7189,8 +7907,9 @@
       "homeTeam": "SS",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-03-SSG-WO",
@@ -7199,8 +7918,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-04-HH-LT",
@@ -7209,8 +7929,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-04-KT-KIA",
@@ -7219,8 +7940,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-04-NC-WO",
@@ -7229,8 +7951,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-04-OB-SSG",
@@ -7239,8 +7962,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-04-SS-LG",
@@ -7249,8 +7973,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-05-HH-LT",
@@ -7259,8 +7984,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-05-KT-KIA",
@@ -7269,8 +7995,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-05-NC-WO",
@@ -7279,8 +8006,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-05-OB-SSG",
@@ -7289,8 +8017,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-05-SS-LG",
@@ -7299,8 +8028,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-06-HH-LT",
@@ -7309,8 +8039,9 @@
       "homeTeam": "LT",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-06-KT-KIA",
@@ -7319,8 +8050,9 @@
       "homeTeam": "KIA",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-06-NC-WO",
@@ -7329,8 +8061,9 @@
       "homeTeam": "WO",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-06-OB-SSG",
@@ -7339,8 +8072,9 @@
       "homeTeam": "SSG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     },
     {
       "id": "2026-09-06-SS-LG",
@@ -7349,8 +8083,9 @@
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
-      "status": "tied",
-      "stadium": null
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular"
     }
   ]
 }
