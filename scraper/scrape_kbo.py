@@ -152,6 +152,29 @@ _POSTPONED_STATUS_CODES = {"POSTPONE", "POSTPONED", "PPD", "DELAY"}
 # nasty bug where future games with a default 0:0 score get mislabeled
 # as ties.
 
+# Naver also exposes a Korean statusInfo string ("우천취소", "노게임",
+# "연기" 등). Cancelled/postponed games often arrive with statusCode
+# stuck at "BEFORE" but a meaningful statusInfo, so we check both.
+_CANCEL_INFO_TOKENS = ("취소", "노게임", "NOGAME", "CANCEL")
+_POSTPONE_INFO_TOKENS = ("연기", "POSTPONE", "PPD", "DELAY")
+_FINISHED_INFO_TOKENS = ("종료", "경기종료", "FINAL", "END")
+
+# KBO regular-season opening dates (정규시즌 개막일). Used to draw the
+# line between 시범경기 and 정규시즌 cleanly when the API doesn't expose
+# a category field. Source: KBO 공식 일정.
+_REGULAR_OPENING = {
+    2021: "2021-04-03",
+    2022: "2022-04-02",
+    2023: "2023-04-01",
+    2024: "2024-03-23",
+    2025: "2025-03-22",
+    2026: "2026-03-28",
+}
+# Postseason typically starts mid-to-late October. We use Oct 22 as a
+# generous lower bound — earlier than any recent KS but late enough to
+# exclude regular-season Octobers reliably.
+_POSTSEASON_FROM_MMDD = (10, 22)
+
 # Candidate fields that have appeared in Naver-style sports payloads to
 # distinguish 시범경기 / 정규시즌 / 포스트시즌. We probe each in order
 # and the first non-empty value wins.
@@ -177,9 +200,9 @@ _REGULAR_TOKENS = ("REG", "정규", "REGULAR", "SEASON")
 def _classify_category(raw: dict, date_str: str) -> str:
     """Return 'regular' / 'preseason' / 'postseason' / 'unknown'.
 
-    Tries to read a category-bearing field from the payload first; falls
-    back to a date-based heuristic (시범경기 ≈ 3월 초~중순,
-    포스트시즌 ≈ 10월 후반~11월) when no field matches.
+    Probes likely category-bearing fields first. Falls back to KBO's
+    actual opening dates (hardcoded per season) so 시범경기 doesn't
+    leak into regular-season counts.
     """
     for field in _CATEGORY_FIELDS:
         v = _pluck(raw, field)
@@ -193,16 +216,25 @@ def _classify_category(raw: dict, date_str: str) -> str:
         if any(tok in s for tok in (t.upper() for t in _REGULAR_TOKENS)):
             return "regular"
 
-    # Date-based fallback. KBO 시범경기는 보통 3/초~3/24 사이,
-    # 정규시즌 개막은 3/말~4/초, 포스트시즌은 10월 말~11월 초.
     try:
         y, m, d = (int(x) for x in date_str.split("-"))
     except Exception:
         return "unknown"
+
+    # Postseason: late October onward.
+    pmm, pdd = _POSTSEASON_FROM_MMDD
+    if (m, d) >= (pmm, pdd) or m >= 11:
+        return "postseason"
+
+    opening = _REGULAR_OPENING.get(y)
+    if opening is not None:
+        if date_str < opening:
+            return "preseason"
+        return "regular"
+
+    # No opening date configured for this season — best-effort fallback.
     if m == 3 and d <= 24:
         return "preseason"
-    if (m == 10 and d >= 22) or m >= 11:
-        return "postseason"
     if 3 <= m <= 10:
         return "regular"
     return "unknown"
@@ -260,11 +292,19 @@ def _normalize_game(raw: dict) -> Game | None:
     home_score = _coerce_score(_pluck(raw, "homeTeamScore", "homeTeam.score", "home.score"))
 
     status_code = (raw.get("statusCode") or "").upper().strip()
-    if status_code in _CANCELLED_STATUS_CODES:
+    status_info_raw = str(raw.get("statusInfo") or "").strip()
+    status_info_upper = status_info_raw.upper()
+
+    def _info_has(tokens):
+        return any(t in status_info_raw or t.upper() in status_info_upper for t in tokens)
+
+    # statusInfo wins over statusCode: API frequently keeps statusCode at
+    # "BEFORE" while statusInfo says "우천취소".
+    if _info_has(_CANCEL_INFO_TOKENS) or status_code in _CANCELLED_STATUS_CODES:
         status = "cancelled"
-    elif status_code in _POSTPONED_STATUS_CODES:
+    elif _info_has(_POSTPONE_INFO_TOKENS) or status_code in _POSTPONED_STATUS_CODES:
         status = "postponed"
-    elif status_code in _FINISHED_STATUS_CODES:
+    elif status_code in _FINISHED_STATUS_CODES or _info_has(_FINISHED_INFO_TOKENS):
         if away_score is not None and home_score is not None:
             status = "tied" if away_score == home_score else "completed"
         else:
@@ -297,8 +337,11 @@ def _normalize_game(raw: dict) -> Game | None:
 _debug_state = {
     "first_payload_seen": False,
     "status_counts": {},
+    "status_info_counts": {},
+    "status_combo_counts": {},
     "category_field_values": {f: {} for f in _CATEGORY_FIELDS},
     "first_game": None,
+    "first_before_game": None,  # raw of first non-RESULT/finished sample
     "first_payload_top_keys": None,
     "first_payload_result_keys": None,
 }
@@ -320,7 +363,13 @@ def _record_debug(payload: dict, raws: list[dict]) -> None:
 
     for r in raws:
         sc = (r.get("statusCode") or "").upper().strip() or "(empty)"
+        si = (str(r.get("statusInfo") or "")).strip() or "(empty)"
         _debug_state["status_counts"][sc] = _debug_state["status_counts"].get(sc, 0) + 1
+        _debug_state["status_info_counts"][si] = _debug_state["status_info_counts"].get(si, 0) + 1
+        combo = f"{sc} / {si}"
+        _debug_state["status_combo_counts"][combo] = _debug_state["status_combo_counts"].get(combo, 0) + 1
+        if _debug_state["first_before_game"] is None and sc not in _FINISHED_STATUS_CODES:
+            _debug_state["first_before_game"] = r
         for field in _CATEGORY_FIELDS:
             v = _pluck(r, field)
             if v is None:
@@ -333,6 +382,10 @@ def _record_debug(payload: dict, raws: list[dict]) -> None:
 def _flush_debug() -> None:
     try:
         DEBUG_DUMP_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+        def _sorted_desc(d):
+            return dict(sorted(d.items(), key=lambda kv: -kv[1]))
+
         diag = {
             "topLevelKeys": _debug_state["first_payload_top_keys"],
             "resultKeys": _debug_state["first_payload_result_keys"],
@@ -342,14 +395,12 @@ def _flush_debug() -> None:
                 if _debug_state["first_game"]
                 else None
             ),
-            "statusCodeCounts": dict(
-                sorted(
-                    _debug_state["status_counts"].items(),
-                    key=lambda kv: -kv[1],
-                )
-            ),
+            "firstBeforeGame": _debug_state["first_before_game"],
+            "statusCodeCounts": _sorted_desc(_debug_state["status_counts"]),
+            "statusInfoCounts": _sorted_desc(_debug_state["status_info_counts"]),
+            "statusComboCounts": _sorted_desc(_debug_state["status_combo_counts"]),
             "categoryFieldValues": {
-                f: dict(sorted(vals.items(), key=lambda kv: -kv[1]))
+                f: _sorted_desc(vals)
                 for f, vals in _debug_state["category_field_values"].items()
                 if vals
             },

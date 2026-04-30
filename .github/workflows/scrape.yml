@@ -114,7 +114,7 @@ jobs:
               first = regs[0]
               rows.append(f"- {year}: `{first['date']}` {first['awayTeam']} {first.get('awayScore','-')}:{first.get('homeScore','-')} {first['homeTeam']} ({first['status']}, {first.get('category')})")
 
-          # 진단: statusCode 분포 + 카테고리 후보 필드 분포 (항상 표시)
+          # 진단: statusCode/statusInfo 분포 + 카테고리 후보 + BEFORE 게임 샘플
           dbg_path = "data/_debug_naver.json"
           if os.path.exists(dbg_path):
               with open(dbg_path, encoding="utf-8") as fp:
@@ -124,6 +124,16 @@ jobs:
               rows.append("**statusCode 분포:**")
               for k, v in sc.items():
                   rows.append(f"  - `{k}`: {v}")
+              si = diag.get("statusInfoCounts") or {}
+              if si:
+                  rows += ["", "**statusInfo 분포:**"]
+                  for k, v in list(si.items())[:20]:
+                      rows.append(f"  - `{k}`: {v}")
+              combo = diag.get("statusComboCounts") or {}
+              if combo:
+                  rows += ["", "**statusCode / statusInfo 조합 (상위 20):**"]
+                  for k, v in list(combo.items())[:20]:
+                      rows.append(f"  - `{k}`: {v}")
               cf = diag.get("categoryFieldValues") or {}
               if cf:
                   rows += ["", "**카테고리 후보 필드에서 발견된 값:**"]
@@ -135,8 +145,13 @@ jobs:
                   rows += ["", "**카테고리 후보 필드:** 응답에 매칭되는 필드 없음 → 날짜 휴리스틱으로 분류됨"]
               fg = diag.get("firstGame")
               if fg:
-                  rows += ["", "<details><summary>첫 게임 raw JSON</summary>", "", "```json",
+                  rows += ["", "<details><summary>첫 RESULT 게임 raw JSON</summary>", "", "```json",
                            json.dumps(fg, ensure_ascii=False, indent=2)[:3000],
+                           "```", "</details>"]
+              fb = diag.get("firstBeforeGame")
+              if fb:
+                  rows += ["", "<details><summary>첫 BEFORE 게임 raw JSON (취소/미진행 구분 단서)</summary>", "", "```json",
+                           json.dumps(fb, ensure_ascii=False, indent=2)[:3000],
                            "```", "</details>"]
           os.makedirs("data", exist_ok=True)
           with open("data/_summary.md", "w", encoding="utf-8") as fp:
