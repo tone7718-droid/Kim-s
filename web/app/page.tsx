@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { TeamPicker } from "@/components/TeamPicker";
 import { StatsCard } from "@/components/StatsCard";
 import { GameList } from "@/components/GameList";
+import { InstallButton } from "@/components/InstallButton";
 import {
   availableSeasons,
   computeStats,
@@ -78,9 +79,12 @@ export default function HomePage() {
 
   return (
     <main className="mx-auto max-w-md px-4 py-5 pb-24">
-      <header className="mb-4">
-        <h1 className="text-xl font-bold tracking-tight">내 직관 승률</h1>
-        <p className="text-xs text-zinc-500 mt-0.5">KBO · 응원팀 직관 기록 → 승률 자동 계산</p>
+      <header className="mb-4 flex items-start justify-between gap-3">
+        <div>
+          <h1 className="text-xl font-bold tracking-tight">내 직관 승률</h1>
+          <p className="text-xs text-zinc-500 mt-0.5">KBO · 응원팀 직관 기록 → 승률 자동 계산</p>
+        </div>
+        <InstallButton />
       </header>
 
       <section className="mb-4">
