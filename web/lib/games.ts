@@ -94,3 +94,76 @@ export function statusBadge(status: GameStatus): { label: string; className: str
     case "scheduled":  return { label: "예정",   className: "bg-sky-100 text-sky-800" };
   }
 }
+
+// === Breakdown stats ========================================================
+
+export interface BreakdownRow {
+  key: string;       // group label (e.g. "KIA", "홈", "4월")
+  stats: AttendanceStats;
+}
+
+function statsFromGames(games: Game[], team: string): AttendanceStats {
+  let wins = 0, losses = 0, ties = 0, noresult = 0;
+  for (const g of games) {
+    const o = outcomeForTeam(g, team);
+    if (o === "win") wins++;
+    else if (o === "loss") losses++;
+    else if (o === "tie") ties++;
+    else noresult++;
+  }
+  const denom = wins + losses;
+  return {
+    total: games.length, wins, losses, ties, noresult,
+    winRate: denom === 0 ? null : wins / denom,
+  };
+}
+
+export function breakdownByOpponent(
+  games: Game[], attended: Set<string>, team: string,
+): BreakdownRow[] {
+  const groups = new Map<string, Game[]>();
+  for (const g of games) {
+    if (!attended.has(g.id)) continue;
+    const opp = g.homeTeam === team ? g.awayTeam : g.homeTeam;
+    const arr = groups.get(opp) ?? [];
+    arr.push(g);
+    groups.set(opp, arr);
+  }
+  return [...groups.entries()]
+    .map(([key, gs]) => ({ key, stats: statsFromGames(gs, team) }))
+    .sort((a, b) => b.stats.total - a.stats.total);
+}
+
+export function breakdownByVenue(
+  games: Game[], attended: Set<string>, team: string,
+): BreakdownRow[] {
+  const home: Game[] = [];
+  const away: Game[] = [];
+  for (const g of games) {
+    if (!attended.has(g.id)) continue;
+    (g.homeTeam === team ? home : away).push(g);
+  }
+  const out: BreakdownRow[] = [];
+  if (home.length) out.push({ key: "홈", stats: statsFromGames(home, team) });
+  if (away.length) out.push({ key: "원정", stats: statsFromGames(away, team) });
+  return out;
+}
+
+export function breakdownByMonth(
+  games: Game[], attended: Set<string>, team: string,
+): BreakdownRow[] {
+  const groups = new Map<string, Game[]>();
+  for (const g of games) {
+    if (!attended.has(g.id)) continue;
+    const month = g.date.slice(5, 7); // "04"
+    const arr = groups.get(month) ?? [];
+    arr.push(g);
+    groups.set(month, arr);
+  }
+  return [...groups.entries()]
+    .sort(([a], [b]) => (a < b ? -1 : 1))
+    .map(([key, gs]) => ({
+      key: `${parseInt(key, 10)}월`,
+      stats: statsFromGames(gs, team),
+    }));
+}
