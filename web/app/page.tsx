@@ -7,6 +7,7 @@ import { GameList } from "@/components/GameList";
 import { InstallButton } from "@/components/InstallButton";
 import { SettingsMenu } from "@/components/SettingsMenu";
 import { BreakdownStats } from "@/components/BreakdownStats";
+import { WinLossPieCharts } from "@/components/WinLossPieCharts";
 import {
   availableSeasons,
   computeStats,
@@ -49,6 +50,7 @@ export default function HomePage() {
   const [includePostseason, setIncludePostseason] = useState(true);
   const [includePreseason, setIncludePreseason] = useState(false);
   const [attendedOnly, setAttendedOnly] = useState(false);
+  const [editMode, setEditMode] = useState(false);
   const { attended, toggle, hydrated } = useAttended();
 
   // hydrate prefs
@@ -147,6 +149,12 @@ export default function HomePage() {
 
       {team && stats && stats.total > 0 && (
         <section className="mb-4">
+          <WinLossPieCharts team={team} games={games} attended={attended} />
+        </section>
+      )}
+
+      {team && stats && stats.total > 0 && (
+        <section className="mb-4">
           <BreakdownStats team={team} games={games} attended={attended} />
         </section>
       )}
@@ -184,6 +192,25 @@ export default function HomePage() {
       )}
 
       <section className="bg-white rounded-xl shadow-sm overflow-hidden">
+        {team && season && (
+          <div className="flex items-center justify-between px-3 py-2 border-b border-zinc-100">
+            <span className="text-xs font-semibold text-zinc-500">
+              경기 일정 ({year}년 {season.games[0]?.date.slice(5, 7) ?? "03"}월~)
+            </span>
+            <button
+              onClick={() => setEditMode((v) => !v)}
+              className={[
+                "text-xs font-semibold px-3 py-1 rounded-full transition-colors",
+                editMode
+                  ? "bg-emerald-600 text-white"
+                  : "bg-zinc-200 text-zinc-700",
+              ].join(" ")}
+              aria-pressed={editMode}
+            >
+              {editMode ? "저장" : "수정"}
+            </button>
+          </div>
+        )}
         {!team ? (
           <div className="text-center text-zinc-500 py-12 text-sm">
             응원팀을 골라주세요
@@ -199,7 +226,13 @@ export default function HomePage() {
             직관 체크된 경기가 없어요.
           </div>
         ) : (
-          <GameList team={team} games={visibleGames} attended={attended} onToggle={toggle} />
+          <GameList
+            team={team}
+            games={visibleGames}
+            attended={attended}
+            onToggle={toggle}
+            editMode={editMode}
+          />
         )}
       </section>
 

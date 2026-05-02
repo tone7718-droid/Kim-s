@@ -10,9 +10,12 @@ interface Props {
   games: Game[];
   attended: Set<string>;
   onToggle: (id: string) => void;
+  // When false, checkboxes are hidden and rows are non-interactive,
+  // protecting the user from accidental toggles while scrolling.
+  editMode: boolean;
 }
 
-export function GameList({ team, games, attended, onToggle }: Props) {
+export function GameList({ team, games, attended, onToggle, editMode }: Props) {
   // Group by month for sticky headers.
   const sections = useMemo(() => {
     const m = new Map<string, Game[]>();
@@ -48,6 +51,7 @@ export function GameList({ team, games, attended, onToggle }: Props) {
                 game={g}
                 checked={attended.has(g.id)}
                 onToggle={onToggle}
+                editMode={editMode}
               />
             ))}
           </ul>
@@ -58,8 +62,14 @@ export function GameList({ team, games, attended, onToggle }: Props) {
 }
 
 function GameRow({
-  team, game, checked, onToggle,
-}: { team: string; game: Game; checked: boolean; onToggle: (id: string) => void }) {
+  team, game, checked, onToggle, editMode,
+}: {
+  team: string;
+  game: Game;
+  checked: boolean;
+  onToggle: (id: string) => void;
+  editMode: boolean;
+}) {
   const isHome = game.homeTeam === team;
   const opp = isHome ? game.awayTeam : game.homeTeam;
   const out = outcomeForTeam(game, team);
@@ -80,9 +90,6 @@ function GameRow({
   const outcomeText =
     out === "win" ? "승" : out === "loss" ? "패" : out === "tie" ? "무" : "—";
 
-  // Highlight attended rows with a colored left bar + tinted background.
-  // Color is derived from outcome so the row tells the user "you saw a
-  // win/loss/tie" at a glance without reading the score.
   const accent = !checked
     ? "border-l-4 border-transparent"
     : out === "win"
@@ -93,45 +100,57 @@ function GameRow({
           ? "border-l-4 border-zinc-400 bg-zinc-100"
           : "border-l-4 border-zinc-300 bg-zinc-50";
 
-  return (
-    <li>
-      <label
-        className={`flex items-center gap-3 pl-3 pr-3 py-2.5 active:bg-zinc-50 transition-colors ${accent}`}
-      >
+  const rowClass = `flex items-center gap-3 pl-3 pr-3 py-2.5 transition-colors ${accent} ${
+    editMode ? "active:bg-zinc-50" : ""
+  }`;
+
+  const inner = (
+    <>
+      {editMode && (
         <input
           type="checkbox"
           checked={checked}
           onChange={() => onToggle(game.id)}
           className="size-5 accent-zinc-900 shrink-0"
         />
-        <div className="flex-1 min-w-0">
-          <div className="flex items-baseline gap-2">
-            <span className="text-xs text-zinc-500 tabular-nums shrink-0">
-              {game.date.slice(5)}
-            </span>
-            <span
-              className={`text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0 ${
-                isHome ? "bg-emerald-100 text-emerald-700" : "bg-violet-100 text-violet-700"
-              }`}
-            >
-              {isHome ? "홈" : "원정"}
-            </span>
-            <span className="text-sm truncate">vs {teamName(opp)}</span>
-          </div>
-          {game.stadium && (
-            <div className="text-[11px] text-zinc-400 mt-0.5 truncate">{game.stadium}</div>
-          )}
+      )}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-baseline gap-2">
+          <span className="text-xs text-zinc-500 tabular-nums shrink-0">
+            {game.date.slice(5)}
+          </span>
+          <span
+            className={`text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0 ${
+              isHome ? "bg-emerald-100 text-emerald-700" : "bg-violet-100 text-violet-700"
+            }`}
+          >
+            {isHome ? "홈" : "원정"}
+          </span>
+          <span className="text-sm truncate">vs {teamName(opp)}</span>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
-          <span className="text-sm tabular-nums">{scoreText}</span>
-          <span className={`text-sm w-5 text-center ${outcomeClass}`}>{outcomeText}</span>
-          {game.status !== "completed" && game.status !== "tied" && (
-            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${badge.className}`}>
-              {badge.label}
-            </span>
-          )}
-        </div>
-      </label>
+        {game.stadium && (
+          <div className="text-[11px] text-zinc-400 mt-0.5 truncate">{game.stadium}</div>
+        )}
+      </div>
+      <div className="flex items-center gap-2 shrink-0">
+        <span className="text-sm tabular-nums">{scoreText}</span>
+        <span className={`text-sm w-5 text-center ${outcomeClass}`}>{outcomeText}</span>
+        {game.status !== "completed" && game.status !== "tied" && (
+          <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${badge.className}`}>
+            {badge.label}
+          </span>
+        )}
+      </div>
+    </>
+  );
+
+  return (
+    <li>
+      {editMode ? (
+        <label className={rowClass}>{inner}</label>
+      ) : (
+        <div className={rowClass}>{inner}</div>
+      )}
     </li>
   );
 }
