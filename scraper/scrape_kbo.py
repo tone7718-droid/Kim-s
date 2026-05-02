@@ -33,7 +33,7 @@ import json
 import os
 import sys
 import time
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, replace
 from pathlib import Path
 from typing import Iterable
 
@@ -413,7 +413,12 @@ def _flush_debug() -> None:
 
 
 def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
-    seen: set[str] = set()
+    # base_id -> count of times we've seen it. Same (date, away, home)
+    # appearing more than once means a double-header; the 2nd / 3rd / ...
+    # game gets a "-2" / "-3" suffix on its id so we don't silently drop
+    # one of them. Existing single games keep their original id, so users'
+    # LocalStorage records stay valid across the migration.
+    seen_count: dict[str, int] = {}
     out: list[Game] = []
     for month in months:
         first = dt.date(year, month, 1)
@@ -422,17 +427,25 @@ def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
         print(f"  fetching {first}..{last} ...", file=sys.stderr)
         payload = fetch_range(first.isoformat(), last.isoformat())
         raws = _extract_games(payload)
+        # Sort by gameDateTime so a double-header's earlier game gets the
+        # bare id and the later one gets -2.
+        raws.sort(key=lambda r: str(_pluck(r, "gameDateTime") or _pluck(r, "gameDate") or ""))
         _record_debug(payload, raws)
         kept = 0
         for r in raws:
             g = _normalize_game(r)
-            if g and g.id not in seen:
-                seen.add(g.id)
-                out.append(g)
-                kept += 1
+            if g is None:
+                continue
+            base = g.id
+            count = seen_count.get(base, 0)
+            if count > 0:
+                g = replace(g, id=f"{base}-{count + 1}")
+            seen_count[base] = count + 1
+            out.append(g)
+            kept += 1
         print(f"    -> {len(raws)} raw, {kept} kept", file=sys.stderr)
         time.sleep(0.3)
-    out.sort(key=lambda g: (g.date, g.awayTeam))
+    out.sort(key=lambda g: (g.date, g.awayTeam, g.id))
     return out
 
 

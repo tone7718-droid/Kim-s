@@ -10,6 +10,7 @@ import { BreakdownStats } from "@/components/BreakdownStats";
 import {
   availableSeasons,
   computeStats,
+  formatGeneratedAt,
   gamesForTeam,
   loadSeason,
 } from "@/lib/games";
@@ -103,6 +104,11 @@ export default function HomePage() {
         <div>
           <h1 className="text-xl font-bold tracking-tight">내 직관 승률</h1>
           <p className="text-xs text-zinc-500 mt-0.5">KBO · 응원팀 직관 기록 → 승률 자동 계산</p>
+          {season?.generatedAt && (
+            <p className="text-[11px] text-zinc-400 mt-1 tabular-nums">
+              데이터 {formatGeneratedAt(season.generatedAt)} 갱신
+            </p>
+          )}
         </div>
         <div className="flex items-center gap-2 shrink-0">
           <InstallButton />

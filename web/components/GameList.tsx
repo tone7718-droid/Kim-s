@@ -80,9 +80,24 @@ function GameRow({
   const outcomeText =
     out === "win" ? "승" : out === "loss" ? "패" : out === "tie" ? "무" : "—";
 
+  // Highlight attended rows with a colored left bar + tinted background.
+  // Color is derived from outcome so the row tells the user "you saw a
+  // win/loss/tie" at a glance without reading the score.
+  const accent = !checked
+    ? "border-l-4 border-transparent"
+    : out === "win"
+      ? "border-l-4 border-emerald-500 bg-emerald-50/70"
+      : out === "loss"
+        ? "border-l-4 border-rose-500 bg-rose-50/70"
+        : out === "tie"
+          ? "border-l-4 border-zinc-400 bg-zinc-100"
+          : "border-l-4 border-zinc-300 bg-zinc-50";
+
   return (
     <li>
-      <label className="flex items-center gap-3 px-3 py-2.5 active:bg-zinc-50">
+      <label
+        className={`flex items-center gap-3 pl-3 pr-3 py-2.5 active:bg-zinc-50 transition-colors ${accent}`}
+      >
         <input
           type="checkbox"
           checked={checked}

@@ -89,6 +89,38 @@ export function computeStats(
   };
 }
 
+// Format an ISO timestamp from the scraper as a short Korean string in
+// KST. Uses "오늘 / 어제" relative phrasing for recent updates.
+export function formatGeneratedAt(iso: string): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+
+  const dateInKst = (date: Date) =>
+    new Intl.DateTimeFormat("ko-KR", {
+      timeZone: "Asia/Seoul",
+      year: "numeric", month: "2-digit", day: "2-digit",
+    }).format(date);
+
+  const time = new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).format(d);
+
+  const today = dateInKst(new Date());
+  const yesterdayDate = new Date();
+  yesterdayDate.setDate(yesterdayDate.getDate() - 1);
+  const yesterday = dateInKst(yesterdayDate);
+  const ts = dateInKst(d);
+
+  if (ts === today) return `오늘 ${time}`;
+  if (ts === yesterday) return `어제 ${time}`;
+  const md = new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul", month: "long", day: "numeric",
+  }).format(d);
+  return `${md} ${time}`;
+}
+
 export function statusBadge(status: GameStatus): { label: string; className: string } {
   switch (status) {
     case "completed":  return { label: "종료",   className: "bg-zinc-200 text-zinc-700" };
