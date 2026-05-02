@@ -10,8 +10,8 @@ on:
       - 'scraper/**'
       - '.github/workflows/scrape.yml'
   schedule:
-    # 매일 09:00 KST (= 00:00 UTC) — 전날 경기 결과 반영
-    - cron: '0 0 * * *'
+    # 매일 00:00 KST (= 15:00 UTC, 전날) — 어제 경기 결과 반영
+    - cron: '0 15 * * *'
   workflow_dispatch:
     inputs:
       year:

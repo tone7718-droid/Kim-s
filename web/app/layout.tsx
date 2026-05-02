@@ -2,12 +2,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "내 직관 승률 (KBO)",
+  title: "KBO 직관 승률",
   description: "KBO 직관 경기 승률 자동 계산기",
   manifest: "/manifest.webmanifest",
+  applicationName: "KBO 직관 승률",
   appleWebApp: {
     capable: true,
-    title: "직관승률",
+    title: "KBO 직관 승률",
     statusBarStyle: "default",
   },
 };

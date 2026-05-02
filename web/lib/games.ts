@@ -8,11 +8,15 @@ export function availableSeasons(currentYear: number = new Date().getFullYear())
 }
 
 // Fetches a single season's payload from the static JSON shipped under
-// /public/data/seasons. Returns null if the file isn't available yet
-// (e.g. a season the scraper hasn't reached).
+// /public/data/seasons. The cache buster (today's date) ensures users
+// see fresh data within a day of the scraper publishing it without
+// burning bandwidth on every navigation.
 export async function loadSeason(year: number): Promise<SeasonPayload | null> {
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD (UTC-ish)
   try {
-    const res = await fetch(`/data/seasons/${year}.json`, { cache: "force-cache" });
+    const res = await fetch(`/data/seasons/${year}.json?d=${today}`, {
+      cache: "no-cache", // forces revalidation against the network
+    });
     if (!res.ok) return null;
     return (await res.json()) as SeasonPayload;
   } catch {
