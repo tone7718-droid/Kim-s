@@ -1,6 +1,6 @@
 {
   "year": 2024,
-  "generatedAt": "2026-05-02T03:15:36+0000",
+  "generatedAt": "2026-05-02T03:32:25+0000",
   "games": [
     {
       "id": "2024-03-08-KIA-LT",
@@ -1972,6 +1972,17 @@
       "category": "regular"
     },
     {
+      "id": "2024-04-21-KT-LT-2",
+      "date": "2024-04-21",
+      "awayTeam": "KT",
+      "homeTeam": "LT",
+      "awayScore": 5,
+      "homeScore": 7,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-04-21-LG-SSG",
       "date": "2024-04-21",
       "awayTeam": "LG",
@@ -1979,6 +1990,17 @@
       "awayScore": 10,
       "homeScore": 8,
       "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-04-21-LG-SSG-2",
+      "date": "2024-04-21",
+      "awayTeam": "LG",
+      "homeTeam": "SSG",
+      "awayScore": 5,
+      "homeScore": 5,
+      "status": "tied",
       "stadium": null,
       "category": "regular"
     },
@@ -2011,6 +2033,17 @@
       "homeTeam": "OB",
       "awayScore": 8,
       "homeScore": 4,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-04-21-WO-OB-2",
+      "date": "2024-04-21",
+      "awayTeam": "WO",
+      "homeTeam": "OB",
+      "awayScore": 1,
+      "homeScore": 2,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -2962,6 +2995,17 @@
       "category": "regular"
     },
     {
+      "id": "2024-05-12-KT-OB-2",
+      "date": "2024-05-12",
+      "awayTeam": "KT",
+      "homeTeam": "OB",
+      "awayScore": 4,
+      "homeScore": 8,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-05-12-LG-LT",
       "date": "2024-05-12",
       "awayTeam": "LG",
@@ -2990,6 +3034,17 @@
       "homeTeam": "KIA",
       "awayScore": 2,
       "homeScore": 3,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-05-12-SSG-KIA-2",
+      "date": "2024-05-12",
+      "awayTeam": "SSG",
+      "homeTeam": "KIA",
+      "awayScore": 10,
+      "homeScore": 6,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -4326,6 +4381,17 @@
       "category": "regular"
     },
     {
+      "id": "2024-06-09-SSG-LT-2",
+      "date": "2024-06-09",
+      "awayTeam": "SSG",
+      "homeTeam": "LT",
+      "awayScore": 3,
+      "homeScore": 5,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-06-11-HH-OB",
       "date": "2024-06-11",
       "awayTeam": "HH",
@@ -4942,12 +5008,34 @@
       "category": "regular"
     },
     {
+      "id": "2024-06-23-HH-KIA-2",
+      "date": "2024-06-23",
+      "awayTeam": "HH",
+      "homeTeam": "KIA",
+      "awayScore": 1,
+      "homeScore": 4,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-06-23-KT-LG",
       "date": "2024-06-23",
       "awayTeam": "KT",
       "homeTeam": "LG",
       "awayScore": 2,
       "homeScore": 7,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-06-23-KT-LG-2",
+      "date": "2024-06-23",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 4,
+      "homeScore": 3,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -4981,6 +5069,17 @@
       "homeTeam": "SS",
       "awayScore": 4,
       "homeScore": 7,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-06-23-OB-SS-2",
+      "date": "2024-06-23",
+      "awayTeam": "OB",
+      "homeTeam": "SS",
+      "awayScore": 4,
+      "homeScore": 10,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -5272,6 +5371,17 @@
       "category": "regular"
     },
     {
+      "id": "2024-06-30-HH-LT-2",
+      "date": "2024-06-30",
+      "awayTeam": "HH",
+      "homeTeam": "LT",
+      "awayScore": 0,
+      "homeScore": 0,
+      "status": "cancelled",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-06-30-LG-NC",
       "date": "2024-06-30",
       "awayTeam": "LG",
@@ -5283,6 +5393,17 @@
       "category": "regular"
     },
     {
+      "id": "2024-06-30-LG-NC-2",
+      "date": "2024-06-30",
+      "awayTeam": "LG",
+      "homeTeam": "NC",
+      "awayScore": 9,
+      "homeScore": 6,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-06-30-SS-KT",
       "date": "2024-06-30",
       "awayTeam": "SS",
@@ -5290,6 +5411,17 @@
       "awayScore": 2,
       "homeScore": 2,
       "status": "tied",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-06-30-SS-KT-2",
+      "date": "2024-06-30",
+      "awayTeam": "SS",
+      "homeTeam": "KT",
+      "awayScore": 1,
+      "homeScore": 2,
+      "status": "completed",
       "stadium": null,
       "category": "regular"
     },
@@ -5306,6 +5438,17 @@
     },
     {
       "id": "2024-06-30-WO-KIA",
+      "date": "2024-06-30",
+      "awayTeam": "WO",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 0,
+      "status": "cancelled",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2024-06-30-WO-KIA-2",
       "date": "2024-06-30",
       "awayTeam": "WO",
       "homeTeam": "KIA",
@@ -8836,6 +8979,17 @@
       "category": "regular"
     },
     {
+      "id": "2024-09-21-OB-LG-2",
+      "date": "2024-09-21",
+      "awayTeam": "OB",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 2,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2024-09-21-SSG-KT",
       "date": "2024-09-21",
       "awayTeam": "SSG",
@@ -9381,6 +9535,17 @@
       "homeTeam": "KIA",
       "awayScore": 1,
       "homeScore": 5,
+      "status": "completed",
+      "stadium": null,
+      "category": "postseason"
+    },
+    {
+      "id": "2024-10-23-SS-KIA-2",
+      "date": "2024-10-23",
+      "awayTeam": "SS",
+      "homeTeam": "KIA",
+      "awayScore": 3,
+      "homeScore": 8,
       "status": "completed",
       "stadium": null,
       "category": "postseason"

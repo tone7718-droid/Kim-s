@@ -1,6 +1,6 @@
 {
   "year": 2023,
-  "generatedAt": "2026-05-02T03:15:27+0000",
+  "generatedAt": "2026-05-02T03:32:12+0000",
   "games": [
     {
       "id": "2023-03-13-KIA-HH",
@@ -8055,12 +8055,34 @@
       "category": "regular"
     },
     {
+      "id": "2023-09-09-HH-WO-2",
+      "date": "2023-09-09",
+      "awayTeam": "HH",
+      "homeTeam": "WO",
+      "awayScore": 3,
+      "homeScore": 1,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2023-09-09-LG-KIA",
       "date": "2023-09-09",
       "awayTeam": "LG",
       "homeTeam": "KIA",
       "awayScore": 6,
       "homeScore": 7,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2023-09-09-LG-KIA-2",
+      "date": "2023-09-09",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 7,
+      "homeScore": 12,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -8077,12 +8099,34 @@
       "category": "regular"
     },
     {
+      "id": "2023-09-09-LT-NC-2",
+      "date": "2023-09-09",
+      "awayTeam": "LT",
+      "homeTeam": "NC",
+      "awayScore": 5,
+      "homeScore": 6,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2023-09-09-SS-OB",
       "date": "2023-09-09",
       "awayTeam": "SS",
       "homeTeam": "OB",
       "awayScore": 5,
       "homeScore": 1,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2023-09-09-SS-OB-2",
+      "date": "2023-09-09",
+      "awayTeam": "SS",
+      "homeTeam": "OB",
+      "awayScore": 0,
+      "homeScore": 4,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -8385,6 +8429,17 @@
       "category": "regular"
     },
     {
+      "id": "2023-09-17-KT-HH-2",
+      "date": "2023-09-17",
+      "awayTeam": "KT",
+      "homeTeam": "HH",
+      "awayScore": 3,
+      "homeScore": 1,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2023-09-17-LT-SS",
       "date": "2023-09-17",
       "awayTeam": "LT",
@@ -8413,6 +8468,17 @@
       "homeTeam": "LG",
       "awayScore": 3,
       "homeScore": 8,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2023-09-17-SSG-LG-2",
+      "date": "2023-09-17",
+      "awayTeam": "SSG",
+      "homeTeam": "LG",
+      "awayScore": 5,
+      "homeScore": 9,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -8803,12 +8869,34 @@
       "category": "regular"
     },
     {
+      "id": "2023-09-27-KIA-NC-2",
+      "date": "2023-09-27",
+      "awayTeam": "KIA",
+      "homeTeam": "NC",
+      "awayScore": 6,
+      "homeScore": 1,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2023-09-27-KT-LG",
       "date": "2023-09-27",
       "awayTeam": "KT",
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 4,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2023-09-27-KT-LG-2",
+      "date": "2023-09-27",
+      "awayTeam": "KT",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 3,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -8825,12 +8913,34 @@
       "category": "regular"
     },
     {
+      "id": "2023-09-27-OB-SSG-2",
+      "date": "2023-09-27",
+      "awayTeam": "OB",
+      "homeTeam": "SSG",
+      "awayScore": 3,
+      "homeScore": 6,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2023-09-27-SS-HH",
       "date": "2023-09-27",
       "awayTeam": "SS",
       "homeTeam": "HH",
       "awayScore": 11,
       "homeScore": 3,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2023-09-27-SS-HH-2",
+      "date": "2023-09-27",
+      "awayTeam": "SS",
+      "homeTeam": "HH",
+      "awayScore": 0,
+      "homeScore": 4,
       "status": "completed",
       "stadium": null,
       "category": "regular"
@@ -9034,6 +9144,17 @@
       "category": "regular"
     },
     {
+      "id": "2023-10-02-SS-LT-2",
+      "date": "2023-10-02",
+      "awayTeam": "SS",
+      "homeTeam": "LT",
+      "awayScore": 8,
+      "homeScore": 6,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
       "id": "2023-10-02-WO-OB",
       "date": "2023-10-02",
       "awayTeam": "WO",
@@ -9106,6 +9227,17 @@
       "homeTeam": "KT",
       "awayScore": 10,
       "homeScore": 2,
+      "status": "completed",
+      "stadium": null,
+      "category": "regular"
+    },
+    {
+      "id": "2023-10-04-KIA-KT-2",
+      "date": "2023-10-04",
+      "awayTeam": "KIA",
+      "homeTeam": "KT",
+      "awayScore": 2,
+      "homeScore": 3,
       "status": "completed",
       "stadium": null,
       "category": "regular"
