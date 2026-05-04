@@ -9,17 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // KBO 팀 컬러 (대략) — UI 강조용
+        // KBO 팀 컬러 — public/teams/colors.md 기준
         kia:  "#EA0029",
-        ss:   "#074CA1",
+        ss:   "#0065B3",
         lg:   "#C30452",
-        ob:   "#131230",
+        ob:   "#1A1748",
         kt:   "#000000",
         ssg:  "#CE0E2D",
         lt:   "#041E42",
-        hh:   "#FF6600",
+        hh:   "#FC4E00",
         nc:   "#315288",
-        wo:   "#820024",
+        wo:   "#570514",
       },
     },
   },

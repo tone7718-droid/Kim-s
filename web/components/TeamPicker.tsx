@@ -17,14 +17,32 @@ export function TeamPicker({ selected, onSelect }: Props) {
             key={t.code}
             onClick={() => onSelect(t.code)}
             className={[
-              "rounded-lg py-3 text-sm font-bold tracking-tight transition",
-              t.colorClass,
-              t.textClass,
-              isSel ? "ring-2 ring-offset-2 ring-offset-white ring-zinc-900 scale-[1.02]" : "opacity-80 hover:opacity-100",
+              "relative aspect-square rounded-lg overflow-hidden bg-white",
+              "border-[3px] transition-all",
+              isSel ? "scale-[1.04] shadow-md" : "opacity-85 hover:opacity-100",
             ].join(" ")}
+            // Border picks up each team's brand color when selected so
+            // it's clear which team is active without adding a separate
+            // accent element. Using inline style because Tailwind can't
+            // generate per-team border colors at build time.
+            style={{
+              borderColor: isSel ? t.color : "rgb(228 228 231)" /* zinc-200 */,
+            }}
             aria-pressed={isSel}
+            aria-label={t.fullName}
+            title={t.fullName}
           >
-            {t.name}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/teams/${t.code.toLowerCase()}.png`}
+              alt={t.name}
+              // object-contain keeps non-square logos intact (no
+              // stretching, no cropping) and the padding gives a small
+              // breathing margin inside the tile.
+              className="absolute inset-0 size-full object-contain p-1.5"
+              loading="lazy"
+              decoding="async"
+            />
           </button>
         );
       })}
