@@ -177,12 +177,13 @@ jobs:
             echo "No data changes."
           else
             git commit -m "data: refresh KBO schedule ($(date -u +'%Y-%m-%d'))"
-            # _debug_naver.json is diagnostics-only. It may be tracked/modified
-            # by the scrape step, but it is intentionally not part of the data
-            # commit. Clean it before rebase so Git has a clean worktree.
-            git restore --staged data/_debug_naver.json 2>/dev/null || true
-            git restore data/_debug_naver.json 2>/dev/null || true
-            git clean -f data/_debug_naver.json 2>/dev/null || true
+            # After committing the intended season JSON and summary, discard
+            # any diagnostics/temp files left by the scrape before rebasing.
+            # Git refuses to rebase with a dirty worktree.
+            echo "Cleaning worktree before rebase..."
+            git status --short
+            git reset --hard HEAD
+            git clean -fd
             git status --short
             git fetch origin main
             git rebase -X theirs origin/main
