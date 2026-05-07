@@ -69,6 +69,9 @@ jobs:
           KBO_DEBUG_DUMP: ${{ github.workspace }}/data/_debug_naver.json
         run: python scrape_kbo.py ${{ steps.args.outputs.scope }}
 
+      - name: Validate scraped data
+        run: python scraper/validate_kbo_data.py --data-dir data/seasons
+
       - name: Build human-readable summary
         run: |
           python - <<'PY'
@@ -77,8 +80,8 @@ jobs:
           rows += [f"_생성 시각 (UTC): {os.environ.get('GITHUB_RUN_STARTED_AT','-')}_  ", ""]
           rows += ["사용자 선택: **정규시즌 + 포스트시즌만 합산** (시범경기는 별도 표시)", ""]
           rows += ["## 시즌별 요약 (정규+포스트시즌)", ""]
-          rows += ["| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 |",
-                   "|---|---|---|---|---|---|---|"]
+          rows += ["| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 | 네이버 ID |",
+                   "|---|---|---|---|---|---|---|---|"]
           total_main = 0
           total_pre = 0
           per_season = []
@@ -96,11 +99,13 @@ jobs:
               status_counts = {"completed":0,"tied":0,"cancelled":0,"postponed":0,"scheduled":0}
               for x in main:
                   status_counts[x.get("status","scheduled")] = status_counts.get(x.get("status","scheduled"),0)+1
-              rows.append(f"| {year} | **{len(main)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['scheduled']} |")
+              naver_ids = sum(1 for x in main if x.get("naverGameId"))
+              rows.append(f"| {year} | **{len(main)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['scheduled']} | {naver_ids}/{len(main)} |")
               total_main += len(main)
               total_pre += len(pre)
               per_season.append((year, by_cat))
           rows += ["", f"**합산 총 {total_main} 경기** / 시범경기는 별도 {total_pre} 경기 (제외됨)", ""]
+          rows += ["✅ 데이터 검증 통과: 팀 코드, 상태값, 카테고리, 중복 ID, 점수 무결성, 미래 경기 상태, 시즌 경기 수 범위를 확인했습니다.", ""]
           rows += ["## 카테고리 분포", ""]
           rows += ["| 시즌 | 정규 | 포스트 | 시범 | 미상 |", "|---|---|---|---|---|"]
           for year, by_cat in per_season:
