@@ -27,8 +27,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: scrape-kbo
-  cancel-in-progress: false
+  group: scrape-kbo-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   scrape:
@@ -168,6 +168,7 @@ jobs:
           PY
 
       - name: Commit & push if data changed
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -176,7 +177,8 @@ jobs:
             echo "No data changes."
           else
             git commit -m "data: refresh KBO schedule ($(date -u +'%Y-%m-%d'))"
-            git pull --rebase origin main
+            git fetch origin main
+            git rebase -X theirs origin/main
             python scraper/validate_kbo_data.py --data-dir data/seasons
-            git push
+            git push origin HEAD:main
           fi
