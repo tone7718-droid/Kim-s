@@ -75,30 +75,28 @@ jobs:
         run: python scraper/validate_kbo_data.py --data-dir data/seasons
 
       - name: Build human-readable summary
+        run: python scraper/build_summary.py
+
+      - name: Commit & push if data changed
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
-          python - <<'PY'
-          import json, glob, os
-          rows = ["# KBO 스크래핑 결과 요약", ""]
-          rows += [f"_생성 시각 (UTC): {os.environ.get('GITHUB_RUN_STARTED_AT','-')}_  ", ""]
-          rows += ["사용자 선택: **정규시즌 + 포스트시즌만 합산** (시범경기는 별도 표시)", ""]
-          rows += ["## 시즌별 요약 (정규+포스트시즌)", ""]
-          rows += ["| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 | 네이버 ID |",
-                   "|---|---|---|---|---|---|---|---|"]
-          total_main = 0
-          total_pre = 0
-          per_season = []
-          for f in sorted(glob.glob("data/seasons/*.json")):
-              with open(f, encoding="utf-8") as fp:
-                  payload = json.load(fp)
-              g = payload["games"]
-              year = payload["year"]
-              by_cat = {"regular":[],"postseason":[],"preseason":[],"unknown":[]}
-              for x in g:
-                  by_cat.setdefault(x.get("category","unknown"), []).append(x)
-              main = by_cat["regular"] + by_cat["postseason"] + by_cat["unknown"]
-              pre = by_cat["preseason"]
-              status_counts = {"completed":0,"tied":0,"cancelled":0,"postponed":0,"scheduled":0}
-              for x in main:
-                  status_counts[x.get("status","scheduled")] = status_counts.get(x.get("status","scheduled"),0)+1
-              naver_ids = sum(1 for x in main if x.get("naverGameId"))
-              rows.append(f"| {year} | **{len(main)}** | {status_counts['completed']} | {status_counts['tied']} | {status_counts['cancelled']} | {status_counts['postponed']} | {status_counts['sche[...
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seasons/ data/_summary.md
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: refresh KBO schedule ($(date -u +'%Y-%m-%d'))"
+            # After committing the intended season JSON and summary, discard
+            # any diagnostics/temp files left by the scrape before rebasing.
+            # Git refuses to rebase with a dirty worktree.
+            echo "Cleaning worktree before rebase..."
+            git status --short
+            git reset --hard HEAD
+            git clean -fd
+            git status --short
+            git fetch origin main
+            git rebase -X theirs origin/main
+            python scraper/validate_kbo_data.py --data-dir data/seasons
+            git push origin HEAD:main
+          fi
