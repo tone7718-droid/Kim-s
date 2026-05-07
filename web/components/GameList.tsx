@@ -15,6 +15,24 @@ interface Props {
   editMode: boolean;
 }
 
+const KOREAN_WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"] as const;
+
+function weekdayForDate(date: string): string {
+  const [year, month, day] = date.split("-").map(Number);
+  if (!year || !month || !day) return "";
+  return KOREAN_WEEKDAYS[new Date(year, month - 1, day).getDay()] ?? "";
+}
+
+function compactDateWithWeekday(date: string): string {
+  const weekday = weekdayForDate(date);
+  return weekday ? `${date.slice(5)} ${weekday}` : date.slice(5);
+}
+
+function fullDateWithWeekday(date: string): string {
+  const weekday = weekdayForDate(date);
+  return weekday ? `${date} ${weekday}` : date;
+}
+
 export function GameList({ team, games, attended, onToggle, editMode }: Props) {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
@@ -130,7 +148,7 @@ function GameRow({
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline gap-2">
           <span className="text-xs text-zinc-500 tabular-nums shrink-0">
-            {game.date.slice(5)}
+            {compactDateWithWeekday(game.date)}
           </span>
           <span
             className={`text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0 ${
@@ -206,7 +224,7 @@ function GameDetailSheet({
         <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-zinc-300" />
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-semibold text-zinc-500 tabular-nums">{game.date}</p>
+            <p className="text-xs font-semibold text-zinc-500 tabular-nums">{fullDateWithWeekday(game.date)}</p>
             <h2 className="mt-1 text-lg font-bold tracking-tight">
               {teamName(team)} vs {teamName(opp)}
             </h2>
