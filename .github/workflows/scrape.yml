@@ -35,6 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -174,5 +176,7 @@ jobs:
             echo "No data changes."
           else
             git commit -m "data: refresh KBO schedule ($(date -u +'%Y-%m-%d'))"
+            git pull --rebase origin main
+            python scraper/validate_kbo_data.py --data-dir data/seasons
             git push
           fi
