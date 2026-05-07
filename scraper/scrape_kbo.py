@@ -20,7 +20,10 @@ Each game looks like:
         "awayScore": 5,
         "homeScore": 3,
         "status": "completed" | "tied" | "cancelled" | "postponed" | "scheduled",
-        "stadium": "창원NC파크" | null
+        "stadium": "창원NC파크" | null,
+        "category": "regular" | "preseason" | "postseason" | "unknown",
+        "naverGameId": "20210403LGNC02021" | null,
+        "naverRecordUrl": "https://m.sports.naver.com/game/.../record" | null
     }
 """
 
@@ -67,6 +70,8 @@ class Game:
     status: str
     stadium: str | None
     category: str  # "regular" | "preseason" | "postseason" | "unknown"
+    naverGameId: str | None
+    naverRecordUrl: str | None
 
 
 def fetch_range(from_date: str, to_date: str, retries: int = 3) -> dict:
@@ -264,6 +269,25 @@ def _pluck(d: dict, *keys: str):
     return None
 
 
+def _extract_naver_game_id(raw: dict) -> str | None:
+    """Return Naver's own game id when present in the schedule payload."""
+    v = _pluck(
+        raw,
+        "gameId",
+        "gameID",
+        "gameKey",
+        "gamekey",
+        "gameCenterId",
+        "gameCenterID",
+        "gmkey",
+        "gmid",
+    )
+    if v is None:
+        return None
+    s = str(v).strip()
+    return s or None
+
+
 def _normalize_game(raw: dict) -> Game | None:
     game_date_raw = _pluck(raw, "gameDate", "gmkey", "date") or ""
     if isinstance(game_date_raw, (int, float)):
@@ -319,6 +343,12 @@ def _normalize_game(raw: dict) -> Game | None:
         stadium = str(stadium)
 
     category = _classify_category(raw, date_str)
+    naver_game_id = _extract_naver_game_id(raw)
+    naver_record_url = (
+        f"https://m.sports.naver.com/game/{naver_game_id}/record"
+        if naver_game_id
+        else None
+    )
 
     game_id = f"{date_str}-{away_code}-{home_code}"
     return Game(
@@ -331,6 +361,8 @@ def _normalize_game(raw: dict) -> Game | None:
         status=status,
         stadium=stadium,
         category=category,
+        naverGameId=naver_game_id,
+        naverRecordUrl=naver_record_url,
     )
 
 
