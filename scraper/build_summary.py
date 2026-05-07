@@ -18,10 +18,8 @@ SEASON_DIR = DATA_DIR / "seasons"
 SUMMARY_PATH = DATA_DIR / "_summary.md"
 DEBUG_PATH = DATA_DIR / "_debug_naver.json"
 
-
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
-
 
 def category_buckets(games: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     buckets: dict[str, list[dict[str, Any]]] = {
@@ -35,7 +33,6 @@ def category_buckets(games: list[dict[str, Any]]) -> dict[str, list[dict[str, An
         buckets.setdefault(category, []).append(game)
     return buckets
 
-
 def status_counts(games: list[dict[str, Any]]) -> dict[str, int]:
     counts = {
         "completed": 0,
@@ -48,7 +45,6 @@ def status_counts(games: list[dict[str, Any]]) -> dict[str, int]:
         status = str(game.get("status", "scheduled"))
         counts[status] = counts.get(status, 0) + 1
     return counts
-
 
 def append_diagnostics(rows: list[str]) -> None:
     if not DEBUG_PATH.exists():
@@ -110,7 +106,6 @@ def append_diagnostics(rows: list[str]) -> None:
             "```",
             "</details>",
         ]
-
 
 def build_summary() -> str:
     rows: list[str] = ["# KBO 스크래핑 결과 요약", ""]
@@ -179,7 +174,6 @@ def build_summary() -> str:
     append_diagnostics(rows)
     return "\n".join(rows) + "\n"
 
-
 def main() -> int:
     summary = build_summary()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -190,7 +184,6 @@ def main() -> int:
         with open(step_summary, "a", encoding="utf-8") as fp:
             fp.write(summary)
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
