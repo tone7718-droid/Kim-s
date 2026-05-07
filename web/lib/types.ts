@@ -17,6 +17,11 @@ export interface Game {
   status: GameStatus;
   stadium: string | null;
   category: GameCategory;
+  // Naver's original game identifier/record URL when the scraper can read it.
+  // Older season JSON files may not have these fields, so the UI also builds
+  // a best-effort URL from date + team codes.
+  naverGameId?: string | null;
+  naverRecordUrl?: string | null;
 }
 
 export interface SeasonPayload {
