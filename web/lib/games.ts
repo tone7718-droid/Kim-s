@@ -131,6 +131,41 @@ export function statusBadge(status: GameStatus): { label: string; className: str
   }
 }
 
+const NAVER_TEAM_CODES: Record<string, string> = {
+  KIA: "HT",
+  SS: "SS",
+  LG: "LG",
+  OB: "OB",
+  KT: "KT",
+  SSG: "SK",
+  LT: "LT",
+  HH: "HH",
+  NC: "NC",
+  WO: "WO",
+};
+
+function fallbackNaverGameId(game: Game): string | null {
+  const away = NAVER_TEAM_CODES[game.awayTeam];
+  const home = NAVER_TEAM_CODES[game.homeTeam];
+  const year = game.date.slice(0, 4);
+  const ymd = game.date.replaceAll("-", "");
+  if (!away || !home || year.length !== 4 || ymd.length !== 8) return null;
+
+  // Naver game ids usually end with a one-digit game sequence before the year.
+  // Normal games use 0; double-header ids in this app keep the first game bare
+  // and mark later games as ...-2, ...-3, so map those to 1, 2, ...
+  const dhMatch = game.id.match(/-(\d+)$/);
+  const sequence = dhMatch ? Math.max(0, Number(dhMatch[1]) - 1) : 0;
+  return `${ymd}${away}${home}${sequence}${year}`;
+}
+
+export function buildNaverRecordUrl(game: Game): string | null {
+  if (game.naverRecordUrl?.trim()) return game.naverRecordUrl.trim();
+  const gameId = game.naverGameId?.trim() || fallbackNaverGameId(game);
+  if (!gameId) return null;
+  return `https://m.sports.naver.com/game/${gameId}/record`;
+}
+
 // === Breakdown stats ========================================================
 
 export interface BreakdownRow {
