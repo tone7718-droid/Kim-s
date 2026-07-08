@@ -162,7 +162,11 @@ _POSTPONED_STATUS_CODES = {"POSTPONE", "POSTPONED", "PPD", "DELAY"}
 # stuck at "BEFORE" but a meaningful statusInfo, so we check both.
 _CANCEL_INFO_TOKENS = ("취소", "노게임", "NOGAME", "CANCEL")
 _POSTPONE_INFO_TOKENS = ("연기", "POSTPONE", "PPD", "DELAY")
-_FINISHED_INFO_TOKENS = ("종료", "경기종료", "FINAL", "END")
+# Note: these are substring-matched against statusInfo, so we avoid short
+# ambiguous tokens like a bare "END" (it lurks inside "SUSPENDED" →
+# ...P-END-ED). A finished English status is already caught via statusCode
+# (_FINISHED_STATUS_CODES), and Korean strings use "종료"/"경기종료".
+_FINISHED_INFO_TOKENS = ("종료", "경기종료", "FINAL")
 
 # KBO regular-season opening dates (정규시즌 개막일). Used to draw the
 # line between 시범경기 and 정규시즌 cleanly when the API doesn't expose

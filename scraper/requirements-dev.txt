@@ -1,0 +1,5 @@
+# Test-only dependencies. Runtime scraping needs just requirements.txt.
+#   pip install -r requirements.txt -r requirements-dev.txt
+#   pytest
+-r requirements.txt
+pytest>=8.0

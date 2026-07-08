@@ -1,3 +1,5 @@
 data/_debug_naver.json
 scraper/.venv/
 scraper/__pycache__/
+scraper/.pytest_cache/
+.pytest_cache/
