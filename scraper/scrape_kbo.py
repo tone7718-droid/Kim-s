@@ -175,9 +175,24 @@ _REGULAR_OPENING = {
     2025: "2025-03-22",
     2026: "2026-03-28",
 }
-# Postseason typically starts mid-to-late October. We use Oct 22 as a
-# generous lower bound — earlier than any recent KS but late enough to
-# exclude regular-season Octobers reliably.
+# KBO postseason opening dates (와일드카드 결정전 1차전). The regular
+# season and postseason don't split on a fixed calendar date — the
+# regular season runs late (makeup games) in some years and the
+# postseason ladder (와카 → 준PO → PO → 한국시리즈) starts on a
+# schedule KBO announces each season. Hardcoding the actual 와카 1차전
+# date per season (like _REGULAR_OPENING) keeps 정규시즌 makeup games
+# out of the postseason bucket. Source: KBO 공식 포스트시즌 일정.
+_POSTSEASON_OPENING = {
+    2021: "2021-11-01",
+    2022: "2022-10-13",
+    2023: "2023-10-19",
+    2024: "2024-10-02",
+    2025: "2025-10-06",
+}
+# Fallback for seasons without a configured 와카 date (e.g. a future
+# season scraped before its postseason schedule is added above). Oct 22
+# is a generous lower bound — late enough to exclude most regular-season
+# Octobers but earlier than any recent 한국시리즈.
 _POSTSEASON_FROM_MMDD = (10, 22)
 
 # Candidate fields that have appeared in Naver-style sports payloads to
@@ -226,10 +241,17 @@ def _classify_category(raw: dict, date_str: str) -> str:
     except Exception:
         return "unknown"
 
-    # Postseason: late October onward.
-    pmm, pdd = _POSTSEASON_FROM_MMDD
-    if (m, d) >= (pmm, pdd) or m >= 11:
-        return "postseason"
+    # Postseason: on/after the season's 와일드카드 결정전 1차전. Prefer
+    # the hardcoded per-season date; fall back to the late-October
+    # heuristic only when the season isn't configured yet.
+    postseason_opening = _POSTSEASON_OPENING.get(y)
+    if postseason_opening is not None:
+        if date_str >= postseason_opening:
+            return "postseason"
+    else:
+        pmm, pdd = _POSTSEASON_FROM_MMDD
+        if (m, d) >= (pmm, pdd) or m >= 11:
+            return "postseason"
 
     opening = _REGULAR_OPENING.get(y)
     if opening is not None:

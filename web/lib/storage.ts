@@ -64,17 +64,33 @@ export function useAttended() {
     );
   }, []);
 
-  const importJson = useCallback((text: string): { ok: boolean; count: number } => {
-    try {
-      const parsed = JSON.parse(text);
-      const list = Array.isArray(parsed?.attended) ? parsed.attended : [];
-      const set = new Set<string>(list.filter((x: unknown) => typeof x === "string"));
-      writeToStorage(set);
-      return { ok: true, count: set.size };
-    } catch {
-      return { ok: false, count: 0 };
-    }
-  }, []);
+  // Merge (union) the imported IDs into whatever is already stored rather
+  // than replacing. Attendance is a set of games you went to, so a union
+  // never loses a record — importing an older backup can only add games,
+  // not silently drop ones you checked since. A file that parses but has
+  // no `attended` array is rejected (returns ok:false) instead of being
+  // treated as an empty set, which would otherwise wipe all records.
+  const importJson = useCallback(
+    (text: string): { ok: boolean; count: number; added: number } => {
+      try {
+        const parsed = JSON.parse(text);
+        if (!parsed || !Array.isArray(parsed.attended)) {
+          return { ok: false, count: 0, added: 0 };
+        }
+        const incoming = parsed.attended.filter(
+          (x: unknown): x is string => typeof x === "string",
+        );
+        const merged = new Set(readFromStorage());
+        const before = merged.size;
+        for (const id of incoming) merged.add(id);
+        writeToStorage(merged);
+        return { ok: true, count: merged.size, added: merged.size - before };
+      } catch {
+        return { ok: false, count: 0, added: 0 };
+      }
+    },
+    [],
+  );
 
   return { attended, toggle, clear, exportJson, importJson, hydrated };
 }

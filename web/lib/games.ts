@@ -7,20 +7,33 @@ export function availableSeasons(currentYear: number = new Date().getFullYear())
   return years;
 }
 
+// Result of loading a season. We distinguish "not published yet" (a real
+// 404 — nothing to retry) from a transient failure (network offline,
+// parse error, 5xx) so the UI can offer a retry only when retrying might
+// actually help.
+export type SeasonLoad =
+  | { status: "ok"; payload: SeasonPayload }
+  | { status: "empty" }
+  | { status: "error" };
+
 // Fetches a single season's payload from the static JSON shipped under
-// /public/data/seasons. The cache buster (today's date) ensures users
-// see fresh data within a day of the scraper publishing it without
-// burning bandwidth on every navigation.
-export async function loadSeason(year: number): Promise<SeasonPayload | null> {
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD (UTC-ish)
+// /public/data/seasons. `cache: "no-cache"` forces revalidation against
+// the network so users see fresh data within a day of the scraper
+// publishing it. We intentionally do NOT append a per-day query string:
+// the service worker's network-first strategy already keeps the cache
+// fresh when online, and a changing query key would make the offline
+// cache lookup miss (yesterday's `?d=` never matches today's request).
+export async function loadSeason(year: number): Promise<SeasonLoad> {
   try {
-    const res = await fetch(`/data/seasons/${year}.json?d=${today}`, {
+    const res = await fetch(`/data/seasons/${year}.json`, {
       cache: "no-cache", // forces revalidation against the network
     });
-    if (!res.ok) return null;
-    return (await res.json()) as SeasonPayload;
+    if (res.status === 404) return { status: "empty" };
+    if (!res.ok) return { status: "error" };
+    const payload = (await res.json()) as SeasonPayload;
+    return { status: "ok", payload };
   } catch {
-    return null;
+    return { status: "error" };
   }
 }
 

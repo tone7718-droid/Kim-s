@@ -11113,7 +11113,7 @@
       "homeScore": 1,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "44441006NCSS02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/44441006NCSS02025/record"
     },
@@ -11126,7 +11126,7 @@
       "homeScore": 3,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "44441007NCSS02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/44441007NCSS02025/record"
     },
@@ -11139,7 +11139,7 @@
       "homeScore": 2,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "33331009SSSK02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/33331009SSSK02025/record"
     },
@@ -11152,7 +11152,7 @@
       "homeScore": 0,
       "status": "cancelled",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "33331010SSSK02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/33331010SSSK02025/record"
     },
@@ -11165,7 +11165,7 @@
       "homeScore": 4,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "33331011SSSK02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/33331011SSSK02025/record"
     },
@@ -11178,7 +11178,7 @@
       "homeScore": 5,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "33331013SKSS02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/33331013SKSS02025/record"
     },
@@ -11191,7 +11191,7 @@
       "homeScore": 5,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "33331014SKSS02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/33331014SKSS02025/record"
     },
@@ -11204,7 +11204,7 @@
       "homeScore": 0,
       "status": "cancelled",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "55551017SSHH02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/55551017SSHH02025/record"
     },
@@ -11217,7 +11217,7 @@
       "homeScore": 9,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "55551018SSHH02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/55551018SSHH02025/record"
     },
@@ -11230,7 +11230,7 @@
       "homeScore": 3,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "55551019SSHH02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/55551019SSHH02025/record"
     },
@@ -11243,7 +11243,7 @@
       "homeScore": 4,
       "status": "completed",
       "stadium": null,
-      "category": "regular",
+      "category": "postseason",
       "naverGameId": "55551021HHSS02025",
       "naverRecordUrl": "https://m.sports.naver.com/game/55551021HHSS02025/record"
     },

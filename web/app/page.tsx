@@ -46,6 +46,8 @@ export default function HomePage() {
   const [year, setYear] = useState<number>(seasons[seasons.length - 1]);
   const [team, setTeam] = useState<string | null>(null);
   const [season, setSeason] = useState<SeasonPayload | null>(null);
+  const [loadStatus, setLoadStatus] = useState<"ok" | "empty" | "error">("ok");
+  const [reloadTick, setReloadTick] = useState(0);
   const [loading, setLoading] = useState(false);
   const [includePostseason, setIncludePostseason] = useState(true);
   const [includePreseason, setIncludePreseason] = useState(false);
@@ -78,13 +80,19 @@ export default function HomePage() {
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
-    loadSeason(year).then((p) => {
+    loadSeason(year).then((result) => {
       if (cancelled) return;
-      setSeason(p);
+      if (result.status === "ok") {
+        setSeason(result.payload);
+        setLoadStatus("ok");
+      } else {
+        setSeason(null);
+        setLoadStatus(result.status);
+      }
       setLoading(false);
     });
     return () => { cancelled = true; };
-  }, [year]);
+  }, [year, reloadTick]);
 
   const games = useMemo(() => {
     if (!season || !team) return [];
@@ -217,6 +225,17 @@ export default function HomePage() {
           </div>
         ) : loading || !hydrated ? (
           <div className="text-center text-zinc-400 py-12 text-sm">불러오는 중…</div>
+        ) : loadStatus === "error" ? (
+          <div className="text-center py-12 text-sm">
+            <p className="text-zinc-500">데이터를 불러오지 못했어요.</p>
+            <p className="text-xs text-zinc-400 mt-1">네트워크 연결을 확인해 주세요.</p>
+            <button
+              onClick={() => setReloadTick((t) => t + 1)}
+              className="mt-4 px-4 py-2 rounded-full bg-zinc-900 text-white text-sm font-semibold active:opacity-80"
+            >
+              다시 시도
+            </button>
+          </div>
         ) : !season ? (
           <div className="text-center text-zinc-500 py-12 text-sm">
             {year} 시즌 데이터가 아직 없어요.

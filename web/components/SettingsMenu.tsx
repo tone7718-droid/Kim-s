@@ -37,7 +37,11 @@ export function SettingsMenu() {
     if (!file) return;
     file.text().then((text) => {
       const result = importJson(text);
-      flash(result.ok ? `불러왔어요 (${result.count}경기)` : "파일 형식이 맞지 않아요.");
+      flash(
+        result.ok
+          ? `불러왔어요 · ${result.added}경기 추가 (총 ${result.count}경기)`
+          : "파일 형식이 맞지 않아요.",
+      );
     });
   }
 

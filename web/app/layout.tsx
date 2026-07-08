@@ -18,8 +18,9 @@ export const viewport: Viewport = {
   themeColor: "#18181b",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  // Intentionally allow pinch-zoom (no maximumScale / userScalable:false):
+  // blocking zoom fails WCAG 1.4.4, and iOS Safari ignores those flags
+  // anyway, so disabling them costs nothing in UX.
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
