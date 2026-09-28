@@ -13,6 +13,7 @@ interface Props {
   // When false, checkboxes are hidden and rows are non-interactive for
   // attendance toggles. In that locked state, tapping a row opens details.
   editMode: boolean;
+  duplicateGameIds: Set<string>;
 }
 
 const KOREAN_WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"] as const;
@@ -33,7 +34,12 @@ function fullDateWithWeekday(date: string): string {
   return weekday ? `${date} ${weekday}` : date;
 }
 
-export function GameList({ team, games, attended, onToggle, editMode }: Props) {
+function gameNumber(game: Game): number {
+  const suffix = game.id.match(/-(\d+)$/);
+  return suffix ? Number(suffix[1]) : 1;
+}
+
+export function GameList({ team, games, attended, onToggle, editMode, duplicateGameIds }: Props) {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   // Group by month for sticky headers.
@@ -74,6 +80,7 @@ export function GameList({ team, games, attended, onToggle, editMode }: Props) {
                   onToggle={onToggle}
                   onOpen={setSelectedGame}
                   editMode={editMode}
+                  duplicate={duplicateGameIds.has(g.id)}
                 />
               ))}
             </ul>
@@ -84,6 +91,7 @@ export function GameList({ team, games, attended, onToggle, editMode }: Props) {
         <GameDetailSheet
           team={team}
           game={selectedGame}
+          duplicate={duplicateGameIds.has(selectedGame.id)}
           onClose={() => setSelectedGame(null)}
         />
       )}
@@ -92,7 +100,7 @@ export function GameList({ team, games, attended, onToggle, editMode }: Props) {
 }
 
 function GameRow({
-  team, game, checked, onToggle, onOpen, editMode,
+  team, game, checked, onToggle, onOpen, editMode, duplicate,
 }: {
   team: string;
   game: Game;
@@ -100,6 +108,7 @@ function GameRow({
   onToggle: (id: string) => void;
   onOpen: (game: Game) => void;
   editMode: boolean;
+  duplicate: boolean;
 }) {
   const isHome = game.homeTeam === team;
   const opp = isHome ? game.awayTeam : game.homeTeam;
@@ -158,6 +167,7 @@ function GameRow({
             {isHome ? "홈" : "원정"}
           </span>
           <span className="text-sm truncate">vs {teamName(opp)}</span>
+          {duplicate && <span className="text-[10px] font-bold text-zinc-600 shrink-0">{gameNumber(game)}경기</span>}
         </div>
         {game.stadium && (
           <div className="text-[11px] text-zinc-400 mt-0.5 truncate">{game.stadium}</div>
@@ -189,10 +199,11 @@ function GameRow({
 }
 
 function GameDetailSheet({
-  team, game, onClose,
+  team, game, onClose, duplicate,
 }: {
   team: string;
   game: Game;
+  duplicate: boolean;
   onClose: () => void;
 }) {
   const isHome = game.homeTeam === team;
@@ -226,7 +237,7 @@ function GameDetailSheet({
           <div>
             <p className="text-xs font-semibold text-zinc-500 tabular-nums">{fullDateWithWeekday(game.date)}</p>
             <h2 className="mt-1 text-lg font-bold tracking-tight">
-              {teamName(team)} vs {teamName(opp)}
+              {teamName(team)} vs {teamName(opp)}{duplicate ? ` · ${gameNumber(game)}경기` : ""}
             </h2>
             <p className="mt-1 text-sm text-zinc-500">
               {isHome ? "홈" : "원정"}{game.stadium ? ` · ${game.stadium}` : ""}

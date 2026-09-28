@@ -7,6 +7,9 @@ Run with:
 
 from __future__ import annotations
 
+import sys
+import scrape_kbo
+
 from scrape_kbo import (
     _classify_category,
     _coerce_score,
@@ -149,8 +152,26 @@ class TestNormalizeGame:
         )
         assert g.status == "postponed"
 
+    def test_finished_game_without_scores_is_not_scheduled(self):
+        g = _normalize_game(
+            self._raw(statusCode="RESULT", statusInfo="종료", homeTeamScore=None, awayTeamScore=None)
+        )
+        assert g.status == "unknown_result"
+
     def test_unknown_team_is_dropped(self):
         assert _normalize_game(self._raw(awayTeamCode="ZZZ", awayTeamName="")) is None
 
     def test_bad_date_is_dropped(self):
         assert _normalize_game(self._raw(gameDate="", gameDateTime="")) is None
+
+
+def test_month_diagnostic_does_not_overwrite_season(monkeypatch):
+    monkeypatch.setattr(sys, "argv", ["scrape_kbo.py", "--year", "2024", "--month", "4"])
+    monkeypatch.setattr(scrape_kbo, "scrape_year", lambda year, months: [])
+    monkeypatch.setattr(scrape_kbo, "_flush_debug", lambda: None)
+
+    def fail_if_written(*args):
+        raise AssertionError("monthly diagnostic must not write data/seasons")
+
+    monkeypatch.setattr(scrape_kbo, "write_season", fail_if_written)
+    assert scrape_kbo.main() == 0

@@ -42,3 +42,9 @@ jobs:
       - name: Run tests
         working-directory: web
         run: npm test
+      - name: Lint
+        working-directory: web
+        run: npm run lint
+      - name: Production build
+        working-directory: web
+        run: npm run build

@@ -40,6 +40,9 @@ describe("outcomeForTeam", () => {
   it("cancelled game has no result", () => {
     expect(outcomeForTeam(game({ status: "cancelled", homeScore: null, awayScore: null }), "LG")).toBe("noresult");
   });
+  it("finished game without a reported score has no result", () => {
+    expect(outcomeForTeam(game({ status: "unknown_result", homeScore: null, awayScore: null }), "LG")).toBe("noresult");
+  });
   it("completed but missing scores is no result", () => {
     expect(outcomeForTeam(game({ status: "completed", homeScore: null, awayScore: null }), "LG")).toBe("noresult");
   });

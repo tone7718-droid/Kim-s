@@ -103,6 +103,20 @@ export default function HomePage() {
     return attendedOnly ? games.filter((g) => attended.has(g.id)) : games;
   }, [games, attendedOnly, attended]);
 
+  // Derive this from the complete season. The label must stay the same when
+  // "attended only" hides the other game of a doubleheader.
+  const duplicateGameIds = useMemo(() => {
+    const all = season?.games ?? [];
+    const counts = new Map<string, number>();
+    for (const g of all) {
+      const key = `${g.date}-${g.awayTeam}-${g.homeTeam}`;
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    }
+    return new Set(all.filter((g) =>
+      (counts.get(`${g.date}-${g.awayTeam}-${g.homeTeam}`) ?? 0) > 1,
+    ).map((g) => g.id));
+  }, [season]);
+
   const stats = useMemo(() => {
     if (!team) return null;
     return computeStats(games, attended, team);
@@ -251,6 +265,7 @@ export default function HomePage() {
             attended={attended}
             onToggle={toggle}
             editMode={editMode}
+            duplicateGameIds={duplicateGameIds}
           />
         )}
       </section>

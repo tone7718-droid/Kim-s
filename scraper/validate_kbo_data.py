@@ -17,7 +17,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ALLOWED_TEAMS = {"KIA", "SS", "LG", "OB", "KT", "SSG", "LT", "HH", "NC", "WO"}
-ALLOWED_STATUSES = {"completed", "tied", "cancelled", "postponed", "scheduled"}
+ALLOWED_STATUSES = {"completed", "tied", "cancelled", "postponed", "scheduled", "unknown_result"}
 ALLOWED_CATEGORIES = {"regular", "postseason", "preseason", "unknown"}
 
 # Full-season scrape should be roughly 720 regular games plus cancellations,

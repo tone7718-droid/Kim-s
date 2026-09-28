@@ -10,6 +10,7 @@ from __future__ import annotations
 import glob
 import json
 import os
+import datetime as dt
 from pathlib import Path
 from typing import Any
 
@@ -40,6 +41,7 @@ def status_counts(games: list[dict[str, Any]]) -> dict[str, int]:
         "cancelled": 0,
         "postponed": 0,
         "scheduled": 0,
+        "unknown_result": 0,
     }
     for game in games:
         status = str(game.get("status", "scheduled"))
@@ -80,7 +82,7 @@ def append_diagnostics(rows: list[str]) -> None:
     else:
         rows += [
             "",
-            "**카테고리 후보 필드:** 응답에 매칭되는 필드 없음 → 날짜 휴리스틱으로 분류됨",
+            "**카테고리 후보 필드:** 응답에 매칭되는 필드 없음 → 연도별 개막일·포스트시즌 시작일(미등록 연도는 날짜 휴리스틱)로 분류됨",
         ]
 
     first_game = diag.get("firstGame")
@@ -109,12 +111,12 @@ def append_diagnostics(rows: list[str]) -> None:
 
 def build_summary() -> str:
     rows: list[str] = ["# KBO 스크래핑 결과 요약", ""]
-    rows += [f"_생성 시각 (UTC): {os.environ.get('GITHUB_RUN_STARTED_AT', '-')}_  ", ""]
+    rows += [f"_생성 시각 (UTC): {dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}_", ""]
     rows += ["사용자 선택: **정규시즌 + 포스트시즌만 합산** (시범경기는 별도 표시)", ""]
     rows += ["## 시즌별 요약 (정규+포스트시즌)", ""]
     rows += [
-        "| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 | 네이버 ID |",
-        "|---|---|---|---|---|---|---|---|",
+        "| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 | 결과 미상 | 네이버 ID | 구장 정보 |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
 
     total_main = 0
@@ -131,11 +133,12 @@ def build_summary() -> str:
         preseason_games = by_category["preseason"]
         counts = status_counts(main_games)
         naver_ids = sum(1 for game in main_games if game.get("naverGameId"))
+        stadiums = sum(1 for game in main_games if game.get("stadium"))
 
         rows.append(
             f"| {year} | **{len(main_games)}** | {counts['completed']} | "
             f"{counts['tied']} | {counts['cancelled']} | {counts['postponed']} | "
-            f"{counts['scheduled']} | {naver_ids}/{len(main_games)} |"
+            f"{counts['scheduled']} | {counts['unknown_result']} | {naver_ids}/{len(main_games)} | {stadiums}/{len(main_games)} |"
         )
         total_main += len(main_games)
         total_preseason += len(preseason_games)
@@ -146,6 +149,7 @@ def build_summary() -> str:
         f"**합산 총 {total_main} 경기** / 시범경기는 별도 {total_preseason} 경기 (제외됨)",
         "",
         "✅ 데이터 검증 통과: 팀 코드, 상태값, 카테고리, 중복 ID, 점수 무결성, 미래 경기 상태, 시즌 경기 수 범위를 확인했습니다.",
+        "구장 정보가 비어 있으면 원본 일정 응답에서 확인되지 않은 것입니다. 홈팀의 통상 구장을 실제 경기장으로 추정해 채우지 않습니다.",
         "",
     ]
 

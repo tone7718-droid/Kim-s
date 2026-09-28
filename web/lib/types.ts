@@ -3,7 +3,8 @@ export type GameStatus =
   | "tied"
   | "cancelled"
   | "postponed"
-  | "scheduled";
+  | "scheduled"
+  | "unknown_result";
 
 export type GameCategory = "regular" | "postseason" | "preseason" | "unknown";
 

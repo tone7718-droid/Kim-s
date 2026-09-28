@@ -15,7 +15,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 # 한 달만 빠르게 테스트
-python scrape_kbo.py --year 2021 --month 4
+python scrape_kbo.py --year 2021 --month 4  # 진단 전용: 시즌 JSON을 덮어쓰지 않음
 
 # 한 시즌
 python scrape_kbo.py --year 2021

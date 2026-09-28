@@ -19,7 +19,7 @@ Each game looks like:
         "homeTeam": "NC",
         "awayScore": 5,
         "homeScore": 3,
-        "status": "completed" | "tied" | "cancelled" | "postponed" | "scheduled",
+        "status": "completed" | "tied" | "cancelled" | "postponed" | "scheduled" | "unknown_result",
         "stadium": "창원NC파크" | null,
         "category": "regular" | "preseason" | "postseason" | "unknown",
         "naverGameId": "20210403LGNC02021" | null,
@@ -358,7 +358,9 @@ def _normalize_game(raw: dict) -> Game | None:
         if away_score is not None and home_score is not None:
             status = "tied" if away_score == home_score else "completed"
         else:
-            status = "scheduled"
+            # The API says the game ended, but does not provide a usable
+            # result. It must not appear as a future scheduled game.
+            status = "unknown_result"
     else:
         # BEFORE / READY / LIVE / 알 수 없는 코드 — 점수 0:0이 들어와도
         # 미래 경기를 무승부로 오분류하지 않도록 무조건 scheduled.
@@ -540,8 +542,13 @@ def main() -> int:
     for y in years:
         print(f"== {y} ==", file=sys.stderr)
         games = scrape_year(y, months)
-        out = write_season(y, games)
-        print(f"  wrote {len(games)} games -> {out}", file=sys.stderr)
+        if args.month:
+            # A month is a diagnostic subset, not a replacement for a
+            # published season. Keep data/seasons/<year>.json untouched.
+            print(f"  diagnostic month {args.month}: {len(games)} games; season file unchanged", file=sys.stderr)
+        else:
+            out = write_season(y, games)
+            print(f"  wrote {len(games)} games -> {out}", file=sys.stderr)
 
     _flush_debug()
     return 0

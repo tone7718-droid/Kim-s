@@ -147,7 +147,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-한 달만 테스트하려면 다음 명령어를 사용합니다.
+한 달만 테스트하려면 다음 명령어를 사용합니다. 이 명령은 시즌 JSON을 변경하지 않고 수집 건수와 진단만 출력합니다.
 
 python scrape_kbo.py --year 2021 --month 4
 

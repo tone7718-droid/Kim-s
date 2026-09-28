@@ -141,6 +141,7 @@ export function statusBadge(status: GameStatus): { label: string; className: str
     case "cancelled":  return { label: "취소",   className: "bg-amber-100 text-amber-800" };
     case "postponed":  return { label: "연기",   className: "bg-amber-100 text-amber-800" };
     case "scheduled":  return { label: "예정",   className: "bg-sky-100 text-sky-800" };
+    case "unknown_result": return { label: "결과 미상", className: "bg-amber-100 text-amber-800" };
   }
 }
 
