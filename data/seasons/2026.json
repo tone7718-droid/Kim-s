@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generatedAt": "2026-10-13T20:28:53+0000",
+  "generatedAt": "2026-10-14T19:07:39+0000",
   "games": [
     {
       "id": "2026-03-12-KT-LT",
@@ -11096,26 +11096,78 @@
       "date": "2026-10-14",
       "awayTeam": "OB",
       "homeTeam": "LG",
-      "awayScore": 0,
-      "homeScore": 0,
-      "status": "scheduled",
+      "awayScore": 1,
+      "homeScore": 4,
+      "status": "completed",
       "stadium": null,
       "category": "regular",
       "naverGameId": "44441014OBLG02026",
       "naverRecordUrl": "https://m.sports.naver.com/game/44441014OBLG02026/record"
     },
     {
-      "id": "2026-10-15-OB-LG",
-      "date": "2026-10-15",
-      "awayTeam": "OB",
+      "id": "2026-10-17-LG-KIA",
+      "date": "2026-10-17",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 0,
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular",
+      "naverGameId": "33331017LGHT02026",
+      "naverRecordUrl": "https://m.sports.naver.com/game/33331017LGHT02026/record"
+    },
+    {
+      "id": "2026-10-18-LG-KIA",
+      "date": "2026-10-18",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 0,
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular",
+      "naverGameId": "33331018LGHT02026",
+      "naverRecordUrl": "https://m.sports.naver.com/game/33331018LGHT02026/record"
+    },
+    {
+      "id": "2026-10-20-KIA-LG",
+      "date": "2026-10-20",
+      "awayTeam": "KIA",
       "homeTeam": "LG",
       "awayScore": 0,
       "homeScore": 0,
       "status": "scheduled",
       "stadium": null,
       "category": "regular",
-      "naverGameId": "44441015OBLG02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/44441015OBLG02026/record"
+      "naverGameId": "33331020HTLG02026",
+      "naverRecordUrl": "https://m.sports.naver.com/game/33331020HTLG02026/record"
+    },
+    {
+      "id": "2026-10-21-KIA-LG",
+      "date": "2026-10-21",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": 0,
+      "homeScore": 0,
+      "status": "scheduled",
+      "stadium": null,
+      "category": "regular",
+      "naverGameId": "33331021HTLG02026",
+      "naverRecordUrl": "https://m.sports.naver.com/game/33331021HTLG02026/record"
+    },
+    {
+      "id": "2026-10-23-LG-KIA",
+      "date": "2026-10-23",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": 0,
+      "homeScore": 0,
+      "status": "scheduled",
+      "stadium": null,
+      "category": "postseason",
+      "naverGameId": "33331023LGHT02026",
+      "naverRecordUrl": "https://m.sports.naver.com/game/33331023LGHT02026/record"
     }
   ]
 }
