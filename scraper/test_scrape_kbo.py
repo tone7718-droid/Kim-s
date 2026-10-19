@@ -87,6 +87,16 @@ class TestClassifyCategory:
         assert _classify_category({"seriesName": "시범경기"}, "2024-06-01") == "preseason"
         assert _classify_category({"gameKindName": "한국시리즈"}, "2024-06-01") == "postseason"
 
+    def test_postseason_detected_from_naver_game_id_prefix(self):
+        # Date alone says regular here (season not configured, before Oct 22).
+        for prefix in ("4444", "3333", "5555", "7777"):
+            raw = {"gameId": f"{prefix}1017LGHT02099"}
+            assert _classify_category(raw, "2099-10-17") == "postseason"
+
+    def test_regular_and_allstar_game_ids_are_not_postseason(self):
+        assert _classify_category({"gameId": "20990717LGHT02099"}, "2099-07-17") == "regular"
+        assert _classify_category({"gameId": "66660712EAWE02099"}, "2099-07-12") == "regular"
+
     def test_bad_date_is_unknown(self):
         assert _classify_category({}, "not-a-date") == "unknown"
 
@@ -175,3 +185,15 @@ def test_month_diagnostic_does_not_overwrite_season(monkeypatch):
 
     monkeypatch.setattr(scrape_kbo, "write_season", fail_if_written)
     assert scrape_kbo.main() == 0
+
+
+def test_empty_season_is_not_written(monkeypatch):
+    monkeypatch.setattr(sys, "argv", ["scrape_kbo.py", "--years", "2026-2027"])
+    monkeypatch.setattr(
+        scrape_kbo, "scrape_year", lambda year, months: [] if year == 2027 else ["game"]
+    )
+    monkeypatch.setattr(scrape_kbo, "_flush_debug", lambda: None)
+    written = []
+    monkeypatch.setattr(scrape_kbo, "write_season", lambda y, g: written.append(y) or y)
+    assert scrape_kbo.main() == 0
+    assert written == [2026]

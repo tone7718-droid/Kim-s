@@ -192,7 +192,14 @@ _POSTSEASON_OPENING = {
     2023: "2023-10-19",
     2024: "2024-10-02",
     2025: "2025-10-06",
+    2026: "2026-10-14",
 }
+# Naver gives postseason games a series prefix instead of the season year
+# as the first four digits of gameId (e.g. 33331017LGHT02026 = 준PO).
+# Verified against 2021~2026 data: 4444 와일드카드, 3333 준플레이오프,
+# 5555 플레이오프, 7777 한국시리즈 (6666 올스타전 is deliberately absent).
+# This needs no per-season upkeep, so it is checked before the dates.
+_POSTSEASON_ID_PREFIXES = ("4444", "3333", "5555", "7777")
 # Fallback for seasons without a configured 와카 date (e.g. a future
 # season scraped before its postseason schedule is added above). Oct 22
 # is a generous lower bound — late enough to exclude most regular-season
@@ -228,6 +235,10 @@ def _classify_category(raw: dict, date_str: str) -> str:
     actual opening dates (hardcoded per season) so 시범경기 doesn't
     leak into regular-season counts.
     """
+    naver_game_id = _extract_naver_game_id(raw)
+    if naver_game_id and naver_game_id[:4] in _POSTSEASON_ID_PREFIXES:
+        return "postseason"
+
     for field in _CATEGORY_FIELDS:
         v = _pluck(raw, field)
         if v is None:
@@ -546,6 +557,12 @@ def main() -> int:
             # A month is a diagnostic subset, not a replacement for a
             # published season. Keep data/seasons/<year>.json untouched.
             print(f"  diagnostic month {args.month}: {len(games)} games; season file unchanged", file=sys.stderr)
+        elif not games:
+            # Season not published yet (e.g. January before KBO's schedule
+            # reaches Naver) or the API returned nothing. Writing an empty
+            # file would fail validation and block every other season's
+            # refresh, so keep whatever is on disk and move on.
+            print(f"  no games for {y}; season file not written", file=sys.stderr)
         else:
             out = write_season(y, games)
             print(f"  wrote {len(games)} games -> {out}", file=sys.stderr)
