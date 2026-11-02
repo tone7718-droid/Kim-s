@@ -1,11 +1,14 @@
 # scraper
 
-KBO schedule/result scraper using the Naver Sports JSON API. Outputs
-`data/seasons/<year>.json`.
+KBO schedule/result scraper. Outputs `data/seasons/<year>.json`.
 
-원래는 스탯티즈를 쓰려 했지만, 클라우드 IP에서 DNS가 풀리지 않아 자동화가
-불가능해 네이버 스포츠 공개 API로 전환했습니다 (`api-gw.sports.naver.com`).
-JSON이라 HTML 셀렉터 깨질 일도 없고 GitHub Actions에서 잘 동작합니다.
+기본 소스는 KBO 공식 사이트 일정 페이지가 쓰는
+`POST /ws/Schedule.asmx/GetScheduleList` 입니다. 응답은 JSON 안에 HTML
+조각이 들어 있는 비공식 엔드포인트라 형식이 바뀔 수 있습니다.
+
+네이버 스포츠 API(`api-gw.sports.naver.com`)는 GitHub Actions 러너에서
+읽기 타임아웃이 나서, 예약 실행의 기본값은 `--source kbo` 입니다.
+`--source naver` 또는 `--source kbo-naver`(KBO 실패 시 네이버)로 바꿀 수 있습니다.
 
 ## 로컬 실행
 
@@ -17,11 +20,12 @@ pip install -r requirements.txt
 # 한 달만 빠르게 테스트
 python scrape_kbo.py --year 2021 --month 4  # 진단 전용: 시즌 JSON을 덮어쓰지 않음
 
-# 한 시즌
-python scrape_kbo.py --year 2021
+# 한 시즌 (기본 소스: KBO)
+python scrape_kbo.py --year 2026
 
-# 여러 시즌
-python scrape_kbo.py --years 2021-2026
+# 네이버만, 또는 KBO가 실패한 달에 네이버로 폴백
+python scrape_kbo.py --year 2026 --source naver
+python scrape_kbo.py --years 2021-2026 --source kbo-naver
 ```
 
 ## 출력 데이터 형식

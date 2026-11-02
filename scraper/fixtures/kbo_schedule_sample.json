@@ -1,0 +1,1522 @@
+{
+  "source": "https://www.koreabaseball.com/ws/Schedule.asmx/GetScheduleList",
+  "savedOn": "2026-11-02",
+  "note": "Live response slices. Series ids were checked against Schedule.aspx and these payloads: 3 준PO, 4 와일드카드, 5 플레이오프, 7 한국시리즈. Combined srIdList=3,4,5,7 omitted the 2026-10-25 rainout that srIdList=5 includes.",
+  "slices": [
+    {
+      "year": 2026,
+      "srIdList": "5",
+      "payload": {
+        "rows": [
+          {
+            "row": [
+              {
+                "Text": "10.25(일)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "1",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>14:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>KIA</span><em><span>vs</span></em><span>삼성</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "M-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "대구",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "우천취소",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "10.26(월)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "1",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>KIA</span><em><span class=\"win\">5</span><span>vs</span><span class=\"lose\">1</span></em><span>삼성</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20261026&gameId=20261026HTSS0&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20261026&gameId=20261026HTSS0&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "M-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "대구",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "10.29(목)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "1",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>삼성</span><em><span class=\"win\">6</span><span>vs</span><span class=\"lose\">4</span></em><span>KIA</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20261029&gameId=20261029SSHT0&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20261029&gameId=20261029SSHT0&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "S-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "광주",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "srIdList": "7",
+      "payload": {
+        "rows": [
+          {
+            "row": [
+              {
+                "Text": "11.03(화)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "1",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>삼성</span><em><span>vs</span></em><span>KT</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20261103&gameId=20261103SSKT0&section=START_PIT' class='btn2' id='btnPreView'>프리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "수원",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "11.10(화)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "1",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>삼성</span><em><span>vs</span></em><span>KT</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "수원",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "srIdList": "0,9,6",
+      "payload": {
+        "rows": [
+          {
+            "row": [
+              {
+                "Text": "04.09(목)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "5",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>키움</span><em><span>vs</span></em><span>두산</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "SPO-2T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "잠실",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "우천취소",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>KT</span><em><span>vs</span></em><span>롯데</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "MS-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "사직",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "우천취소",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>한화</span><em><span>vs</span></em><span>SSG</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "SPO-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "문학",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "우천취소",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "srIdList": "1",
+      "payload": {
+        "rows": [
+          {
+            "row": [
+              {
+                "Text": "03.13(금)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "5",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>13:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>LG</span><em><span class=\"same\">5</span><span>vs</span><span class=\"same\">5</span></em><span>NC</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20260313&gameId=20260313LGNC0&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20260313&gameId=20260313LGNC0&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "KN-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "마산",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>13:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>KT</span><em><span class=\"same\">6</span><span>vs</span><span class=\"same\">6</span></em><span>롯데</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20260313&gameId=20260313KTLT0&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20260313&gameId=20260313KTLT0&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "MS-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "사직",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "srIdList": "0,9,6",
+      "payload": {
+        "rows": [
+          {
+            "row": [
+              {
+                "Text": "08.16(일)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "5",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>19:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>SSG</span><em><span class=\"win\">6</span><span>vs</span><span class=\"lose\">0</span></em><span>LG</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20260816&gameId=20260816SKLG0&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20260816&gameId=20260816SKLG0&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "SPO-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "잠실",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>19:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>한화</span><em><span>vs</span></em><span>삼성</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "KN-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "대구",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "그라운드사정",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "08.28(금)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "5",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>키움</span><em><span>vs</span></em><span>두산</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "MS-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "잠실",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "그라운드사정",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>18:30</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>KT</span><em><span>vs</span></em><span>삼성</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "SPO-2T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "대구",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "그라운드사정",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "srIdList": "0,9,6",
+      "payload": {
+        "rows": [
+          {
+            "row": [
+              {
+                "Text": "05.10(토)",
+                "Class": "day",
+                "Scope": null,
+                "RowSpan": "9",
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<b>14:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>한화</span><em><span class=\"win\">9</span><span>vs</span><span class=\"lose\">1</span></em><span>키움</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20250510&gameId=20250510HHWO0&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20250510&gameId=20250510HHWO0&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "S-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "고척",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>14:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>LG</span><em><span class=\"win\">5</span><span>vs</span><span class=\"lose\">4</span></em><span>삼성</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20250510&gameId=20250510LGSS1&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20250510&gameId=20250510LGSS1&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "K-2T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "대구",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          },
+          {
+            "row": [
+              {
+                "Text": "<b>17:00</b>",
+                "Class": "time",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<span>LG</span><em><span class=\"win\">4</span><span>vs</span><span class=\"lose\">1</span></em><span>삼성</span>",
+                "Class": "play",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20250510&gameId=20250510LGSS2&section=REVIEW' class='btn2 mr5' id='btnReview'>리뷰</a>",
+                "Class": "relay",
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "<a href='/Schedule/GameCenter/Main.aspx?gameDate=20250510&gameId=20250510LGSS2&section=HIGHLIGHT' class='btn2' id='btnHighlight' style='width:65px;'>하이라이트</a>",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "MS-T<br />SS-T",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "대구",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              },
+              {
+                "Text": "-",
+                "Class": null,
+                "Scope": null,
+                "RowSpan": null,
+                "ColSpan": null,
+                "Width": null,
+                "TypeObj": null
+              }
+            ],
+            "Class": null,
+            "OnClick": null,
+            "Style": null,
+            "Value": null,
+            "Id": null
+          }
+        ]
+      }
+    }
+  ]
+}

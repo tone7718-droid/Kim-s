@@ -102,6 +102,34 @@ export function computeStats(
   };
 }
 
+// The daily scrape is expected to land well inside two days. Older than
+// that, the in-progress season is missing results.
+export const STALE_DATA_MS = 48 * 60 * 60 * 1000;
+
+export function isGeneratedAtStale(iso: string | null | undefined, now: Date = new Date()): boolean {
+  if (!iso) return false;
+  const parsed = new Date(iso).getTime();
+  if (Number.isNaN(parsed)) return false;
+  return now.getTime() - parsed > STALE_DATA_MS;
+}
+
+function yearInKst(date: Date): number {
+  return Number(
+    new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Seoul", year: "numeric" }).format(date),
+  );
+}
+
+// Finished seasons are not refreshed on the daily run, so a stale
+// generatedAt there does not mean the schedule is missing games.
+export function shouldShowStaleDataBanner(
+  seasonYear: number,
+  generatedAt: string | null | undefined,
+  now: Date = new Date(),
+): boolean {
+  if (seasonYear !== yearInKst(now)) return false;
+  return isGeneratedAtStale(generatedAt, now);
+}
+
 // Format an ISO timestamp from the scraper as a short Korean string in
 // KST. Uses "오늘 / 어제" relative phrasing for recent updates.
 export function formatGeneratedAt(iso: string): string {

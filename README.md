@@ -59,7 +59,7 @@ Kim-s/
 
 scraper/ 디렉터리는 KBO 경기 일정과 결과 데이터를 수집해 data/seasons/<year>.json 형태로 저장합니다.
 
-현재 스크래퍼는 네이버 스포츠 JSON API를 기반으로 KBO 경기 데이터를 수집합니다.
+현재 스크래퍼는 KBO 공식 사이트 일정 엔드포인트를 기본 소스로 쓰고, 네이버 스포츠 API는 `--source naver`로 선택할 수 있습니다. GitHub Actions에서는 네이버 API가 타임아웃나서 KBO를 사용합니다.
 
 출력 예시는 다음과 같습니다.
 
