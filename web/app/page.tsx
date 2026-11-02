@@ -14,6 +14,7 @@ import {
   formatGeneratedAt,
   gamesForTeam,
   loadSeason,
+  shouldShowStaleDataBanner,
 } from "@/lib/games";
 import { useAttended } from "@/lib/storage";
 import type { SeasonPayload } from "@/lib/types";
@@ -139,6 +140,15 @@ export default function HomePage() {
           <SettingsMenu />
         </div>
       </header>
+
+      {season && shouldShowStaleDataBanner(season.year, season.generatedAt) && (
+        <div
+          role="status"
+          className="mb-3 rounded-lg bg-amber-100 px-3 py-2 text-xs font-medium text-amber-900"
+        >
+          데이터가 오래되었을 수 있어요
+        </div>
+      )}
 
       <section className="mb-4">
         <label className="text-xs font-semibold text-zinc-500 mb-1.5 block">시즌</label>

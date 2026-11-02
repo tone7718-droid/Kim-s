@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       year:
-        description: '단일 시즌만 (예: 2021). 비워두면 2021~현재 시즌 전부.'
+        description: '과거 시즌만 다시 받을 때 (예: 2021). 비워두면 올해 시즌만.'
         required: false
         default: ''
       month:
@@ -33,6 +33,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,11 +54,15 @@ jobs:
         run: |
           year="${{ github.event.inputs.year }}"
           month="${{ github.event.inputs.month }}"
-          current_year=$(date -u +'%Y')
+          # KST. A UTC year would be wrong for a few hours after New Year.
+          current_year=$(TZ=Asia/Seoul date +'%Y')
+          # Scheduled runs and pushes refresh the in-progress season only.
+          # Past seasons stay as they are unless workflow_dispatch passes a year
+          # (Naver is unreachable from GitHub runners, and re-scraping them is manual).
           if [ -n "$year" ]; then
-            scope="--year $year"
+            scope="--year $year --source kbo"
           else
-            scope="--years 2021-$current_year"
+            scope="--year $current_year --source kbo"
           fi
           if [ -n "$month" ]; then
             scope="$scope --month $month"

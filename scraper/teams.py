@@ -30,3 +30,17 @@ def normalize_code(s: str) -> str:
     """Map any known alias/code to our canonical code. Empty string if unknown."""
     s = (s or "").strip()
     return NAME_TO_CODE.get(s, "")
+
+
+# Naver and the KBO schedule use HT/SK inside game ids. Canonical codes differ.
+_NAVER_GAME_CODE = {"KIA": "HT", "SSG": "SK"}
+
+
+def naver_game_code(canonical: str) -> str:
+    """2-letter code used in Naver/KBO game ids. Empty if the team is unknown."""
+    canonical = (canonical or "").strip()
+    if canonical in _NAVER_GAME_CODE:
+        return _NAVER_GAME_CODE[canonical]
+    if canonical in CODE_TO_NAME:
+        return canonical
+    return ""

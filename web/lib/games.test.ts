@@ -5,6 +5,8 @@ import {
   gamesForTeam,
   buildNaverRecordUrl,
   breakdownByVenue,
+  isGeneratedAtStale,
+  shouldShowStaleDataBanner,
 } from "./games";
 import type { Game } from "./types";
 
@@ -154,6 +156,22 @@ describe("buildNaverRecordUrl", () => {
     expect(buildNaverRecordUrl(g)).toBe(
       "https://m.sports.naver.com/game/20240401HTSK02024/record",
     );
+  });
+});
+
+describe("stale data banner", () => {
+  const now = new Date("2026-11-02T12:00:00+09:00");
+
+  it("is stale after 48 hours", () => {
+    expect(isGeneratedAtStale("2026-10-30T11:00:00+09:00", now)).toBe(true);
+    expect(isGeneratedAtStale("2026-11-01T12:00:00+09:00", now)).toBe(false);
+    expect(isGeneratedAtStale("not-a-date", now)).toBe(false);
+  });
+
+  it("warns only for the current KST season", () => {
+    expect(shouldShowStaleDataBanner(2026, "2026-10-25T18:02:19+0000", now)).toBe(true);
+    expect(shouldShowStaleDataBanner(2025, "2026-10-25T18:02:11+0000", now)).toBe(false);
+    expect(shouldShowStaleDataBanner(2026, "2026-11-02T09:00:00+09:00", now)).toBe(false);
   });
 });
 

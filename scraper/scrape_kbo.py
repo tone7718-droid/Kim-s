@@ -1,13 +1,15 @@
-"""Scrape KBO regular-season schedule + results from Naver Sports.
+"""Scrape KBO schedule + results.
 
-Uses the public Naver Sports schedule endpoint (api-gw.sports.naver.com),
-which returns JSON. Far more reliable than HTML scraping — no DOM parsing,
-no selector drift, and accessible from cloud CI environments.
+The default source is the KBO schedule endpoint used by
+koreabaseball.com/Schedule/Schedule.aspx. Naver's API
+(api-gw.sports.naver.com) times out from GitHub-hosted runners, so scheduled
+runs use KBO and keep Naver as an optional fallback.
 
 Usage:
-    python scrape_kbo.py --year 2021
-    python scrape_kbo.py --year 2021 --month 4
-    python scrape_kbo.py --years 2021-2026
+    python scrape_kbo.py --year 2026
+    python scrape_kbo.py --year 2026 --month 10
+    python scrape_kbo.py --year 2021 --source naver
+    python scrape_kbo.py --years 2021-2026 --source kbo-naver
 
 Output: data/seasons/<year>.json
 
@@ -34,19 +36,63 @@ import calendar
 import datetime as dt
 import json
 import os
+import re
 import sys
 import time
 from dataclasses import dataclass, asdict, replace
+from html import unescape
 from pathlib import Path
 from typing import Iterable
+from zoneinfo import ZoneInfo
 
 import requests
 
-from teams import normalize_code
+from teams import naver_game_code, normalize_code
 
 API_URL = "https://api-gw.sports.naver.com/schedule/games"
+KBO_URL = "https://www.koreabaseball.com/ws/Schedule.asmx/GetScheduleList"
 DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "seasons"
 DEBUG_DUMP_PATH = Path(os.environ.get("KBO_DEBUG_DUMP", "/tmp/kbo_debug_response.json"))
+
+# Form fields posted by Schedule.aspx (`getTableGridList`). Confirmed against
+# the live page and responses on 2026-11-02:
+#   leId=1 (KBO 1군)
+#   srIdList  1       시범경기
+#             0,9,6   정규시즌 (9 is the 올스타전 드림/나눔 game; unknown clubs are dropped)
+#             3       준플레이오프
+#             4       와일드카드
+#             5       플레이오프
+#             7       한국시리즈
+#   seasonId  four-digit year
+#   gameMonth zero-padded month
+# Postseason series are requested separately. The combined value "3,4,5,7"
+# that the postseason tab sends omits rainouts (2026-10-25 PO 우천취소 was
+# missing there and present on srIdList=5).
+# classify_as is fed to _classify_category so stored categories stay inside
+# regular / preseason / postseason / unknown. naver_prefix replaces the date
+# on postseason Naver ids (3333 준PO, 4444 WC, 5555 PO, 7777 KS).
+KBO_SERIES: tuple[tuple[str, str, str | None], ...] = (
+    ("1", "시범경기", None),
+    ("0,9,6", "정규", None),
+    ("3", "준플레이오프", "3333"),
+    ("4", "와일드카드", "4444"),
+    ("5", "PO", "5555"),
+    ("7", "한국시리즈", "7777"),
+)
+_KBO_SERIES_BY_KEY = {key: (name, prefix) for key, name, prefix in KBO_SERIES}
+
+KBO_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Referer": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
+    "Origin": "https://www.koreabaseball.com",
+    "X-Requested-With": "XMLHttpRequest",
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+}
 
 HEADERS = {
     "User-Agent": (
@@ -74,7 +120,7 @@ class Game:
     naverRecordUrl: str | None
 
 
-def fetch_range(from_date: str, to_date: str, retries: int = 3) -> dict:
+def fetch_range(from_date: str, to_date: str, retries: int = 4, timeout: float = 30) -> dict:
     """Fetch a date-range of KBO games from Naver Sports.
 
     Returns the full JSON payload (caller extracts the games list) so the
@@ -91,7 +137,7 @@ def fetch_range(from_date: str, to_date: str, retries: int = 3) -> dict:
     last_err: Exception | None = None
     for attempt in range(retries):
         try:
-            r = requests.get(API_URL, headers=HEADERS, params=params, timeout=20)
+            r = requests.get(API_URL, headers=HEADERS, params=params, timeout=timeout)
             print(f"    HTTP {r.status_code}, {len(r.content)} bytes", file=sys.stderr)
             r.raise_for_status()
             try:
@@ -483,40 +529,500 @@ def _flush_debug() -> None:
         print(f"  (debug dump failed: {e})", file=sys.stderr)
 
 
-def scrape_year(year: int, months: Iterable[int] = range(3, 12)) -> list[Game]:
-    # base_id -> count of times we've seen it. Same (date, away, home)
-    # appearing more than once means a double-header; the 2nd / 3rd / ...
-    # game gets a "-2" / "-3" suffix on its id so we don't silently drop
-    # one of them. Existing single games keep their original id, so users'
-    # LocalStorage records stay valid across the migration.
-    seen_count: dict[str, int] = {}
-    out: list[Game] = []
-    for month in months:
-        first = dt.date(year, month, 1)
-        last_day = calendar.monthrange(year, month)[1]
-        last = dt.date(year, month, last_day)
-        print(f"  fetching {first}..{last} ...", file=sys.stderr)
-        payload = fetch_range(first.isoformat(), last.isoformat())
-        raws = _extract_games(payload)
-        # Sort by gameDateTime so a double-header's earlier game gets the
-        # bare id and the later one gets -2.
-        raws.sort(key=lambda r: str(_pluck(r, "gameDateTime") or _pluck(r, "gameDate") or ""))
-        _record_debug(payload, raws)
-        kept = 0
-        for r in raws:
-            g = _normalize_game(r)
-            if g is None:
+_TAG_RE = re.compile(r"<[^>]+>")
+_WS_RE = re.compile(r"\s+")
+_PLAY_RE = re.compile(
+    r"<span>(?P<away>[^<]+)</span>\s*<em>(?P<em>.*?)</em>\s*<span>(?P<home>[^<]+)</span>",
+    re.S,
+)
+_SCORE_RE = re.compile(r'<span class="(win|lose|same)">(\d+)</span>')
+_KBO_GAME_ID_RE = re.compile(r"gameId=(\d{8}[A-Za-z]{2}[A-Za-z]{2}\d)")
+_DAY_RE = re.compile(r"(\d{1,2})\.(\d{1,2})")
+_TIME_RE = re.compile(r"(\d{1,2}):(\d{2})")
+_SERIES_NOTE_RE = re.compile(
+    r"^(WC|준PO|PO|KS|와일드카드|준플레이오프|플레이오프|한국시리즈)\b"
+)
+# The schedule page prints these in the last column instead of a series label
+# when the game is not played. 2026 had 우천취소, 폭염취소, and 그라운드사정.
+# 연기/순연 did not appear that season; they are mapped so a later postponement
+# is not stored as a final score.
+_CANCEL_NOTES = ("취소", "노게임", "그라운드사정", "몰수")
+_POSTPONE_NOTES = ("연기", "순연", "서스펜디드", "중단")
+
+
+@dataclass
+class ScrapeResult:
+    games: list[Game]
+    failed_months: list[int]
+    succeeded_months: list[int]
+
+
+def current_season_year() -> int:
+    return dt.datetime.now(ZoneInfo("Asia/Seoul")).year
+
+
+def _html_text(raw: str) -> str:
+    return _WS_RE.sub(" ", unescape(_TAG_RE.sub(" ", raw or ""))).strip()
+
+
+def _parse_play(raw: str) -> tuple[str, str, int | None, int | None] | None:
+    match = _PLAY_RE.search(raw or "")
+    if not match:
+        return None
+    away = unescape(match.group("away")).strip()
+    home = unescape(match.group("home")).strip()
+    scores = _SCORE_RE.findall(match.group("em"))
+    away_score = home_score = None
+    if len(scores) >= 2:
+        away_score = int(scores[0][1])
+        home_score = int(scores[1][1])
+    if not away or not home:
+        return None
+    return away, home, away_score, home_score
+
+
+def _note_and_stadium(extras: list[str]) -> tuple[str | None, str | None]:
+    note = None
+    stadium = None
+    for text in extras:
+        if text in {"-", "리뷰", "프리뷰", "하이라이트"}:
+            continue
+        if any(tok in text for tok in _CANCEL_NOTES + _POSTPONE_NOTES) or "이동일" in text:
+            note = text
+            continue
+        if _SERIES_NOTE_RE.search(text):
+            continue
+        if re.search(r"[A-Za-z]", text):
+            continue
+        if re.search(r"[가-힣]", text):
+            stadium = text
+    return note, stadium
+
+
+def _status_from_note(
+    note: str | None,
+    away_score: int | None,
+    home_score: int | None,
+    relay: str,
+) -> tuple[str, int | None, int | None]:
+    note = note or ""
+    relay = relay or ""
+    if any(tok in note for tok in _CANCEL_NOTES):
+        return "cancelled", None, None
+    if any(tok in note for tok in _POSTPONE_NOTES):
+        return "postponed", None, None
+    # "프리뷰" contains "리뷰", so the preview label has to win first.
+    if "프리뷰" in relay:
+        return "scheduled", None, None
+    # win/lose/same spans are the final result.
+    if away_score is not None and home_score is not None:
+        if away_score == home_score:
+            return "tied", away_score, home_score
+        return "completed", away_score, home_score
+    if "리뷰" in relay:
+        return "unknown_result", None, None
+    return "scheduled", None, None
+
+
+def derive_naver_game_id(
+    kbo_game_id: str | None,
+    date_str: str,
+    away_code: str,
+    home_code: str,
+    series_key: str,
+) -> str | None:
+    """Build a Naver game id when the KBO id and series follow the known pattern.
+
+    Regular/preseason: ``YYYYMMDD + away + home + seq + year``
+    (``20250510LGSS12025``). Postseason swaps the year-month-day prefix for
+    4444/3333/5555/7777 (``55551029SSHT02026``). Team letters are the Naver
+    codes (HT, SK), which is what ``gameId`` on the KBO page already uses.
+    Without a ``gameId``, only sequence 0 is assumed, and only for one game.
+    """
+    info = _KBO_SERIES_BY_KEY.get(series_key)
+    if info is None:
+        return None
+    _name, prefix = info
+    year = date_str[:4]
+    ymd = date_str.replace("-", "")
+    if kbo_game_id:
+        match = re.fullmatch(r"(\d{8})([A-Za-z]{2})([A-Za-z]{2})(\d)", kbo_game_id)
+        if not match:
+            return None
+        id_ymd, away_raw, home_raw, seq = match.groups()
+        away_raw = away_raw.upper()
+        home_raw = home_raw.upper()
+        if id_ymd != ymd:
+            return None
+        if normalize_code(away_raw) != away_code or normalize_code(home_raw) != home_code:
+            return None
+    else:
+        away_raw = naver_game_code(away_code)
+        home_raw = naver_game_code(home_code)
+        if not away_raw or not home_raw:
+            return None
+        seq = "0"
+    if prefix:
+        return f"{prefix}{ymd[4:]}{away_raw}{home_raw}{seq}{year}"
+    return f"{ymd}{away_raw}{home_raw}{seq}{year}"
+
+
+def parse_kbo_schedule(
+    payload: dict, year: int, series_key: str
+) -> list[tuple[str, Game]]:
+    """Parse one GetScheduleList payload into provisional games.
+
+    Each item is ``(sort_key, game)``. Game ids do not yet have a
+    doubleheader suffix; ``assign_game_ids`` adds those in time order.
+    Rows that only mark a travel day (이동일) are skipped. A date cell uses
+    rowspan for the rest of that day, so later rows reuse the previous date.
+    """
+    if series_key not in _KBO_SERIES_BY_KEY:
+        raise ValueError(f"unknown KBO series {series_key!r}")
+    series_name, _prefix = _KBO_SERIES_BY_KEY[series_key]
+    current_date: str | None = None
+    out: list[tuple[str, Game]] = []
+    for row in payload.get("rows") or []:
+        if not isinstance(row, dict):
+            continue
+        cells = row.get("row") or []
+        day = time_text = relay = None
+        play_raw = ""
+        extras: list[str] = []
+        raw_bits: list[str] = []
+        for cell in cells:
+            if not isinstance(cell, dict):
                 continue
-            base = g.id
-            count = seen_count.get(base, 0)
-            if count > 0:
-                g = replace(g, id=f"{base}-{count + 1}")
-            seen_count[base] = count + 1
-            out.append(g)
-            kept += 1
-        print(f"    -> {len(raws)} raw, {kept} kept", file=sys.stderr)
-        time.sleep(0.3)
-    out.sort(key=lambda g: (g.date, g.awayTeam, g.id))
+            raw = cell.get("Text") or ""
+            raw_bits.append(raw)
+            text = _html_text(raw)
+            kind = cell.get("Class") or ""
+            if kind == "day" and text:
+                day = text
+            elif kind == "time":
+                time_text = text
+            elif kind == "play":
+                play_raw = raw
+            elif kind == "relay":
+                relay = text
+            elif text:
+                extras.append(text)
+        if day:
+            day_match = _DAY_RE.search(day)
+            if day_match:
+                current_date = (
+                    f"{year:04d}-{int(day_match.group(1)):02d}-{int(day_match.group(2)):02d}"
+                )
+        if not current_date or not play_raw:
+            continue
+        note, stadium = _note_and_stadium(extras)
+        if note and "이동일" in note:
+            continue
+        parsed = _parse_play(play_raw)
+        if not parsed:
+            continue
+        away_name, home_name, away_score, home_score = parsed
+        away_code = normalize_code(away_name)
+        home_code = normalize_code(home_name)
+        if not away_code or not home_code or away_code == home_code:
+            continue
+        status, away_score, home_score = _status_from_note(
+            note, away_score, home_score, relay or ""
+        )
+        id_match = _KBO_GAME_ID_RE.search(" ".join(raw_bits))
+        kbo_game_id = id_match.group(1).upper() if id_match else None
+        naver_id = derive_naver_game_id(
+            kbo_game_id, current_date, away_code, home_code, series_key
+        )
+        category = _classify_category(
+            {"seriesName": series_name, **({"gameId": naver_id} if naver_id else {})},
+            current_date,
+        )
+        time_match = _TIME_RE.search(time_text or "")
+        sort_time = (
+            f"{int(time_match.group(1)):02d}:{time_match.group(2)}" if time_match else "99:99"
+        )
+        game = Game(
+            id=f"{current_date}-{away_code}-{home_code}",
+            date=current_date,
+            awayTeam=away_code,
+            homeTeam=home_code,
+            awayScore=away_score,
+            homeScore=home_score,
+            status=status,
+            stadium=stadium,
+            category=category,
+            naverGameId=naver_id,
+            naverRecordUrl=(
+                f"https://m.sports.naver.com/game/{naver_id}/record" if naver_id else None
+            ),
+        )
+        out.append((f"{current_date}T{sort_time}", game))
+    return out
+
+
+def assign_game_ids(entries: list[tuple[str, Game]]) -> list[Game]:
+    """Give the earlier game the bare id and later ones ``-2``, ``-3``, ...
+
+    Same rule as the Naver scraper: LocalStorage keys for single games stay
+    stable, and a doubleheader does not collapse into one object.
+    """
+    ordered = sorted(entries, key=lambda item: (item[0], item[1].awayTeam, item[1].homeTeam, item[1].naverGameId or ""))
+    seen: dict[str, int] = {}
+    out: list[Game] = []
+    for _sort_key, game in ordered:
+        base = f"{game.date}-{game.awayTeam}-{game.homeTeam}"
+        count = seen.get(base, 0)
+        game_id = base if count == 0 else f"{base}-{count + 1}"
+        seen[base] = count + 1
+        out.append(game if game.id == game_id else replace(game, id=game_id))
+    counts: dict[str, int] = {}
+    for game in out:
+        if game.naverGameId:
+            counts[game.naverGameId] = counts.get(game.naverGameId, 0) + 1
+    cleaned: list[Game] = []
+    for game in out:
+        if game.naverGameId and counts.get(game.naverGameId, 0) > 1:
+            cleaned.append(replace(game, naverGameId=None, naverRecordUrl=None))
+        else:
+            cleaned.append(game)
+    return cleaned
+
+
+def games_from_kbo_payload(payload: dict, year: int, series_key: str) -> list[Game]:
+    return assign_game_ids(parse_kbo_schedule(payload, year, series_key))
+
+
+def fetch_kbo_schedule(year: int, month: int, sr_id_list: str, retries: int = 3, timeout: float = 30) -> dict:
+    """POST one month of one series. Raises after the retries are exhausted."""
+    form = {
+        "leId": "1",
+        "srIdList": sr_id_list,
+        "seasonId": str(year),
+        "gameMonth": f"{month:02d}",
+        "teamId": "",
+    }
+    last_err: Exception | None = None
+    for attempt in range(retries):
+        try:
+            response = requests.post(KBO_URL, headers=KBO_HEADERS, data=form, timeout=timeout)
+            print(
+                f"    KBO sr={sr_id_list} HTTP {response.status_code}, {len(response.content)} bytes",
+                file=sys.stderr,
+            )
+            response.raise_for_status()
+            payload = response.json()
+            if not isinstance(payload, dict) or not isinstance(payload.get("rows"), list):
+                raise RuntimeError("KBO payload has no rows list")
+            return payload
+        except Exception as exc:
+            last_err = exc
+            time.sleep(2 ** attempt)
+    raise RuntimeError(f"KBO {year}-{month:02d} sr={sr_id_list}: {last_err}")
+
+
+def _fetch_month_kbo(year: int, month: int) -> list[tuple[str, Game]]:
+    entries: list[tuple[str, Game]] = []
+    for index, (series_key, _name, _prefix) in enumerate(KBO_SERIES):
+        if index:
+            time.sleep(0.15)
+        payload = fetch_kbo_schedule(year, month, series_key)
+        entries.extend(parse_kbo_schedule(payload, year, series_key))
+    return entries
+
+
+def _fetch_month_naver(year: int, month: int) -> list[tuple[str, Game]]:
+    last_day = calendar.monthrange(year, month)[1]
+    first = dt.date(year, month, 1)
+    last = dt.date(year, month, last_day)
+    payload = fetch_range(first.isoformat(), last.isoformat())
+    raws = _extract_games(payload)
+    raws.sort(key=lambda raw: str(_pluck(raw, "gameDateTime") or _pluck(raw, "gameDate") or ""))
+    _record_debug(payload, raws)
+    entries: list[tuple[str, Game]] = []
+    for raw in raws:
+        game = _normalize_game(raw)
+        if game is None:
+            continue
+        sort_key = str(_pluck(raw, "gameDateTime") or game.date)
+        entries.append((sort_key, game))
+    return entries
+
+
+def _fetch_month(year: int, month: int, source: str) -> list[tuple[str, Game]]:
+    if source == "naver":
+        return _fetch_month_naver(year, month)
+    if source == "kbo":
+        return _fetch_month_kbo(year, month)
+    if source == "kbo-naver":
+        try:
+            return _fetch_month_kbo(year, month)
+        except Exception as exc:
+            print(
+                f"  warning: KBO {year}-{month:02d} failed ({exc}); trying Naver",
+                file=sys.stderr,
+            )
+            return _fetch_month_naver(year, month)
+    raise ValueError(f"unknown --source {source!r}")
+
+
+def scrape_year(year: int, months: Iterable[int] = range(3, 12), source: str = "kbo") -> ScrapeResult:
+    """Fetch each month. A failed month is recorded and does not raise.
+
+    Callers keep the games already on disk for ``failed_months`` and continue
+    with the months that returned.
+    """
+    entries: list[tuple[str, Game]] = []
+    failed_months: list[int] = []
+    succeeded_months: list[int] = []
+    month_list = list(months)
+    for index, month in enumerate(month_list):
+        print(f"  fetching {year}-{month:02d} via {source} ...", file=sys.stderr)
+        try:
+            month_entries = _fetch_month(year, month, source)
+        except Exception as exc:
+            print(
+                f"  warning: {year}-{month:02d} failed ({exc}); keeping existing games for this month",
+                file=sys.stderr,
+            )
+            failed_months.append(month)
+            continue
+        succeeded_months.append(month)
+        print(f"    -> {len(month_entries)} games", file=sys.stderr)
+        entries.extend(month_entries)
+        if index != len(month_list) - 1:
+            time.sleep(0.15)
+    deduped: list[tuple[str, Game]] = []
+    seen_naver: set[str] = set()
+    for sort_key, game in entries:
+        if game.naverGameId:
+            if game.naverGameId in seen_naver:
+                continue
+            seen_naver.add(game.naverGameId)
+        deduped.append((sort_key, game))
+    return ScrapeResult(
+        games=assign_game_ids(deduped),
+        failed_months=failed_months,
+        succeeded_months=succeeded_months,
+    )
+
+
+def load_existing_games(year: int) -> list[Game]:
+    path = DATA_DIR / f"{year}.json"
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"  warning: could not read {path}: {exc}", file=sys.stderr)
+        return []
+    games: list[Game] = []
+    for raw in payload.get("games") or []:
+        if not isinstance(raw, dict) or "id" not in raw or "date" not in raw:
+            continue
+        games.append(
+            Game(
+                id=str(raw["id"]),
+                date=str(raw["date"]),
+                awayTeam=str(raw.get("awayTeam") or ""),
+                homeTeam=str(raw.get("homeTeam") or ""),
+                awayScore=raw.get("awayScore"),
+                homeScore=raw.get("homeScore"),
+                status=str(raw.get("status") or "scheduled"),
+                stadium=raw.get("stadium"),
+                category=str(raw.get("category") or "unknown"),
+                naverGameId=raw.get("naverGameId"),
+                naverRecordUrl=raw.get("naverRecordUrl"),
+            )
+        )
+    return games
+
+
+def _allocate_id(provisional: str, seen: set[str]) -> str:
+    parts = provisional.split("-")
+    if len(parts) >= 6 and parts[-1].isdigit():
+        base = "-".join(parts[:-1])
+    else:
+        base = provisional
+    if base not in seen:
+        return base
+    number = 2
+    while f"{base}-{number}" in seen:
+        number += 1
+    return f"{base}-{number}"
+
+
+def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[int]) -> list[Game]:
+    """Update scores, status, and stadium. Keep every other field already on disk.
+
+    Matching prefers ``naverGameId`` so a doubleheader suffix stays put even
+    when this run only sees one of the two games. Months in ``failed_months``
+    are copied through unchanged. Games that are not in the new payload are
+    kept, and games that are only in the new payload are appended.
+    """
+    def month_of(game: Game) -> int:
+        return int(game.date[5:7])
+
+    fresh_pool = [game for game in fetched if month_of(game) not in failed_months]
+    by_naver: dict[str, list[int]] = {}
+    by_id: dict[str, list[int]] = {}
+    for index, game in enumerate(fresh_pool):
+        if game.naverGameId:
+            by_naver.setdefault(game.naverGameId, []).append(index)
+        by_id.setdefault(game.id, []).append(index)
+
+    used: set[int] = set()
+
+    def take(indexes: list[int]) -> Game | None:
+        for index in indexes:
+            if index not in used:
+                used.add(index)
+                return fresh_pool[index]
+        return None
+
+    out: list[Game] = []
+    seen_ids: set[str] = set()
+    for old in existing:
+        if month_of(old) in failed_months:
+            out.append(old)
+            seen_ids.add(old.id)
+            continue
+        fresh = None
+        if old.naverGameId and old.naverGameId in by_naver:
+            fresh = take(by_naver[old.naverGameId])
+        if fresh is None and old.id in by_id:
+            for index in by_id[old.id]:
+                if index in used:
+                    continue
+                candidate = fresh_pool[index]
+                if old.naverGameId and candidate.naverGameId and candidate.naverGameId != old.naverGameId:
+                    continue
+                used.add(index)
+                fresh = candidate
+                break
+        if fresh is None:
+            out.append(old)
+            seen_ids.add(old.id)
+            continue
+        out.append(
+            replace(
+                old,
+                awayScore=fresh.awayScore,
+                homeScore=fresh.homeScore,
+                status=fresh.status,
+                stadium=fresh.stadium or old.stadium,
+            )
+        )
+        seen_ids.add(old.id)
+
+    for index, game in enumerate(fresh_pool):
+        if index in used:
+            continue
+        game_id = _allocate_id(game.id, seen_ids)
+        out.append(game if game.id == game_id else replace(game, id=game_id))
+        seen_ids.add(game_id)
+
+    out.sort(key=lambda game: (game.date, game.awayTeam, game.id))
     return out
 
 
@@ -545,30 +1051,60 @@ def main() -> int:
     g.add_argument("--year", type=int, help="single year, e.g. 2021")
     g.add_argument("--years", type=str, help="range like 2021-2026")
     ap.add_argument("--month", type=int, help="restrict to one month (debugging)")
+    ap.add_argument(
+        "--source",
+        choices=("kbo", "naver", "kbo-naver"),
+        default="kbo",
+        help="kbo (default, works from GitHub runners), naver, or kbo with a Naver fallback",
+    )
     args = ap.parse_args()
 
     years = [args.year] if args.year else parse_year_range(args.years)
     months = [args.month] if args.month else range(3, 12)
+    current_year = current_season_year()
+    # Non-zero only when the season that is actually in progress produced
+    # nothing. A past season that fails, or one bad month inside an otherwise
+    # useful scrape, does not fail the run.
+    current_produced_nothing = False
 
     for y in years:
-        print(f"== {y} ==", file=sys.stderr)
-        games = scrape_year(y, months)
+        print(f"== {y} ({args.source}) ==", file=sys.stderr)
+        result = scrape_year(y, months, source=args.source)
         if args.month:
             # A month is a diagnostic subset, not a replacement for a
             # published season. Keep data/seasons/<year>.json untouched.
-            print(f"  diagnostic month {args.month}: {len(games)} games; season file unchanged", file=sys.stderr)
-        elif not games:
-            # Season not published yet (e.g. January before KBO's schedule
-            # reaches Naver) or the API returned nothing. Writing an empty
-            # file would fail validation and block every other season's
-            # refresh, so keep whatever is on disk and move on.
+            print(
+                f"  diagnostic month {args.month}: {len(result.games)} games; season file unchanged",
+                file=sys.stderr,
+            )
+            continue
+        if not result.games:
+            # Nothing fetched (every month failed, or the schedule is empty).
+            # Leave the file alone so generatedAt does not look fresh.
             print(f"  no games for {y}; season file not written", file=sys.stderr)
+            if y == current_year:
+                current_produced_nothing = True
+            continue
+        existing = load_existing_games(y)
+        merged = merge_games(existing, result.games, set(result.failed_months))
+        if not merged:
+            print(f"  no games for {y}; season file not written", file=sys.stderr)
+            if y == current_year:
+                current_produced_nothing = True
+            continue
+        out = write_season(y, merged)
+        if result.failed_months:
+            print(
+                f"  wrote {len(merged)} games -> {out} "
+                f"(kept existing games for failed months {result.failed_months})",
+                file=sys.stderr,
+            )
         else:
-            out = write_season(y, games)
-            print(f"  wrote {len(games)} games -> {out}", file=sys.stderr)
+            print(f"  wrote {len(merged)} games -> {out}", file=sys.stderr)
 
-    _flush_debug()
-    return 0
+    if _debug_state["first_payload_seen"]:
+        _flush_debug()
+    return 1 if current_produced_nothing else 0
 
 
 if __name__ == "__main__":
