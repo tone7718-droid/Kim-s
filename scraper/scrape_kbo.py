@@ -615,7 +615,11 @@ def _status_from_note(
     # "프리뷰" contains "리뷰", so the preview label has to win first.
     if "프리뷰" in relay:
         return "scheduled", None, None
-    # win/lose/same spans are the final result.
+    # KBO also emits same/win/lose score spans before and during games.
+    # In particular, an empty relay plus same 0:0 is a pregame placeholder.
+    # Only the review link confirms a final result.
+    if "리뷰" not in relay:
+        return "scheduled", None, None
     if away_score is not None and home_score is not None:
         if away_score == home_score:
             return "tied", away_score, home_score
@@ -1013,9 +1017,9 @@ def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[in
         out.append(
             replace(
                 old,
-                awayScore=fresh.awayScore,
-                homeScore=fresh.homeScore,
-                status=fresh.status,
+                awayScore=old.awayScore if old.status in {"completed", "tied"} and fresh.status == "scheduled" else fresh.awayScore,
+                homeScore=old.homeScore if old.status in {"completed", "tied"} and fresh.status == "scheduled" else fresh.homeScore,
+                status=old.status if old.status in {"completed", "tied"} and fresh.status == "scheduled" else fresh.status,
                 stadium=fresh.stadium or old.stadium,
                 startTime=fresh.startTime or old.startTime,
             )

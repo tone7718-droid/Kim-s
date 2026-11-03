@@ -20,6 +20,19 @@ def test_removed_schedule_keeps_identity_but_is_not_advertised_as_confirmed():
     assert merged[0].id==old.id
     assert merged[0].status=="unconfirmed"
 
+@pytest.mark.parametrize("away,home",[(0,0),(3,1)])
+def test_scores_without_a_review_are_not_final(away,home):
+    assert s._status_from_note(None,away,home,"")==("scheduled",None,None)
+    assert s._status_from_note(None,away,home,"문자중계")==("scheduled",None,None)
+
+def test_zero_zero_is_a_tie_only_after_a_review_is_available():
+    assert s._status_from_note(None,0,0,"리뷰")==("tied",0,0)
+
+def test_incomplete_response_does_not_erase_previously_confirmed_result():
+    old=game(status="completed",awayScore=3,homeScore=1)
+    merged=s.merge_games([old],[game()],set())
+    assert (merged[0].status,merged[0].awayScore,merged[0].homeScore)==("completed",3,1)
+
 def test_failed_month_does_not_change_existing_pending_game():
     old=game()
     assert s.merge_games([old],[],{11})==[old]
