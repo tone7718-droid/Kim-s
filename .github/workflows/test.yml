@@ -25,6 +25,8 @@ jobs:
       - name: Run tests
         working-directory: scraper
         run: pytest -q
+      - name: Validate published seasons
+        run: python scraper/validate_kbo_data.py --data-dir data/seasons
 
   web:
     name: Web (vitest)
@@ -48,3 +50,4 @@ jobs:
       - name: Production build
         working-directory: web
         run: npm run build
+

@@ -14,7 +14,7 @@ import {
   formatGeneratedAt,
   gamesForTeam,
   loadSeason,
-  shouldShowStaleDataBanner,
+  dataRefreshWarning,
 } from "@/lib/games";
 import { useAttended } from "@/lib/storage";
 import type { SeasonPayload } from "@/lib/types";
@@ -50,11 +50,13 @@ export default function HomePage() {
   const [loadStatus, setLoadStatus] = useState<"ok" | "empty" | "error">("ok");
   const [reloadTick, setReloadTick] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [fromCache, setFromCache] = useState(false);
   const [includePostseason, setIncludePostseason] = useState(true);
   const [includePreseason, setIncludePreseason] = useState(false);
   const [attendedOnly, setAttendedOnly] = useState(false);
   const [editMode, setEditMode] = useState(false);
-  const { attended, toggle, hydrated } = useAttended();
+  const { attended, toggle, hydrated, storageError } = useAttended();
+  const refreshWarning = season ? dataRefreshWarning(season) : null;
 
   // hydrate prefs
   useEffect(() => {
@@ -84,9 +86,11 @@ export default function HomePage() {
     loadSeason(year).then((result) => {
       if (cancelled) return;
       if (result.status === "ok") {
+        setFromCache(result.fromCache ?? false);
         setSeason(result.payload);
         setLoadStatus("ok");
       } else {
+        setFromCache(false);
         setSeason(null);
         setLoadStatus(result.status);
       }
@@ -141,12 +145,14 @@ export default function HomePage() {
         </div>
       </header>
 
-      {season && shouldShowStaleDataBanner(season.year, season.generatedAt) && (
+      {storageError && <p role="alert" className="mb-3 rounded-lg bg-rose-100 px-3 py-2 text-xs text-rose-900">{storageError}</p>}
+      {fromCache && <p role="status" className="mb-3 rounded-lg bg-amber-100 px-3 py-2 text-xs text-amber-900">연결이 원활하지 않아 기기에 저장된 데이터를 표시하고 있어요.</p>}
+      {refreshWarning && (
         <div
           role="status"
           className="mb-3 rounded-lg bg-amber-100 px-3 py-2 text-xs font-medium text-amber-900"
         >
-          데이터가 오래되었을 수 있어요
+          {refreshWarning}
         </div>
       )}
 
@@ -286,3 +292,4 @@ export default function HomePage() {
     </main>
   );
 }
+

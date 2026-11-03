@@ -4,7 +4,9 @@ export type GameStatus =
   | "cancelled"
   | "postponed"
   | "scheduled"
-  | "unknown_result";
+  | "unknown_result"
+  | "unconfirmed"
+  | "not_required";
 
 export type GameCategory = "regular" | "postseason" | "preseason" | "unknown";
 
@@ -18,6 +20,7 @@ export interface Game {
   status: GameStatus;
   stadium: string | null;
   category: GameCategory;
+  startTime?: string | null; // HH:mm, Asia/Seoul
   // Naver's original game identifier/record URL when the scraper can read it.
   // Older season JSON files may not have these fields, so the UI also builds
   // a best-effort URL from date + team codes.
@@ -29,4 +32,9 @@ export interface SeasonPayload {
   year: number;
   generatedAt: string;
   games: Game[];
+  refresh?: {
+    attemptedAt: string;
+    failedMonths: number[];
+  };
 }
+

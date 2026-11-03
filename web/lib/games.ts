@@ -12,9 +12,60 @@ export function availableSeasons(currentYear: number = new Date().getFullYear())
 // parse error, 5xx) so the UI can offer a retry only when retrying might
 // actually help.
 export type SeasonLoad =
-  | { status: "ok"; payload: SeasonPayload }
+  | { status: "ok"; payload: SeasonPayload; fromCache?: boolean }
   | { status: "empty" }
   | { status: "error" };
+
+const TEAMS = new Set(["KIA", "SS", "LG", "OB", "KT", "SSG", "LT", "HH", "NC", "WO"]);
+const STATUSES = new Set(["completed", "tied", "cancelled", "postponed", "scheduled", "unknown_result", "unconfirmed", "not_required"]);
+const CATEGORIES = new Set(["regular", "postseason", "preseason", "unknown"]);
+function validDate(value: unknown): value is string {
+  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) &&
+    !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
+}
+export function isSeasonPayload(value: unknown, year: number): value is SeasonPayload {
+  if (!value || typeof value !== "object") return false;
+  const p = value as Record<string, unknown>;
+  if (p.year !== year || typeof p.generatedAt !== "string" ||
+      (p.generatedAt !== "" && Number.isNaN(Date.parse(p.generatedAt))) || !Array.isArray(p.games)) return false;
+  if (p.generatedAt === "" && !p.refresh) return false;
+  const ids = new Set<string>();
+  for (const item of p.games) {
+    if (!item || typeof item !== "object") return false;
+    const g = item as Record<string, unknown>;
+    if (typeof g.id !== "string" || !/^\d{4}-\d{2}-\d{2}-[A-Z0-9]+-[A-Z0-9]+(?:-\d+)?$/.test(g.id) || ids.has(g.id) ||
+        !validDate(g.date) || !g.date.startsWith(`${year}-`) || !TEAMS.has(g.awayTeam as string) ||
+        !TEAMS.has(g.homeTeam as string) || g.awayTeam === g.homeTeam ||
+        !STATUSES.has(g.status as string) || !CATEGORIES.has(g.category as string) ||
+        (g.stadium !== null && typeof g.stadium !== "string")) return false;
+    for (const score of [g.awayScore, g.homeScore]) {
+      if (score !== null && (typeof score !== "number" || !Number.isInteger(score) || score < 0)) return false;
+    }
+    if (["completed", "tied"].includes(g.status as string)) {
+      if (g.awayScore === null || g.homeScore === null ||
+          (g.status === "tied") !== (g.awayScore === g.homeScore)) return false;
+    }
+    if (g.startTime != null && (typeof g.startTime !== "string" || !/^([01]\d|2[0-3]):[0-5]\d$/.test(g.startTime))) return false;
+    if (g.naverGameId != null && (typeof g.naverGameId !== "string" || !/^[0-9A-Z]+$/.test(g.naverGameId))) return false;
+    if (g.naverRecordUrl != null && (typeof g.naverRecordUrl !== "string" ||
+        !/^https:\/\/m\.sports\.naver\.com\/game\/[0-9A-Z]+\/record$/.test(g.naverRecordUrl))) return false;
+    ids.add(g.id);
+  }
+  if (p.refresh !== undefined) {
+    if (!p.refresh || typeof p.refresh !== "object") return false;
+    const r = p.refresh as Record<string, unknown>;
+    if (typeof r.attemptedAt !== "string" || Number.isNaN(Date.parse(r.attemptedAt)) ||
+        !Array.isArray(r.failedMonths) || r.failedMonths.some(m => !Number.isInteger(m) || m < 1 || m > 12)) return false;
+    if (p.generatedAt === "" && r.failedMonths.length === 0) return false;
+  }
+  return true;
+}
+
+export function dataRefreshWarning(season: SeasonPayload): string | null {
+  const failed = season.refresh?.failedMonths ?? [];
+  if (failed.length) return `${failed.join("·")}월 데이터 갱신에 실패했어요. 해당 월은 이전 정보일 수 있어요.`;
+  return shouldShowStaleDataBanner(season.year, season.generatedAt) ? "데이터가 오래되었을 수 있어요" : null;
+}
 
 // Fetches a single season's payload from the static JSON shipped under
 // /public/data/seasons. `cache: "no-cache"` forces revalidation against
@@ -30,8 +81,9 @@ export async function loadSeason(year: number): Promise<SeasonLoad> {
     });
     if (res.status === 404) return { status: "empty" };
     if (!res.ok) return { status: "error" };
-    const payload = (await res.json()) as SeasonPayload;
-    return { status: "ok", payload };
+    const payload: unknown = await res.json();
+    if (!isSeasonPayload(payload, year)) return { status: "error" };
+    return { status: "ok", payload, fromCache: res.headers.get("X-KBO-Cache") === "fallback" };
   } catch {
     return { status: "error" };
   }
@@ -170,6 +222,8 @@ export function statusBadge(status: GameStatus): { label: string; className: str
     case "postponed":  return { label: "연기",   className: "bg-amber-100 text-amber-800" };
     case "scheduled":  return { label: "예정",   className: "bg-sky-100 text-sky-800" };
     case "unknown_result": return { label: "결과 미상", className: "bg-amber-100 text-amber-800" };
+    case "unconfirmed": return { label: "일정 확인 필요", className: "bg-amber-100 text-amber-800" };
+    case "not_required": return { label: "미개최", className: "bg-zinc-100 text-zinc-600" };
   }
 }
 
@@ -186,24 +240,22 @@ const NAVER_TEAM_CODES: Record<string, string> = {
   WO: "WO",
 };
 
-function fallbackNaverGameId(game: Game): string | null {
+function fallbackNaverGameId(game: Game, duplicate: boolean): string | null {
+  // Dates alone cannot identify a postseason series or doubleheader game 1.
+  // Prefer no link over sending the user to another game's record.
+  if (duplicate || game.category === "postseason" || /-\d+$/.test(game.id)) return null;
   const away = NAVER_TEAM_CODES[game.awayTeam];
   const home = NAVER_TEAM_CODES[game.homeTeam];
   const year = game.date.slice(0, 4);
   const ymd = game.date.replaceAll("-", "");
   if (!away || !home || year.length !== 4 || ymd.length !== 8) return null;
 
-  // Naver game ids usually end with a one-digit game sequence before the year.
-  // Normal games use 0; double-header ids in this app keep the first game bare
-  // and mark later games as ...-2, ...-3, so map those to 1, 2, ...
-  const dhMatch = game.id.match(/-(\d+)$/);
-  const sequence = dhMatch ? Math.max(0, Number(dhMatch[1]) - 1) : 0;
-  return `${ymd}${away}${home}${sequence}${year}`;
+  return `${ymd}${away}${home}0${year}`;
 }
 
-export function buildNaverRecordUrl(game: Game): string | null {
+export function buildNaverRecordUrl(game: Game, duplicate = false): string | null {
   if (game.naverRecordUrl?.trim()) return game.naverRecordUrl.trim();
-  const gameId = game.naverGameId?.trim() || fallbackNaverGameId(game);
+  const gameId = game.naverGameId?.trim() || fallbackNaverGameId(game, duplicate);
   if (!gameId) return null;
   return `https://m.sports.naver.com/game/${gameId}/record`;
 }
@@ -280,3 +332,4 @@ export function breakdownByMonth(
       stats: statsFromGames(gs, team),
     }));
 }
+

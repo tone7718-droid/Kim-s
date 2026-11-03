@@ -65,14 +65,26 @@ async function networkFirst(request, cacheName) {
   try {
     const fresh = await fetch(request);
     if (fresh && fresh.ok) {
-      cache.put(request, fresh.clone());
+      try { await cache.put(request, fresh.clone()); } catch { /* A full cache must not hide a successful response. */ }
+    }
+    // Missing unpublished seasons (404) remain missing. Transient server
+    // failures may use the last successful response, just like offline mode.
+    if (fresh.status >= 500) {
+      const cached = await cache.match(request);
+      if (cached) return cachedResponse(cached);
     }
     return fresh;
   } catch (error) {
     const cached = await cache.match(request);
-    if (cached) return cached;
+    if (cached) return cachedResponse(cached);
     throw error;
   }
+}
+
+function cachedResponse(response) {
+  const headers = new Headers(response.headers);
+  headers.set("X-KBO-Cache", "fallback");
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
 async function cacheFirst(request, cacheName) {
@@ -86,3 +98,4 @@ async function cacheFirst(request, cacheName) {
   }
   return fresh;
 }
+

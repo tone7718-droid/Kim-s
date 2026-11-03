@@ -231,7 +231,7 @@ def test_empty_season_is_not_written(monkeypatch):
     monkeypatch.setattr(scrape_kbo, "load_existing_games", lambda year: [])
     monkeypatch.setattr(scrape_kbo, "_flush_debug", lambda: None)
     written = []
-    monkeypatch.setattr(scrape_kbo, "write_season", lambda y, g: written.append(y) or y)
+    monkeypatch.setattr(scrape_kbo, "write_season", lambda y, g, **kwargs: written.append(y) or y)
     assert scrape_kbo.main() == 0
     assert written == [2026]
 
@@ -505,3 +505,4 @@ def test_merge_appends_games_that_were_not_on_disk():
     )
     merged = merge_games([existing], [existing, added], set())
     assert [game.id for game in merged] == ["2026-04-01-LG-NC", "2026-11-03-SS-KT"]
+

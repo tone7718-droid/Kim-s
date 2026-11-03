@@ -42,6 +42,8 @@ def status_counts(games: list[dict[str, Any]]) -> dict[str, int]:
         "postponed": 0,
         "scheduled": 0,
         "unknown_result": 0,
+        "unconfirmed": 0,
+        "not_required": 0,
     }
     for game in games:
         status = str(game.get("status", "scheduled"))
@@ -115,8 +117,8 @@ def build_summary() -> str:
     rows += ["사용자 선택: **정규시즌 + 포스트시즌만 합산** (시범경기는 별도 표시)", ""]
     rows += ["## 시즌별 요약 (정규+포스트시즌)", ""]
     rows += [
-        "| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 | 결과 미상 | 네이버 ID | 구장 정보 |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        "| 시즌 | 합산 경기 | 정상종료 | 무승부 | 취소 | 연기 | 미진행 | 결과 미상 | 일정 확인 필요 | 미개최 | 네이버 ID | 구장 정보 |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
 
     total_main = 0
@@ -138,7 +140,7 @@ def build_summary() -> str:
         rows.append(
             f"| {year} | **{len(main_games)}** | {counts['completed']} | "
             f"{counts['tied']} | {counts['cancelled']} | {counts['postponed']} | "
-            f"{counts['scheduled']} | {counts['unknown_result']} | {naver_ids}/{len(main_games)} | {stadiums}/{len(main_games)} |"
+            f"{counts['scheduled']} | {counts['unknown_result']} | {counts['unconfirmed']} | {counts['not_required']} | {naver_ids}/{len(main_games)} | {stadiums}/{len(main_games)} |"
         )
         total_main += len(main_games)
         total_preseason += len(preseason_games)
@@ -191,3 +193,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

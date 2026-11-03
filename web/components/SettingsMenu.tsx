@@ -15,6 +15,7 @@ export function SettingsMenu() {
   }
 
   function handleExport() {
+    try {
     const blob = new Blob([exportJson()], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -25,6 +26,7 @@ export function SettingsMenu() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     flash(`내보냈어요 (${attended.size}경기)`);
+    } catch { flash("기록을 읽지 못해 내보내지 못했어요. 브라우저 저장 설정을 확인해 주세요."); }
   }
 
   function handleImportClick() {
@@ -40,15 +42,14 @@ export function SettingsMenu() {
       flash(
         result.ok
           ? `불러왔어요 · ${result.added}경기 추가 (총 ${result.count}경기)`
-          : "파일 형식이 맞지 않아요.",
+          : result.error,
       );
-    });
+    }).catch(() => flash("파일을 읽지 못했어요. 파일을 다시 선택해 주세요."));
   }
 
   function handleClear() {
     if (!window.confirm(`정말 ${attended.size}개 직관 기록을 모두 지울까요?`)) return;
-    clear();
-    flash("모두 지웠어요.");
+    flash(clear() ? "모두 지웠어요." : "삭제하지 못했어요. 브라우저 저장 설정을 확인해 주세요.");
   }
 
   return (
@@ -111,7 +112,7 @@ export function SettingsMenu() {
             </div>
 
             {msg && (
-              <div className="mt-3 text-center text-xs text-emerald-700 bg-emerald-50 py-2 rounded-lg">
+              <div role="status" className="mt-3 text-center text-xs text-zinc-700 bg-zinc-100 py-2 rounded-lg">
                 {msg}
               </div>
             )}
@@ -137,3 +138,4 @@ function GearIcon() {
     </svg>
   );
 }
+

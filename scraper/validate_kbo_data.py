@@ -17,7 +17,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ALLOWED_TEAMS = {"KIA", "SS", "LG", "OB", "KT", "SSG", "LT", "HH", "NC", "WO"}
-ALLOWED_STATUSES = {"completed", "tied", "cancelled", "postponed", "scheduled", "unknown_result"}
+ALLOWED_STATUSES = {"completed", "tied", "cancelled", "postponed", "scheduled", "unknown_result", "unconfirmed", "not_required"}
 ALLOWED_CATEGORIES = {"regular", "postseason", "preseason", "unknown"}
 
 # Full-season scrape should be roughly 720 regular games plus cancellations,
@@ -130,6 +130,15 @@ def validate_file(path: Path, current_date: dt.date) -> list[str]:
                 raise ValueError(f"{path}: {game_id} is completed but scores are tied")
         if date > current_date and status in {"completed", "tied"}:
             future_finished.append(game_id)
+        if status == "scheduled" and date < current_date - dt.timedelta(days=2):
+            failed = (payload.get("refresh") or {}).get("failedMonths", [])
+            if date.month not in failed:
+                raise ValueError(f"{path}: {game_id} is an expired scheduled game; confirm its status")
+        if status in {"unconfirmed", "not_required"} and (away_score is not None or home_score is not None):
+            raise ValueError(f"{path}: {game_id} has no confirmed result but contains scores")
+        start_time = game.get("startTime")
+        if start_time is not None and (not isinstance(start_time, str) or not re.fullmatch(r"([01]\d|2[0-3]):[0-5]\d", start_time)):
+            raise ValueError(f"{path}: {game_id} has invalid startTime")
 
         naver_url = game.get("naverRecordUrl")
         if naver_url is not None:
@@ -192,3 +201,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

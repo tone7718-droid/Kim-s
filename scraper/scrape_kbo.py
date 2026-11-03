@@ -118,6 +118,7 @@ class Game:
     category: str  # "regular" | "preseason" | "postseason" | "unknown"
     naverGameId: str | None
     naverRecordUrl: str | None
+    startTime: str | None = None  # HH:mm in Asia/Seoul
 
 
 def fetch_range(from_date: str, to_date: str, retries: int = 4, timeout: float = 30) -> dict:
@@ -756,6 +757,7 @@ def parse_kbo_schedule(
             naverRecordUrl=(
                 f"https://m.sports.naver.com/game/{naver_id}/record" if naver_id else None
             ),
+            startTime=sort_time if time_match else None,
         )
         out.append((f"{current_date}T{sort_time}", game))
     return out
@@ -933,6 +935,7 @@ def load_existing_games(year: int) -> list[Game]:
                 category=str(raw.get("category") or "unknown"),
                 naverGameId=raw.get("naverGameId"),
                 naverRecordUrl=raw.get("naverRecordUrl"),
+                startTime=raw.get("startTime"),
             )
         )
     return games
@@ -1001,7 +1004,10 @@ def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[in
                 fresh = candidate
                 break
         if fresh is None:
-            out.append(old)
+            # Successful collection no longer confirms this pending game.
+            # Keep its stable id for attendance/backup compatibility.
+            out.append(replace(old, status="unconfirmed", awayScore=None, homeScore=None)
+                       if old.status == "scheduled" else old)
             seen_ids.add(old.id)
             continue
         out.append(
@@ -1011,6 +1017,7 @@ def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[in
                 homeScore=fresh.homeScore,
                 status=fresh.status,
                 stadium=fresh.stadium or old.stadium,
+                startTime=fresh.startTime or old.startTime,
             )
         )
         seen_ids.add(old.id)
@@ -1022,16 +1029,49 @@ def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[in
         out.append(game if game.id == game_id else replace(game, id=game_id))
         seen_ids.add(game_id)
 
+    # A missing schedule is not proof of cancellation. Only a clinched series
+    # can positively establish that later games will not be played.
+    # WC and older best-of-seven PO formats deliberately require manual review.
+    series_wins: dict[tuple[str, tuple[str, ...]], dict[str, int]] = {}
+    clinched: dict[tuple[str, tuple[str, ...]], str] = {}
+    for game in sorted(out, key=lambda g: g.date):
+        prefix = (game.naverGameId or "")[:4]
+        target = 4 if prefix == "7777" else 3 if prefix in {"3333", "5555"} and game.date >= "2022-01-01" else None
+        if target is None or game.status != "completed" or game.awayScore is None or game.homeScore is None:
+            continue
+        key = (prefix, tuple(sorted((game.awayTeam, game.homeTeam))))
+        winner = game.awayTeam if game.awayScore > game.homeScore else game.homeTeam
+        wins = series_wins.setdefault(key, {})
+        wins[winner] = wins.get(winner, 0) + 1
+        if wins[winner] >= target:
+            clinched.setdefault(key, game.date)
+    today = dt.datetime.now(ZoneInfo("Asia/Seoul")).date()
+    reconciled = []
+    for game in out:
+        if month_of(game) in failed_months:
+            reconciled.append(game)
+            continue
+        key = ((game.naverGameId or "")[:4], tuple(sorted((game.awayTeam, game.homeTeam))))
+        if game.status in {"scheduled", "unconfirmed"} and key in clinched and game.date > clinched[key]:
+            game = replace(game, status="not_required", awayScore=None, homeScore=None)
+        elif game.status == "scheduled" and dt.date.fromisoformat(game.date) < today - dt.timedelta(days=2):
+            game = replace(game, status="unconfirmed", awayScore=None, homeScore=None)
+        reconciled.append(game)
+    out = reconciled
     out.sort(key=lambda game: (game.date, game.awayTeam, game.id))
     return out
 
 
-def write_season(year: int, games: list[Game]) -> Path:
+def write_season(year: int, games: list[Game], failed_months: list[int] | None = None) -> Path:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     out = DATA_DIR / f"{year}.json"
+    failed_months = failed_months or []
+    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    previous = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
     payload = {
         "year": year,
-        "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "generatedAt": previous.get("generatedAt", "") if failed_months else now,
+        "refresh": {"attemptedAt": now, "failedMonths": sorted(set(failed_months))},
         "games": [asdict(g) for g in games],
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1092,7 +1132,7 @@ def main() -> int:
             if y == current_year:
                 current_produced_nothing = True
             continue
-        out = write_season(y, merged)
+        out = write_season(y, merged, failed_months=result.failed_months)
         if result.failed_months:
             print(
                 f"  wrote {len(merged)} games -> {out} "
@@ -1109,3 +1149,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

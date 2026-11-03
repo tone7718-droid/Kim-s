@@ -11154,7 +11154,8 @@
       "stadium": "대구",
       "category": "postseason",
       "naverGameId": "55551025HTSS02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/55551025HTSS02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/55551025HTSS02026/record",
+      "startTime": "14:00"
     },
     {
       "id": "2026-10-26-KIA-SS",
@@ -11167,7 +11168,8 @@
       "stadium": "대구",
       "category": "postseason",
       "naverGameId": "55551026HTSS02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/55551026HTSS02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/55551026HTSS02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-10-27-KIA-SS",
@@ -11180,7 +11182,8 @@
       "stadium": "대구",
       "category": "postseason",
       "naverGameId": "55551027HTSS02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/55551027HTSS02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/55551027HTSS02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-10-29-SS-KIA",
@@ -11193,7 +11196,8 @@
       "stadium": "광주",
       "category": "postseason",
       "naverGameId": "55551029SSHT02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/55551029SSHT02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/55551029SSHT02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-10-30-SS-KIA",
@@ -11206,7 +11210,8 @@
       "stadium": "광주",
       "category": "postseason",
       "naverGameId": "55551030SSHT02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/55551030SSHT02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/55551030SSHT02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-11-01-KIA-SS",
@@ -11232,7 +11237,8 @@
       "stadium": "수원",
       "category": "postseason",
       "naverGameId": "77771103SSKT02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771103SSKT02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771103SSKT02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-11-04-SS-KT",
@@ -11245,7 +11251,8 @@
       "stadium": "수원",
       "category": "postseason",
       "naverGameId": "77771104SSKT02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771104SSKT02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771104SSKT02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-11-06-KT-SS",
@@ -11258,7 +11265,8 @@
       "stadium": "대구",
       "category": "postseason",
       "naverGameId": "77771106KTSS02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771106KTSS02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771106KTSS02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-11-07-KT-SS",
@@ -11271,7 +11279,8 @@
       "stadium": "대구",
       "category": "postseason",
       "naverGameId": "77771107KTSS02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771107KTSS02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771107KTSS02026/record",
+      "startTime": "14:00"
     },
     {
       "id": "2026-11-08-KT-SS",
@@ -11284,7 +11293,8 @@
       "stadium": "대구",
       "category": "postseason",
       "naverGameId": "77771108KTSS02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771108KTSS02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771108KTSS02026/record",
+      "startTime": "14:00"
     },
     {
       "id": "2026-11-10-SS-KT",
@@ -11297,7 +11307,8 @@
       "stadium": "수원",
       "category": "postseason",
       "naverGameId": "77771110SSKT02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771110SSKT02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771110SSKT02026/record",
+      "startTime": "18:30"
     },
     {
       "id": "2026-11-11-SS-KT",
@@ -11310,7 +11321,8 @@
       "stadium": "수원",
       "category": "postseason",
       "naverGameId": "77771111SSKT02026",
-      "naverRecordUrl": "https://m.sports.naver.com/game/77771111SSKT02026/record"
+      "naverRecordUrl": "https://m.sports.naver.com/game/77771111SSKT02026/record",
+      "startTime": "18:30"
     }
   ]
 }

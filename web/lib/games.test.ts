@@ -138,11 +138,9 @@ describe("buildNaverRecordUrl", () => {
     );
   });
 
-  it("maps a doubleheader id suffix to the game sequence", () => {
+  it("does not guess an unverified doubleheader record", () => {
     const g = game({ id: "2024-04-01-OB-LG-2", naverGameId: null, naverRecordUrl: null });
-    expect(buildNaverRecordUrl(g)).toBe(
-      "https://m.sports.naver.com/game/20240401OBLG12024/record",
-    );
+    expect(buildNaverRecordUrl(g)).toBeNull();
   });
 
   it("translates KIA/SSG to Naver's HT/SK codes", () => {
@@ -188,3 +186,4 @@ describe("breakdownByVenue", () => {
     expect(away?.stats.wins).toBe(1);
   });
 });
+

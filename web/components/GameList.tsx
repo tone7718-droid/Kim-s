@@ -169,6 +169,7 @@ function GameRow({
           <span className="text-sm truncate">vs {teamName(opp)}</span>
           {duplicate && <span className="text-[10px] font-bold text-zinc-600 shrink-0">{gameNumber(game)}경기</span>}
         </div>
+        {game.startTime && <div className="text-[11px] text-zinc-500 mt-0.5">{game.startTime} (한국시간)</div>}
         {game.stadium && (
           <div className="text-[11px] text-zinc-400 mt-0.5 truncate">{game.stadium}</div>
         )}
@@ -210,7 +211,7 @@ function GameDetailSheet({
   const opp = isHome ? game.awayTeam : game.homeTeam;
   const out = outcomeForTeam(game, team);
   const badge = statusBadge(game.status);
-  const naverUrl = buildNaverRecordUrl(game);
+  const naverUrl = game.status === "unconfirmed" || game.status === "not_required" ? null : buildNaverRecordUrl(game, duplicate);
 
   const teamScore =
     game.awayScore === null || game.homeScore === null
@@ -241,6 +242,7 @@ function GameDetailSheet({
             </h2>
             <p className="mt-1 text-sm text-zinc-500">
               {isHome ? "홈" : "원정"}{game.stadium ? ` · ${game.stadium}` : ""}
+              {game.startTime ? ` · ${game.startTime} (한국시간)` : ""}
             </p>
           </div>
           <button
@@ -290,3 +292,4 @@ function GameDetailSheet({
     </div>
   );
 }
+
