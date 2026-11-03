@@ -1,8 +1,8 @@
 {
   "year": 2026,
-  "generatedAt": "2026-11-03T09:17:00+00:00",
+  "generatedAt": "2026-11-03T20:44:30+00:00",
   "refresh": {
-    "attemptedAt": "2026-11-03T09:17:00+00:00",
+    "attemptedAt": "2026-11-03T20:44:30+00:00",
     "failedMonths": []
   },
   "games": [
@@ -12093,9 +12093,9 @@
       "date": "2026-11-03",
       "awayTeam": "SS",
       "homeTeam": "KT",
-      "awayScore": null,
-      "homeScore": null,
-      "status": "scheduled",
+      "awayScore": 7,
+      "homeScore": 8,
+      "status": "completed",
       "stadium": "수원",
       "category": "postseason",
       "naverGameId": "77771103SSKT02026",
