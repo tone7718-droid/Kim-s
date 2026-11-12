@@ -10,8 +10,9 @@ on:
       - 'scraper/**'
       - '.github/workflows/scrape.yml'
   schedule:
-    # 매일 00:00 KST (= 15:00 UTC, 전날) — 어제 경기 결과 반영
-    - cron: '0 15 * * *'
+    # 매일 00:17 KST (= 15:17 UTC, 전날) — 어제 경기 결과 반영.
+    # 정각은 GitHub 예약 실행이 몰려 몇 시간씩 밀려서 분을 비껴 둔다.
+    - cron: '17 15 * * *'
   workflow_dispatch:
     inputs:
       year:
@@ -61,6 +62,12 @@ jobs:
           # (Naver is unreachable from GitHub runners, and re-scraping them is manual).
           if [ -n "$year" ]; then
             scope="--year $year --source kbo"
+          elif [ ! -f "data/seasons/$current_year.json" ]; then
+            # New year, schedule not published yet. Keep refreshing last
+            # season too: its daily commit is the only repository activity
+            # until then, and GitHub disables scheduled workflows in public
+            # repositories after 60 days without any.
+            scope="--years $((current_year - 1))-$current_year --source kbo"
           else
             scope="--year $current_year --source kbo"
           fi

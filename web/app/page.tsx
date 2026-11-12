@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { TeamPicker } from "@/components/TeamPicker";
 import { StatsCard } from "@/components/StatsCard";
 import { GameList } from "@/components/GameList";
@@ -11,6 +11,7 @@ import { WinLossPieCharts } from "@/components/WinLossPieCharts";
 import {
   availableSeasons,
   computeStats,
+  fallbackSeason,
   formatGeneratedAt,
   gamesForTeam,
   loadSeason,
@@ -45,6 +46,13 @@ function writePrefs(p: Prefs) {
 export default function HomePage() {
   const seasons = useMemo(() => availableSeasons(), []);
   const [year, setYear] = useState<number>(seasons[seasons.length - 1]);
+  // False while the season is only the default. A default is not saved, and
+  // falls back to last season when the new one has no data yet.
+  const yearPicked = useRef(false);
+  const pickYear = (y: number) => {
+    yearPicked.current = true;
+    setYear(y);
+  };
   const [team, setTeam] = useState<string | null>(null);
   const [season, setSeason] = useState<SeasonPayload | null>(null);
   const [loadStatus, setLoadStatus] = useState<"ok" | "empty" | "error">("ok");
@@ -62,7 +70,10 @@ export default function HomePage() {
   useEffect(() => {
     const p = readPrefs();
     if (p.team) setTeam(p.team);
-    if (p.year && seasons.includes(p.year)) setYear(p.year);
+    if (p.year && seasons.includes(p.year)) {
+      yearPicked.current = true;
+      setYear(p.year);
+    }
     if (typeof p.includePostseason === "boolean") setIncludePostseason(p.includePostseason);
     if (typeof p.includePreseason === "boolean") setIncludePreseason(p.includePreseason);
     if (typeof p.attendedOnly === "boolean") setAttendedOnly(p.attendedOnly);
@@ -72,7 +83,7 @@ export default function HomePage() {
   useEffect(() => {
     writePrefs({
       team: team ?? undefined,
-      year,
+      year: yearPicked.current ? year : undefined,
       includePostseason,
       includePreseason,
       attendedOnly,
@@ -85,6 +96,13 @@ export default function HomePage() {
     setLoading(true);
     loadSeason(year).then((result) => {
       if (cancelled) return;
+      if (result.status === "empty") {
+        const fallback = fallbackSeason(year, seasons, yearPicked.current);
+        if (fallback !== null) {
+          setYear(fallback);
+          return;
+        }
+      }
       if (result.status === "ok") {
         setFromCache(result.fromCache ?? false);
         setSeason(result.payload);
@@ -97,7 +115,7 @@ export default function HomePage() {
       setLoading(false);
     });
     return () => { cancelled = true; };
-  }, [year, reloadTick]);
+  }, [year, reloadTick, seasons]);
 
   const games = useMemo(() => {
     if (!season || !team) return [];
@@ -162,7 +180,7 @@ export default function HomePage() {
           {seasons.map((y) => (
             <button
               key={y}
-              onClick={() => setYear(y)}
+              onClick={() => pickYear(y)}
               className={[
                 "px-3 py-1.5 rounded-full text-sm font-semibold tabular-nums",
                 y === year ? "bg-zinc-900 text-white" : "bg-zinc-200 text-zinc-700",

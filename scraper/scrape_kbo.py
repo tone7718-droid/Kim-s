@@ -562,6 +562,20 @@ def current_season_year() -> int:
     return dt.datetime.now(ZoneInfo("Asia/Seoul")).year
 
 
+def _empty_season_is_failure(year: int, result: ScrapeResult) -> bool:
+    """Whether a current season that produced no games should fail the run.
+
+    From January until KBO publishes the new schedule, an empty answer is the
+    normal state, so it only counts once games are expected: a month failed
+    to fetch, the season already has a file, or 시범경기 month has arrived.
+    """
+    if result.failed_months:
+        return True
+    if (DATA_DIR / f"{year}.json").exists():
+        return True
+    return dt.datetime.now(ZoneInfo("Asia/Seoul")).month >= 3
+
+
 def _html_text(raw: str) -> str:
     return _WS_RE.sub(" ", unescape(_TAG_RE.sub(" ", raw or ""))).strip()
 
@@ -1107,8 +1121,9 @@ def main() -> int:
     months = [args.month] if args.month else range(3, 12)
     current_year = current_season_year()
     # Non-zero only when the season that is actually in progress produced
-    # nothing. A past season that fails, or one bad month inside an otherwise
-    # useful scrape, does not fail the run.
+    # nothing although games were expected (see _empty_season_is_failure).
+    # A past season that fails, or one bad month inside an otherwise useful
+    # scrape, does not fail the run.
     current_produced_nothing = False
 
     for y in years:
@@ -1126,14 +1141,14 @@ def main() -> int:
             # Nothing fetched (every month failed, or the schedule is empty).
             # Leave the file alone so generatedAt does not look fresh.
             print(f"  no games for {y}; season file not written", file=sys.stderr)
-            if y == current_year:
+            if y == current_year and _empty_season_is_failure(y, result):
                 current_produced_nothing = True
             continue
         existing = load_existing_games(y)
         merged = merge_games(existing, result.games, set(result.failed_months))
         if not merged:
             print(f"  no games for {y}; season file not written", file=sys.stderr)
-            if y == current_year:
+            if y == current_year and _empty_season_is_failure(y, result):
                 current_produced_nothing = True
             continue
         out = write_season(y, merged, failed_months=result.failed_months)

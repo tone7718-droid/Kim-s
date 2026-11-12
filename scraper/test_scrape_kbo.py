@@ -506,3 +506,45 @@ def test_merge_appends_games_that_were_not_on_disk():
     merged = merge_games([existing], [existing, added], set())
     assert [game.id for game in merged] == ["2026-04-01-LG-NC", "2026-11-03-SS-KT"]
 
+
+
+def _empty_current_season(monkeypatch, tmp_path, month, failed_months=()):
+    class FakeDatetime(scrape_kbo.dt.datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return cls(2027, month, 5, tzinfo=tz)
+
+    monkeypatch.setattr(sys, "argv", ["scrape_kbo.py", "--years", "2026-2027"])
+    monkeypatch.setattr(scrape_kbo, "current_season_year", lambda: 2027)
+    monkeypatch.setattr(scrape_kbo, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(scrape_kbo.dt, "datetime", FakeDatetime)
+    monkeypatch.setattr(
+        scrape_kbo,
+        "scrape_year",
+        lambda year, months, source="kbo": (
+            ScrapeResult([], list(failed_months), [])
+            if year == 2027
+            else ScrapeResult([_sample_game()], [], [4])
+        ),
+    )
+    monkeypatch.setattr(scrape_kbo, "load_existing_games", lambda year: [])
+    monkeypatch.setattr(scrape_kbo, "_flush_debug", lambda: None)
+    monkeypatch.setattr(scrape_kbo, "write_season", lambda y, g, **kwargs: y)
+    return scrape_kbo.main()
+
+
+def test_unpublished_new_season_does_not_fail_before_march(monkeypatch, tmp_path):
+    assert _empty_current_season(monkeypatch, tmp_path, month=1) == 0
+
+
+def test_unpublished_new_season_fails_once_games_are_expected(monkeypatch, tmp_path):
+    assert _empty_current_season(monkeypatch, tmp_path, month=3) == 1
+
+
+def test_new_season_fetch_failure_fails_even_before_march(monkeypatch, tmp_path):
+    assert _empty_current_season(monkeypatch, tmp_path, month=1, failed_months=[3, 4]) == 1
+
+
+def test_emptied_season_with_a_file_on_disk_fails(monkeypatch, tmp_path):
+    (tmp_path / "2027.json").write_text("{}")
+    assert _empty_current_season(monkeypatch, tmp_path, month=1) == 1

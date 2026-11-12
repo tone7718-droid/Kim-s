@@ -4,6 +4,7 @@ import {
   computeStats,
   gamesForTeam,
   buildNaverRecordUrl,
+  fallbackSeason,
   breakdownByVenue,
   isGeneratedAtStale,
   shouldShowStaleDataBanner,
@@ -187,3 +188,20 @@ describe("breakdownByVenue", () => {
   });
 });
 
+
+describe("fallbackSeason", () => {
+  const seasons = [2025, 2026, 2027];
+
+  it("shows last season when the default newest season has no data", () => {
+    expect(fallbackSeason(2027, seasons, false)).toBe(2026);
+  });
+
+  it("stays on a season the user picked", () => {
+    expect(fallbackSeason(2027, seasons, true)).toBeNull();
+  });
+
+  it("does not move away from an older or the only season", () => {
+    expect(fallbackSeason(2026, seasons, false)).toBeNull();
+    expect(fallbackSeason(2021, [2021], false)).toBeNull();
+  });
+});

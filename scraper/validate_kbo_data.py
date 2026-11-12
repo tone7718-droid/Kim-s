@@ -26,6 +26,11 @@ ALLOWED_CATEGORIES = {"regular", "postseason", "preseason", "unknown"}
 MIN_MAIN_GAMES_PER_SEASON = 300
 MAX_MAIN_GAMES_PER_SEASON = 1000
 MAX_UNKNOWN_CATEGORY_GAMES = 40
+# A past game the source no longer confirms becomes "unconfirmed". A normal
+# season has a handful at most (2021~2026: 5 in the worst year). Dozens mean
+# the scraper stopped recognizing finished games, e.g. KBO renamed the 리뷰
+# link, and every result is silently decaying instead of failing the scrape.
+MAX_UNCONFIRMED_GAMES = 20
 
 ID_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[A-Z0-9]+-[A-Z0-9]+(?:-\d+)?$")
 
@@ -81,6 +86,7 @@ def validate_file(path: Path, current_date: dt.date) -> list[str]:
     seen_ids: set[str] = set()
     main_count = 0
     unknown_count = 0
+    unconfirmed_count = 0
     future_finished: list[str] = []
 
     for i, game in enumerate(games):
@@ -134,6 +140,8 @@ def validate_file(path: Path, current_date: dt.date) -> list[str]:
             failed = (payload.get("refresh") or {}).get("failedMonths", [])
             if date.month not in failed:
                 raise ValueError(f"{path}: {game_id} is an expired scheduled game; confirm its status")
+        if status == "unconfirmed":
+            unconfirmed_count += 1
         if status in {"unconfirmed", "not_required"} and (away_score is not None or home_score is not None):
             raise ValueError(f"{path}: {game_id} has no confirmed result but contains scores")
         start_time = game.get("startTime")
@@ -145,7 +153,10 @@ def validate_file(path: Path, current_date: dt.date) -> list[str]:
             if not isinstance(naver_url, str) or not naver_url.startswith("https://m.sports.naver.com/game/"):
                 raise ValueError(f"{path}: {game_id} has unexpected naverRecordUrl: {naver_url!r}")
 
-    if main_count < MIN_MAIN_GAMES_PER_SEASON:
+    # The season in progress is exempt from the minimum: its schedule can be
+    # published in parts (시범경기 first), and the scraper merges into the
+    # file on disk, so a partial fetch cannot shrink it.
+    if year < current_date.year and main_count < MIN_MAIN_GAMES_PER_SEASON:
         raise ValueError(
             f"{path}: only {main_count} regular/postseason/unknown games. "
             "This looks like a partial scrape or API schema break."
@@ -157,6 +168,11 @@ def validate_file(path: Path, current_date: dt.date) -> list[str]:
     if unknown_count > MAX_UNKNOWN_CATEGORY_GAMES:
         raise ValueError(
             f"{path}: {unknown_count} games have unknown category; category detection likely broke"
+        )
+    if unconfirmed_count > MAX_UNCONFIRMED_GAMES:
+        raise ValueError(
+            f"{path}: {unconfirmed_count} games are unconfirmed; "
+            "result detection likely broke (did the KBO schedule page change?)"
         )
     if future_finished:
         sample = ", ".join(future_finished[:5])

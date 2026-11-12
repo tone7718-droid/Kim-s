@@ -87,3 +87,22 @@ def test_validator_rejects_expired_pending_game_but_allows_unconfirmed(tmp_path,
         v.validate_file(path,dt.date(2099,2,1))
     save(replace(old,status="unconfirmed"))
     v.validate_file(path,dt.date(2099,2,1))
+
+def _season(tmp_path,games,year=2099):
+    path=tmp_path/f"{year}.json"
+    path.write_text(json.dumps({"year":year,"games":[g.__dict__ for g in games]}))
+    return path
+
+def test_validator_exempts_only_the_season_in_progress_from_the_minimum(tmp_path):
+    path=_season(tmp_path,[game(category="preseason",status="cancelled")])
+    v.validate_file(path,dt.date(2099,2,1))
+    with pytest.raises(ValueError,match="partial scrape"):
+        v.validate_file(path,dt.date(2100,2,1))
+
+def test_validator_rejects_mass_unconfirmed_results(tmp_path):
+    def games(count):
+        return [game(id=f"2099-04-{day:02d}-SS-KT",date=f"2099-04-{day:02d}",status="unconfirmed")
+                for day in range(1,count+1)]
+    v.validate_file(_season(tmp_path,games(v.MAX_UNCONFIRMED_GAMES)),dt.date(2099,6,1))
+    with pytest.raises(ValueError,match="unconfirmed"):
+        v.validate_file(_season(tmp_path,games(v.MAX_UNCONFIRMED_GAMES+1)),dt.date(2099,6,1))

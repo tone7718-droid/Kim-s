@@ -7,6 +7,18 @@ export function availableSeasons(currentYear: number = new Date().getFullYear())
   return years;
 }
 
+// Early in a new year the newest season has no file yet. When it was only
+// selected by default, show the previous season instead of an empty page.
+// A season the user chose themselves is left alone. Returns null to stay.
+export function fallbackSeason(
+  year: number,
+  seasons: number[],
+  userPicked: boolean,
+): number | null {
+  if (userPicked || year !== seasons[seasons.length - 1]) return null;
+  return seasons.includes(year - 1) ? year - 1 : null;
+}
+
 // Result of loading a season. We distinguish "not published yet" (a real
 // 404 — nothing to retry) from a transient failure (network offline,
 // parse error, 5xx) so the UI can offer a retry only when retrying might
