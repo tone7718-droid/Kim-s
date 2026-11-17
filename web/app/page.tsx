@@ -12,6 +12,7 @@ import {
   availableSeasons,
   computeStats,
   fallbackSeason,
+  restoreSeason,
   formatGeneratedAt,
   gamesForTeam,
   loadSeason,
@@ -27,6 +28,7 @@ type Prefs = {
   includePostseason?: boolean;
   includePreseason?: boolean;
   attendedOnly?: boolean;
+  latestSeen?: number; // newest season this browser has already shown
 };
 
 function readPrefs(): Prefs {
@@ -47,8 +49,10 @@ export default function HomePage() {
   const seasons = useMemo(() => availableSeasons(), []);
   const [year, setYear] = useState<number>(seasons[seasons.length - 1]);
   // False while the season is only the default. A default is not saved, and
-  // falls back to last season when the new one has no data yet.
+  // falls back to the saved (or last) season when the new one has no data yet.
   const yearPicked = useRef(false);
+  const savedYear = useRef<number | undefined>(undefined);
+  const [latestSeen, setLatestSeen] = useState<number | undefined>(undefined);
   const pickYear = (y: number) => {
     yearPicked.current = true;
     setYear(y);
@@ -70,9 +74,12 @@ export default function HomePage() {
   useEffect(() => {
     const p = readPrefs();
     if (p.team) setTeam(p.team);
-    if (p.year && seasons.includes(p.year)) {
+    savedYear.current = p.year;
+    if (typeof p.latestSeen === "number") setLatestSeen(p.latestSeen);
+    const restored = restoreSeason(p.year, p.latestSeen, seasons);
+    if (restored !== null) {
       yearPicked.current = true;
-      setYear(p.year);
+      setYear(restored);
     }
     if (typeof p.includePostseason === "boolean") setIncludePostseason(p.includePostseason);
     if (typeof p.includePreseason === "boolean") setIncludePreseason(p.includePreseason);
@@ -83,12 +90,13 @@ export default function HomePage() {
   useEffect(() => {
     writePrefs({
       team: team ?? undefined,
-      year: yearPicked.current ? year : undefined,
+      year: yearPicked.current ? year : savedYear.current,
       includePostseason,
       includePreseason,
       attendedOnly,
+      latestSeen,
     });
-  }, [team, year, includePostseason, includePreseason, attendedOnly]);
+  }, [team, year, includePostseason, includePreseason, attendedOnly, latestSeen]);
 
   // load season data
   useEffect(() => {
@@ -97,13 +105,19 @@ export default function HomePage() {
     loadSeason(year).then((result) => {
       if (cancelled) return;
       if (result.status === "empty") {
-        const fallback = fallbackSeason(year, seasons, yearPicked.current);
+        const fallback = fallbackSeason(year, seasons, yearPicked.current, savedYear.current);
         if (fallback !== null) {
           setYear(fallback);
           return;
         }
       }
       if (result.status === "ok") {
+        if (year === seasons[seasons.length - 1]) {
+          // The new season is open: it becomes the saved choice until the
+          // user picks another one.
+          yearPicked.current = true;
+          setLatestSeen(year);
+        }
         setFromCache(result.fromCache ?? false);
         setSeason(result.payload);
         setLoadStatus("ok");

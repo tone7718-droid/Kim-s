@@ -7,15 +7,32 @@ export function availableSeasons(currentYear: number = new Date().getFullYear())
   return years;
 }
 
+// The saved season to reopen, or null to start on the newest season.
+// A saved older season is only honoured once the newest season has been
+// shown (`latestSeen`), so the first visit after a new season opens lands
+// on it even for users who had picked last season.
+export function restoreSeason(
+  saved: number | undefined,
+  latestSeen: number | undefined,
+  seasons: number[],
+): number | null {
+  const newest = seasons[seasons.length - 1];
+  if (saved === undefined || !seasons.includes(saved)) return null;
+  return saved === newest || latestSeen === newest ? saved : null;
+}
+
 // Early in a new year the newest season has no file yet. When it was only
-// selected by default, show the previous season instead of an empty page.
-// A season the user chose themselves is left alone. Returns null to stay.
+// selected by default, go back to the user's saved season, or else the
+// previous one, instead of an empty page. A season the user chose
+// themselves is left alone. Returns null to stay.
 export function fallbackSeason(
   year: number,
   seasons: number[],
   userPicked: boolean,
+  saved?: number,
 ): number | null {
   if (userPicked || year !== seasons[seasons.length - 1]) return null;
+  if (saved !== undefined && saved < year && seasons.includes(saved)) return saved;
   return seasons.includes(year - 1) ? year - 1 : null;
 }
 

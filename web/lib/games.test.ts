@@ -5,6 +5,7 @@ import {
   gamesForTeam,
   buildNaverRecordUrl,
   fallbackSeason,
+  restoreSeason,
   breakdownByVenue,
   isGeneratedAtStale,
   shouldShowStaleDataBanner,
@@ -203,5 +204,31 @@ describe("fallbackSeason", () => {
   it("does not move away from an older or the only season", () => {
     expect(fallbackSeason(2026, seasons, false)).toBeNull();
     expect(fallbackSeason(2021, [2021], false)).toBeNull();
+  });
+});
+
+describe("restoreSeason", () => {
+  const seasons = [2025, 2026, 2027];
+
+  it("opens the new season once even if last season was saved", () => {
+    expect(restoreSeason(2026, 2026, seasons)).toBeNull();
+    expect(restoreSeason(2026, undefined, seasons)).toBeNull();
+  });
+
+  it("keeps a saved season after the new season has been shown", () => {
+    expect(restoreSeason(2025, 2027, seasons)).toBe(2025);
+    expect(restoreSeason(2027, undefined, seasons)).toBe(2027);
+  });
+
+  it("ignores a missing or unknown saved season", () => {
+    expect(restoreSeason(undefined, 2027, seasons)).toBeNull();
+    expect(restoreSeason(2019, 2027, seasons)).toBeNull();
+  });
+});
+
+describe("fallbackSeason with a saved season", () => {
+  it("returns to the saved season while the new one is empty", () => {
+    expect(fallbackSeason(2027, [2024, 2025, 2026, 2027], false, 2024)).toBe(2024);
+    expect(fallbackSeason(2027, [2026, 2027], false, 2027)).toBe(2026);
   });
 });
