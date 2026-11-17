@@ -21,7 +21,8 @@ Each game looks like:
         "homeTeam": "NC",
         "awayScore": 5,
         "homeScore": 3,
-        "status": "completed" | "tied" | "cancelled" | "postponed" | "scheduled" | "unknown_result",
+        "status": "completed" | "tied" | "cancelled" | "postponed" | "scheduled"
+                  | "unknown_result" | "unconfirmed" | "not_required",
         "stadium": "창원NC파크" | null,
         "category": "regular" | "preseason" | "postseason" | "unknown",
         "naverGameId": "20210403LGNC02021" | null,
@@ -330,6 +331,9 @@ def _classify_category(raw: dict, date_str: str) -> str:
 
 
 def _coerce_score(v) -> int | None:
+    # bool is an int subclass; True must not become a score of 1.
+    if isinstance(v, bool):
+        return None
     if isinstance(v, int):
         return v
     if isinstance(v, str) and v.strip().lstrip("-").isdigit():
@@ -634,13 +638,11 @@ def _status_from_note(
     # Only the review link confirms a final result.
     if "리뷰" not in relay:
         return "scheduled", None, None
-    if away_score is not None and home_score is not None:
-        if away_score == home_score:
-            return "tied", away_score, home_score
-        return "completed", away_score, home_score
-    if "리뷰" in relay:
+    if away_score is None or home_score is None:
         return "unknown_result", None, None
-    return "scheduled", None, None
+    if away_score == home_score:
+        return "tied", away_score, home_score
+    return "completed", away_score, home_score
 
 
 def derive_naver_game_id(
@@ -728,10 +730,16 @@ def parse_kbo_schedule(
                 extras.append(text)
         if day:
             day_match = _DAY_RE.search(day)
-            if day_match:
-                current_date = (
-                    f"{year:04d}-{int(day_match.group(1)):02d}-{int(day_match.group(2)):02d}"
-                )
+            if not day_match:
+                # A new date cell we cannot read. Reusing the previous date
+                # would file these games on the wrong day without any error;
+                # skipping them until the next readable date lets the
+                # unconfirmed-count check in validate_kbo_data.py catch it.
+                current_date = None
+                continue
+            current_date = (
+                f"{year:04d}-{int(day_match.group(1)):02d}-{int(day_match.group(2)):02d}"
+            )
         if not current_date or not play_raw:
             continue
         note, stadium = _note_and_stadium(extras)
@@ -973,6 +981,9 @@ def _allocate_id(provisional: str, seen: set[str]) -> str:
     return f"{base}-{number}"
 
 
+_UNFINAL_STATUSES = {"scheduled", "unknown_result", "unconfirmed"}
+
+
 def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[int]) -> list[Game]:
     """Update scores, status, and stadium. Keep every other field already on disk.
 
@@ -993,6 +1004,7 @@ def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[in
         by_id.setdefault(game.id, []).append(index)
 
     used: set[int] = set()
+    existing_naver_ids = {game.naverGameId for game in existing if game.naverGameId}
 
     def take(indexes: list[int]) -> Game | None:
         for index in indexes:
@@ -1028,14 +1040,26 @@ def merge_games(existing: list[Game], fetched: list[Game], failed_months: set[in
                        if old.status == "scheduled" else old)
             seen_ids.add(old.id)
             continue
+        # A confirmed result is never downgraded by a later page that shows
+        # the game as pending or without readable scores.
+        keep_result = old.status in {"completed", "tied"} and fresh.status in _UNFINAL_STATUSES
+        # A game first stored without a Naver id picks it up once one is
+        # published, unless another stored game already owns that id.
+        adopt_naver = (
+            not old.naverGameId
+            and fresh.naverGameId
+            and fresh.naverGameId not in existing_naver_ids
+        )
         out.append(
             replace(
                 old,
-                awayScore=old.awayScore if old.status in {"completed", "tied"} and fresh.status == "scheduled" else fresh.awayScore,
-                homeScore=old.homeScore if old.status in {"completed", "tied"} and fresh.status == "scheduled" else fresh.homeScore,
-                status=old.status if old.status in {"completed", "tied"} and fresh.status == "scheduled" else fresh.status,
+                awayScore=old.awayScore if keep_result else fresh.awayScore,
+                homeScore=old.homeScore if keep_result else fresh.homeScore,
+                status=old.status if keep_result else fresh.status,
                 stadium=fresh.stadium or old.stadium,
                 startTime=fresh.startTime or old.startTime,
+                naverGameId=fresh.naverGameId if adopt_naver else old.naverGameId,
+                naverRecordUrl=fresh.naverRecordUrl if adopt_naver else old.naverRecordUrl,
             )
         )
         seen_ids.add(old.id)

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { importAttendanceJson, readFromStorage, writeToStorage } from "./storage";
+import { exportAttendanceJson, importAttendanceJson, readFromStorage, writeToStorage } from "./storage";
 
 afterEach(() => vi.unstubAllGlobals());
 function storage(initial: string | null = null, fail = false) {
@@ -36,5 +36,19 @@ describe("attendance persistence", () => {
   it("surfaces failed clear writes", () => {
     storage('["existing"]',true);
     expect(() => writeToStorage(new Set())).toThrow();
+  });
+});
+
+describe("attendance export", () => {
+  it("exports stored records as an importable backup", () => {
+    storage('["2026-04-01-LG-NC"]');
+    const result = exportAttendanceJson(new Date("2026-11-17T00:00:00Z"));
+    expect(result.ok).toBe(true);
+    if (result.ok) expect(JSON.parse(result.text).attended).toEqual(["2026-04-01-LG-NC"]);
+  });
+
+  it("does not produce an empty backup from corrupted storage", () => {
+    storage('{"broken":');
+    expect(exportAttendanceJson()).toEqual({ ok: false, raw: '{"broken":' });
   });
 });

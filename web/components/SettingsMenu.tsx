@@ -14,19 +14,33 @@ export function SettingsMenu() {
     window.setTimeout(() => setMsg(null), 2500);
   }
 
-  function handleExport() {
-    try {
-    const blob = new Blob([exportJson()], { type: "application/json" });
+  function download(text: string, name: string, type: string) {
+    const blob = new Blob([text], { type });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `kbo-attendance-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = name;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    flash(`내보냈어요 (${attended.size}경기)`);
-    } catch { flash("기록을 읽지 못해 내보내지 못했어요. 브라우저 저장 설정을 확인해 주세요."); }
+  }
+
+  function handleExport() {
+    const today = new Date().toISOString().slice(0, 10);
+    try {
+      const result = exportJson();
+      if (result.ok) {
+        download(result.text, `kbo-attendance-${today}.json`, "application/json");
+        flash(`내보냈어요 (${attended.size}경기)`);
+      } else if (result.raw) {
+        // Not a backup the app can import; kept so the records can be recovered.
+        download(result.raw, `kbo-attendance-recovery-${today}.txt`, "text/plain");
+        flash("기록이 손상돼 백업을 만들지 못했어요. 복구용 원본 파일을 저장했으니 브라우저 데이터는 지우지 마세요.");
+      } else {
+        flash("기록을 읽지 못해 내보내지 못했어요. 브라우저 저장 설정을 확인해 주세요.");
+      }
+    } catch { flash("내보내지 못했어요. 브라우저 저장 설정을 확인해 주세요."); }
   }
 
   function handleImportClick() {

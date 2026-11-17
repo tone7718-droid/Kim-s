@@ -23,6 +23,23 @@ export function writeToStorage(set: Set<string>) {
   window.dispatchEvent(new Event(CHANGE_EVENT));
 }
 
+export type ExportResult = { ok: true; text: string } | { ok: false; raw: string | null };
+
+// A backup of the stored records. When they cannot be read, no backup is
+// produced: an empty file would look like a valid backup and could be
+// trusted before the browser data is cleared. The unreadable raw value is
+// returned instead so it can be saved for recovery.
+export function exportAttendanceJson(now: Date = new Date()): ExportResult {
+  try {
+    const attended = [...readFromStorage()];
+    return { ok: true, text: JSON.stringify({ version: 1, exportedAt: now.toISOString(), attended }, null, 2) };
+  } catch {
+    let raw: string | null = null;
+    try { raw = window.localStorage.getItem(KEY); } catch { /* storage blocked */ }
+    return { ok: false, raw };
+  }
+}
+
 const STORAGE_ERROR = "기록을 저장하지 못했어요. 저장 공간과 브라우저의 저장 허용 설정을 확인해 주세요.";
 export type ImportResult = { ok: true; count: number; added: number } | { ok: false; count: 0; added: 0; error: string };
 
@@ -84,13 +101,7 @@ export function useAttended() {
     } catch { setStorageError(STORAGE_ERROR); return false; }
   }, []);
 
-  const exportJson = useCallback(() => {
-    return JSON.stringify(
-      { version: 1, exportedAt: new Date().toISOString(), attended: [...readFromStorage()] },
-      null,
-      2,
-    );
-  }, []);
+  const exportJson = useCallback(() => exportAttendanceJson(), []);
 
   // Merge (union) the imported IDs into whatever is already stored rather
   // than replacing. Attendance is a set of games you went to, so a union

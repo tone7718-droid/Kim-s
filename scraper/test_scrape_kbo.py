@@ -10,6 +10,8 @@ from __future__ import annotations
 import copy
 import json
 import sys
+
+import pytest
 from pathlib import Path
 
 import scrape_kbo
@@ -548,3 +550,64 @@ def test_new_season_fetch_failure_fails_even_before_march(monkeypatch, tmp_path)
 def test_emptied_season_with_a_file_on_disk_fails(monkeypatch, tmp_path):
     (tmp_path / "2027.json").write_text("{}")
     assert _empty_current_season(monkeypatch, tmp_path, month=1) == 1
+
+
+@pytest.mark.parametrize("fresh_status", ["scheduled", "unknown_result", "unconfirmed"])
+def test_merge_keeps_confirmed_result_when_fresh_is_not_final(fresh_status):
+    old = _sample_game()
+    fresh = _sample_game(status=fresh_status, awayScore=None, homeScore=None)
+    merged = scrape_kbo.merge_games([old], [fresh], set())
+    assert (merged[0].status, merged[0].awayScore, merged[0].homeScore) == ("completed", 5, 3)
+
+
+def test_merge_still_applies_a_corrected_final_score():
+    old = _sample_game()
+    fresh = _sample_game(awayScore=6, homeScore=3)
+    assert scrape_kbo.merge_games([old], [fresh], set())[0].awayScore == 6
+
+
+def test_merge_adopts_a_newly_published_naver_id():
+    old = _sample_game(status="scheduled", awayScore=None, homeScore=None,
+                       naverGameId=None, naverRecordUrl=None)
+    merged = scrape_kbo.merge_games([old], [_sample_game()], set())
+    assert merged[0].id == old.id
+    assert merged[0].naverGameId == "20260401LGNC02026"
+    assert merged[0].naverRecordUrl.endswith("/20260401LGNC02026/record")
+
+
+def test_merge_does_not_adopt_a_naver_id_another_game_owns():
+    owner = _sample_game(id="2026-04-01-LG-NC-2")
+    old = _sample_game(naverGameId=None, naverRecordUrl=None)
+    merged = scrape_kbo.merge_games([old, owner], [_sample_game()], set())
+    assert next(g for g in merged if g.id == old.id).naverGameId is None
+
+
+def _row(day, play):
+    cells = [{"Text": "<b>18:30</b>", "Class": "time"},
+             {"Text": play, "Class": "play"},
+             {"Text": "", "Class": "relay"},
+             {"Text": "잠실", "Class": None}]
+    if day is not None:
+        cells.insert(0, {"Text": day, "Class": "day"})
+    return {"row": cells}
+
+
+def test_unreadable_date_cell_does_not_reuse_the_previous_date():
+    play = "<span>LG</span><em><span>vs</span></em><span>두산</span>"
+    payload = {"rows": [
+        _row("04.09(목)", play),
+        _row("날짜미정", play),
+        _row(None, "<span>KT</span><em><span>vs</span></em><span>롯데</span>"),
+        _row("04.11(토)", "<span>NC</span><em><span>vs</span></em><span>한화</span>"),
+    ]}
+    games = scrape_kbo.games_from_kbo_payload(payload, 2026, "0,9,6")
+    assert [(g.date, g.awayTeam) for g in games] == [("2026-04-09", "LG"), ("2026-04-11", "NC")]
+
+
+def test_review_without_scores_is_unknown_result():
+    assert scrape_kbo._status_from_note(None, None, None, "리뷰") == ("unknown_result", None, None)
+
+
+def test_coerce_score_rejects_bool():
+    assert scrape_kbo._coerce_score(True) is None
+    assert scrape_kbo._coerce_score(False) is None

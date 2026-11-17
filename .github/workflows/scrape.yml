@@ -100,7 +100,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes."
           else
-            git commit -m "data: refresh KBO schedule ($(date -u +'%Y-%m-%d'))"
+            git commit -m "data: refresh KBO schedule ($(TZ=Asia/Seoul date +'%Y-%m-%d'))"
             # After committing the intended season JSON and summary, discard
             # any diagnostics/temp files left by the scrape before rebasing.
             # Git refuses to rebase with a dirty worktree.
